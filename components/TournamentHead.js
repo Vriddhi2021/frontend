@@ -3,43 +3,7 @@ import { makeStyles } from '@mui/styles';
 import {Typography ,Button} from '@mui/material';
 import styles from '../styles/TournamentHead.module.css';
 
-
-// const useStyles = makeStyles({
-//     heading: {
-      
-//     },
-//     center:{
-        
-//     },
-//     display: {
-        
-//     },
-//     btn__hero :`
-//         backgroundColor: '#a81eed',
-//     `,
-//   });
-
 function TournamentHead(props){
-    // const classes=useStyles();
-    // return (
-    //     <div sx={{
-    //         background:'red',
-    //         }}>
-    //         <section >
-    //         <Typography variant="h5" className={classes.heading}>LOREM IPSUM</Typography>
-    //         <Typography variant="h3" className={classes.heading}>TOURNAMENTS</Typography>
-    //         <Typography variant="body1"  component="p" className={classes.heading}>
-    //             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-    //             blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
-    //             neque doloribus.
-    //         </Typography>
-    //         <Button className={classes.btn__hero} 
-    //                 variant="contained" c >
-    //           Register Now
-    //         </Button>
-    //     </section>
-    //     </div>
-    // );
     return(
         <section className={styles.hero} >
             <div  className={styles.hero__layout}>
