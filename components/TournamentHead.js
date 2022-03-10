@@ -6,8 +6,8 @@ import styles from '../styles/TournamentHead.module.css';
 function TournamentHead(props){
     return(
         <section className={styles.hero}>
-        <div className='d-flex justify-content-center align-items-center w-100'>
-        <div className='bg-dark col-11 col-md-10 mx-auto'>
+        <div className='d-flex justify-content-center align-items-center' style={{height: "100%"}}>
+        <div className='col-11 col-md-10 mx-auto'>
             <div  className={styles.hero__layout}>
                 <h2 className={styles.header}>LOREM IPSUM</h2>
                 <h1 className={styles.header__main}>TOURNAMENTS</h1>
