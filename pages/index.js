@@ -1,7 +1,10 @@
 import Head from 'next/head'
+import AppCarousel from '../components/AppCarousel';
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+
+
+const Home = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -10,11 +13,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <main className=''>
+        {/* <h1 className={styles.title}>
           Welcome to <a href="#">Vriddhi 2021</a>
-        </h1>
+        </h1> */}
+        <div className="">
+        </div>
       </main>
     </div>
   )
 }
+
+export default Home;
