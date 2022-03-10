@@ -2,7 +2,8 @@
     position:absolute;
     top:0;
     left: 0;
-    background :linear-gradient(to right , #1d023e 0%, #0e011f ) ;
+    /* background :linear-gradient(to right , #1d023e 0%, #0e011f ) ; */
+    background-image: url('../public/banner.png');
     background-position: center center;
     background-size: cover;
     width : 100%;
@@ -27,11 +28,7 @@
 }
 
 div.hero__layout{
-    position : relative;
-    top:15vh;
-    left:15vw;
-    /* width: 100%; */
-    /* background: red;  */
+    
     display : flex;
     flex-direction: column;
     justify-content: center;
@@ -58,6 +55,7 @@ p.hero__text{
     text-decoration: none;
     transition: 0.2s transform ease-in-out;
     will-change: transform;
+    transition: 3s transform ease-out;
     z-index: 0;
   }
   .coolBeans::after {
@@ -81,8 +79,9 @@ p.hero__text{
   }
   .coolBeans:hover {
     border: 2px solid transparent;
+    transition: 3s transform ease-out;
     color: #ffffff;
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
     will-change: transform;
   }
   
@@ -118,16 +117,14 @@ p.hero__text{
 }
 
 .hero__icons{
-    
     position: relative;
     height: 15vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
     /* transform: translateY(rem); */
-    margin-top: 12rem;
+    /* margin-top: 12rem; */
     background-color: rgba(255,255,255,0.20);
 }
 /* .hero__icons::before{
