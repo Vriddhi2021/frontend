@@ -10,6 +10,7 @@ export default function Home() {
         <title>Vriddhi 2021</title>
         <meta name="description" content="Vriddhi 2021" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <main className={styles.main}>

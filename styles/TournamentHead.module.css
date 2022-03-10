@@ -2,7 +2,8 @@
     position:absolute;
     top:0;
     left: 0;
-    background :linear-gradient(to right , #1d023e 0%, #0e011f ) ;
+    /* background :linear-gradient(to right , #1d023e 0%, #0e011f ) ; */
+    background-image: url('../public/banner.png');
     background-position: center center;
     background-size: cover;
     width : 100%;
@@ -27,11 +28,7 @@
 }
 
 div.hero__layout{
-    position : relative;
-    top:15vh;
-    left:15vw;
-    /* width: 100%; */
-    /* background: red;  */
+    
     display : flex;
     flex-direction: column;
     justify-content: center;
