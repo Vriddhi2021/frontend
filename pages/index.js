@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Footer from '../components/footer'
+import TournamentHead from '../Components/TournamentHead'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           Welcome to <a href="#">Vriddhi 2021</a>
         </h1>
       </main>
+      <TournamentHead />
       
       <Footer/>
     </div>
