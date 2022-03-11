@@ -24,10 +24,10 @@ const Home = () => {
         </div>
       </main>
       <TournamentHead />
-      
+      <AppCarousel/>
       <Footer/>
     </div>
-  )
+  )}
 
 export default Home;
 
