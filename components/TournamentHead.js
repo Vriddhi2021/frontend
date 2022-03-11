@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { makeStyles } from '@mui/styles';
-import {Typography ,Button} from '@mui/material';
+// import * as React from 'react';
+// import { makeStyles } from '@mui/styles';
+// import {Typography ,Button} from '@mui/material';
 import styles from '../styles/TournamentHead.module.css';
 
 function TournamentHead(props){
@@ -21,10 +21,10 @@ function TournamentHead(props){
                 <a className={styles.coolBeans} href="#">Register Now</a>
             </div>
             <div className={styles.hero__icons}>
-                <img className={styles.pngs} src="https://www.freepnglogos.com/uploads/flipkart-logo-png/flipkart-logo-icon-flat-style-png-4.png"  alt="flipkart image" />
-                <img className={styles.pngs} src="https://pngimg.com/uploads/amazon/amazon_PNG21.png"  alt="flipkart image" />
-                <img className={styles.pngs} src="https://www.freepnglogos.com/uploads/flipkart-logo-png/flipkart-logo-icon-flat-style-png-4.png"  alt="flipkart image" />
-                <img className={styles.pngs} src="https://pngimg.com/uploads/amazon/amazon_PNG21.png"  alt="flipkart image" />  
+                <img className={styles.pngs} src="images/sponsor-1.png"  alt="flipkart image" />
+                <img className={styles.pngs} src="images/sponsor-2.png"  alt="flipkart image" />
+                <img className={styles.pngs} src="images/sponsor-3.png"  alt="flipkart image" />
+                <img className={styles.pngs} src="images/sponsor-4.png"  alt="flipkart image" />  
             </div>
         </section>
     );
