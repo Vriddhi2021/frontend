@@ -14,8 +14,9 @@ SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 export default function AppCarousel() {
     return (
-        <div>
-            <div className="container">
+       <div className="mx-auto a__sportsBg">
+            <div className="col-11 col-md-10 mx-auto py-5">
+            <div className="container-fluid containerBg py-5">
                 <p className="_text" style={{ color: "white", textAlign: "center", padding:'10px', fontSize:'30px', fontWeight: 'bold'}}>AVAILABLE ESPORTS</p>
                 <Swiper
                     navigation={true}
@@ -64,5 +65,6 @@ export default function AppCarousel() {
                 </Swiper>
             </div>
         </div>
+       </div>
     );
 }
