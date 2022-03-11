@@ -1,4 +1,3 @@
-import * as React from 'react';
 // import { makeStyles } from '@mui/styles';
 // import {Typography ,Button} from '@mui/material';
 import styles from '../styles/TournamentHead.module.css';
