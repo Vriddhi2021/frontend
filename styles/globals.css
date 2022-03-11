@@ -1,16 +1,100 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1D023E !important;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: "Martel", serif;
+}
+.container-fluid{
+  padding: 0 !important;
+}
+.a__sportsBg{
+  background: url('../public/bg2.png');
+  background-position: center;
+  background-size: cover;
+}
+.swiper {
+  margin-top: -50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px !important;
+  height: 400px !important;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 150px;
+    height: auto;
+  }
+}
+
+.swiper-slide img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.containerBg {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  background: linear-gradient(180deg, #AA1EF1 0%, rgba(170, 30, 241, 0) 100%);
+  display: block;
+  border-radius: 40px 40px 0 0;
+  /* padding-bottom: 88px !important; */
+}
+
+.containerBg .swiper-container {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  bottom: -16vw;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 2;
+  padding-bottom: 3vw;
+}
+
+@media (max-width: 768px) {
+  .containerBg .swiper-container {
+    bottom: -58vw;
+    padding-bottom: 8vw;
+  }
+}
+
+.swiper-pagination-fraction {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 25px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.swiper-container {
+  margin-top: 50px;
+  position: relative;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: black;
+}
+
+.arrow-right {
+  color: black; 
+  position: absolute;
+  top: 50%;
+  right: 0;
 }
