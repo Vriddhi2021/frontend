@@ -4,6 +4,7 @@ import BrowseTournament from "../components/BrowseTournament";
 import Footer from "../components/footer";
 import Navbar from "../components/Navbar";
 import TournamentHead from "../Components/TournamentHead";
+import BrowseT from '../components/browseT';
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       </main>
       <TournamentHead />
       <AppCarousel />
+      <BrowseT/>
       <Footer />
     </div>
   );
