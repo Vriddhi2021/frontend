@@ -17,7 +17,7 @@
 }
 .header{
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 2rem;  
     font-weight: 300;
 }
 
@@ -28,11 +28,16 @@
 }
 
 div.hero__layout{
-    
     display : flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+div.hero__layout h1{
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    word-spacing: 0ch !important;
+    letter-spacing: 0;
 }
 p.hero__text{
     color:#ffffff;
