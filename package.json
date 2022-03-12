@@ -17,6 +17,7 @@
     "bootstrap": "^5.1.3",
     "next": "12.1.0",
     "react": "17.0.2",
+    "react-accessible-accordion": "^4.0.0",
     "react-bootstrap": "^2.2.0",
     "react-coverflow": "^0.2.20",
     "react-coverflow-with-event": "^1.0.0-beta.1",
