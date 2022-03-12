@@ -1,10 +1,9 @@
-import Head from 'next/head'
-import AppCarousel from '../components/AppCarousel';
-import styles from '../styles/Home.module.css'
-import Footer from '../components/footer'
-import TournamentHead from '../Components/TournamentHead'
-
-
+import Head from "next/head";
+import AppCarousel from "../components/AppCarousel";
+import BrowseTournament from "../components/BrowseTournament";
+import Footer from "../components/footer";
+import Navbar from "../components/Navbar";
+import TournamentHead from "../Components/TournamentHead";
 
 const Home = () => {
   return (
@@ -15,19 +14,19 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Navbar />
 
-      <main className=''>
+      <main className="">
         {/* <h1 className={styles.title}>
           Welcome to <a href="#">Vriddhi 2021</a>
         </h1> */}
-        <div className="">
-        </div>
+        <div className=""></div>
       </main>
       <TournamentHead />
-      <AppCarousel/>
-      <Footer/>
+      <AppCarousel />
+      <Footer />
     </div>
-  )}
+  );
+};
 
 export default Home;
-
