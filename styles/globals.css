@@ -117,9 +117,90 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
 }
+/* / Contact us page */
+
+
+/******** tournamentsBrowseCards Styling ********/
+
+.tournamentsBrowseCards{
+  height: 300px !important;
+  background-image: url(../public/game.png);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 
 
+
+.tournamentsBrowseCards::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  background-size: cover;
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.tournamentsBrowseCards:focus::after, .tournamentsBrowseCards:hover::after {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+.tournamentsBrowseCards .cardTarsparent{
+  height: 60% !important;
+  width: 100%;
+  /* background-color: #2B0C52; */
+}
+.tournamentsBrowseCards .cardData{
+  background-color: #2B0C52;
+  color: rgba(225, 225, 225, 0.8) !important;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tournamentsBrowseCards .cardData .roundBox{
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+}
+
+.tournamentsBrowseCards .cardData .cardTitle{
+  font-size: 20px;
+  /* font-weight: bold; */
+  text-align: left !important;
+  margin-bottom: 0.5rem !important;
+  color: rgba(225, 225, 225, 0.8) !important;
+}
+.tournamentsBrowseCards .cardData .dataCard2 p{
+  margin-bottom: 0.5rem !important;
+}
+.tournamentsBrowseCards .roundBox span{
+  font-size: 48px;
+  line-height: 44px;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+  color: white;
+}
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root{
+  color: white;
+}
+/******** / tournamentsBrowseCards Styling ********/
 
 
 
