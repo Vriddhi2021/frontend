@@ -29,6 +29,7 @@ const Navbar = () => {
           <Box sx={{ flexGrow: { lg: 0, md: 0, sm: 1, xs: 1 } }}>
             <Typography>LOGO</Typography>
           </Box>
+           
           <Box
             sx={{
               flexGrow: 1,

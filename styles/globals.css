@@ -203,7 +203,54 @@ body {
 /******** / tournamentsBrowseCards Styling ********/
 
 
-
+/* ***************TrendingVideos*************** */
+.trendingVideo{
+  background-image: url(../public/bg2.png);
+  background-size: cover;
+  background-position: bottom;
+}
+.carousel-indicators{
+  display: none !important;
+}
+.carousel-control-prev{
+  left: -100px !important;
+}
+.carousel-control-next{
+  right: -100px !important;
+}
+.carousel-item>div{
+  width: 100% !important;
+}
+.carousel-item{
+  border-radius: 20px !important;
+  position: relative;
+}
+.carousel-item .carousel-caption{
+  width: 100% !important;
+  background-color: hsl(267, 74%, 18%) !important;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.trendingHeading{
+  text-align: left;
+  padding-left: 24px !important;
+  margin-top: 20px !important;
+  line-height: 5px;
+}
+.trendingHeading p{
+  color: rgba(255, 255, 255, 0.425);
+}
+.carousel-control-next-icon{
+  background-image: url(../public/nextIcon.png) !important;
+  transform: scale(1.2);
+}
+.carousel-control-prev-icon{
+  background-image: url(../public/prevIcon.png) !important;
+  transform: scale(1.2);
+}
+/* *************** / TrendingVideos*************** */
 
 
 
