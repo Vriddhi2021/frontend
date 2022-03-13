@@ -1,4 +1,4 @@
-import { Button } from "@mui/material"
+import { Button, Link } from "@mui/material"
 
 const tournamentsComp = (props) => {
   return (
@@ -25,7 +25,7 @@ const tournamentsComp = (props) => {
                             border: "1px solid #8800CD",
                         },
                     }}
-                    variant="contained">Register</Button></div>
+                    variant="contained"><Link className="text-decoration-none text-white" href={`/tournaments/${props.id}`}>Register</Link></Button></div>
                 </div>
             </div>
         </div>

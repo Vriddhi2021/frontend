@@ -1,10 +1,10 @@
-import Footer from '../components/footer';
-import Hero from '../components/hero';
-import Navbar from '../components/Navbar';
-import bgHero from '../public/Tournament.png';
-import TrendingVideo from '../components/trendingVideo';
-import AppCarousel from '../components/AppCarousel';
-import TournamentEvents from '../components/tournamentEvents';
+import Footer from '../../components/footer';
+import Hero from '../../components/hero';
+import Navbar from '../../components/Navbar';
+import bgHero from '../../public/Tournament.png';
+import TrendingVideo from '../../components/trendingVideo';
+import AppCarousel from '../../components/AppCarousel';
+import TournamentEvents from '../../components/tournamentEvents';
 
 function tournaments() {
   return (

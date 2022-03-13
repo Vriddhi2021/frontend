@@ -7,9 +7,23 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Link from 'next/link'
 import { useState } from "react";
 
-const NavMenu = ["TOURNAMENT", "GALLERY", "ABOUT US", "CONTACT US"];
+const NavMenu = [
+   { title:"TOURNAMENT",
+    url:"tournaments"
+  },
+   { title:"GALLERY",
+   url:"gallery"
+  },
+    {title:"ABOUT US",
+    url:"about"
+  },
+     {title:"CONTACT US",
+     url:"contact"
+    }
+];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -26,9 +40,9 @@ const Navbar = () => {
     <div>
       <AppBar sx={{ backgroundColor: "#18082E" }} position="static">
         <Toolbar>
-          <Box sx={{ flexGrow: { lg: 0, md: 0, sm: 1, xs: 1 } }}>
+        <Link href="/"><Box sx={{ flexGrow: { lg: 0, md: 0, sm: 1, xs: 1 } }}>
             <Typography>LOGO</Typography>
-          </Box>
+          </Box></Link>
            
           <Box
             sx={{
@@ -75,8 +89,9 @@ const Navbar = () => {
                   }}
                   onClick={handleCloseNavMenu}
                 >
-                  <Typography sx={{ padding: 3 }}>{item}</Typography>
+                  <Typography sx={{ padding: 3 }}><Link className="text-decoration-none text-white" href={`/${item.url}`}>{item.title}</Link></Typography>
                 </MenuItem>
+                
               ))}
 
               <MenuItem
@@ -119,7 +134,7 @@ const Navbar = () => {
           >
             {NavMenu.map((item, i) => (
               <Typography sx={{ padding: 3, cursor: "pointer" }} key={i}>
-                {item}
+                <Link className="text-decoration-none text-white" href={`/${item.url}`}>{item.title}</Link>
               </Typography>
             ))}
           </Box>
