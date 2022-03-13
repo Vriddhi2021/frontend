@@ -12,8 +12,10 @@ import eventsJson from './eventsJson';
 const browseT = () => {
     const [eventList, setEventList] = useState(eventsJson);
     const [status, setStatus] = useState('');
-    const [day, setDay] = useState('');
-    const [cat, setCat] = useState(eventsJson);
+    const [cat, setCat] = useState('Major Events');
+    const [catt, setCatt] = useState(eventsJson);
+    const [day, setDay] = useState(1);
+    const [dayy, setDayy] = useState([]);
     const handleChangeStatus = (event) => {
         setStatus(event.target.value);
     };
@@ -24,17 +26,17 @@ const browseT = () => {
         setCat(event.target.value);
     };
     console.log(cat);
-    const filterCards = (cardsDay) => {
-        const updatedCards  = eventsJson.filter((oldData) => {
+    const filterDay = (cardsDay) => {
+        const updatedCardss  = catt.filter((oldData) => {
             return oldData.day === cardsDay;
         });
-        setEventList(updatedCards)
+        setCatt(updatedCardss);
     }
-    const filterCat = (cat) => {
+    const filterCat = (category) => {
         const updatedCatCards  = eventsJson.filter((oldData) => {
-            return oldData.category === cat;
+            return oldData.category === category;
         });
-        setCat(updatedCatCards)
+        setCatt(updatedCatCards)
     }
   return (
     <section style={{background: "#1D023E"}}>
@@ -43,68 +45,25 @@ const browseT = () => {
             <Box sx={{ minWidth: 120 }}>
             <div className="row mx-auto">
             <div className="col-8 d-flex">
-            <FormControl className='mx-3' fullWidth>
-                    <InputLabel id="demo-simple-select-label">Status</InputLabel>
-                    <Select
-                    sx={{
-                        borderRadius: "8px",
-                        borderColor: "#eee",
-                        color: "white",
-                    }}
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={status}
-                    label="Status"
-                    onChange={handleChangeStatus}
-                    >
-                    <MenuItem value={10}>Upcoming</MenuItem>
-                    <MenuItem value={20}>Ongoing</MenuItem>
-                    <MenuItem value={30}>Completed</MenuItem>
-                    </Select>
-            </FormControl>
-            <FormControl className='mx-3' fullWidth>
-                    <InputLabel id="demo-simple-select-label">Day</InputLabel>
-                    <Select
-                    sx={{
-                        borderRadius: "8px",
-                        borderColor: "#eee",
-                        color: "white",
-                    }}
-                    onClick={() => {filterCards(day)}}
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={day}
-                    label="Age"
-                    onChange={handleChangeDay}
-                    >
-                    <MenuItem value="all">All</MenuItem>
-                    <MenuItem value={1}>Day 1</MenuItem>
-                    <MenuItem value={2}>Day 2</MenuItem>
-                    <MenuItem value={3}>Day 3</MenuItem>
-                    </Select>
-            </FormControl>
-            <FormControl className='mx-3' fullWidth>
-                    <InputLabel id="demo-simple-select-label">Catagory</InputLabel>
-                    <Select
-                    sx={{
-                        borderRadius: "8px",
-                        borderColor: "#eee",
-                        color: "white",
-                    }}
-                    onClick={() => filterCat(cat)}
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={cat}
-                    label="Age"
-                    onChange={handleChangeCat}
-                    >
-                    <MenuItem value="Major Events">Major Events</MenuItem>
-                    <MenuItem value="General Games & Events">General Games & Events </MenuItem>
-                    <MenuItem value="Events with Clubs">Events with Clubs</MenuItem>
-                    <MenuItem value="Fun Events (general and pre vridhi)">Fun Events (Pre vridhi)</MenuItem>
-                    <MenuItem value="Fun Events (games)">Fun Events (games)</MenuItem>
-                    </Select>
-            </FormControl>
+            <select value={status} class="form-select" aria-label="Default select example">
+                <option selected value="Upcoming">Upcoming</option>
+                <option value="Ongoing">Ongoing</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <select onChange={handleChangeDay} value={day} onClick={() => filterDay(day)} class="form-select" aria-label="Default select example">
+                <option value="1" selected>Day 1</option>
+                <option value="2">Day 2</option>
+                <option value="3">Day 3</option>
+            </select>
+
+            <select onChange={handleChangeCat} value={cat} onClick={() => filterCat(cat)} class="form-select" aria-label="Default select example">
+                {/* <option value="" selected>All Categories</option> */}
+                <option value="Major Events" selected>Major Events</option>
+                <option value="Events with Clubs">Events with Clubs</option>
+                <option value="Fun Events (general and pre vridhi)">Fun Events (Pre vridhi)</option>
+                <option value="General Games & Events">General Games & Events</option>
+                <option value="Fun Events (games)">Fun Events (games)</option>
+            </select>
             </div>
             <div className="col-4">
             <FormControl fullWidth>
@@ -122,7 +81,7 @@ const browseT = () => {
             </div>
             </Box>
             <div className="row mx-auto my-5">
-            {eventList.map((curData) => {
+            {catt.map((curData) => {
                 return (
                     <TournamentsComp
                         key={curData.id}
