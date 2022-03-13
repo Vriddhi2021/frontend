@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/Navbar";
 import TournamentHead from "../Components/TournamentHead";
 import BrowseT from '../components/browseT';
+import TrendingVideo from '../components/trendingVideo';
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <TournamentHead />
       <AppCarousel />
       <BrowseT/>
+      <TrendingVideo/>
       <Footer />
     </div>
   );

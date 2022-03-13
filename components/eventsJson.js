@@ -60,7 +60,7 @@ const Events = [
     {
         id: "5",
         name: "Clash Royale",
-        category: "General Games & Events ",
+        category: "General Games & Events",
         description: "lzfjghsdkjfhgkjdfh",
         teamSize: "1/1 Teams",
         prize: "6000",
@@ -74,7 +74,7 @@ const Events = [
     {
         id: "6",
         name: "Rocket League",
-        category: "General Games & Events ",
+        category: "General Games & Events",
         description: "lzfjghsdkjfhgkjdfh",
         teamSize: "1/1 Teams",
         prize: "6000",
@@ -88,7 +88,7 @@ const Events = [
     {
         id: "7",
         name: "Free fire max ",
-        category: "General Games & Events ",
+        category: "General Games & Events",
         description: "lzfjghsdkjfhgkjdfh",
         teamSize: "1/1 Teams",
         prize: "6000",
@@ -102,7 +102,7 @@ const Events = [
     {
         id: "8",
         name: "Fantasy Cricket Betting (26/3 27/3 )",
-        category: "General Games & Events ",
+        category: "General Games & Events",
         description: "lzfjghsdkjfhgkjdfh",
         teamSize: "1/1 Teams",
         prize: "6000",
@@ -116,7 +116,7 @@ const Events = [
     {
         id: "9",
         name: " Webinar on 3D VR and AR",
-        category: "General Games & Events ",
+        category: "General Games & Events",
         description: "lzfjghsdkjfhgkjdfh",
         teamSize: "1/1 Teams",
         prize: "6000",
@@ -130,7 +130,7 @@ const Events = [
     {
         id: "10",
         name: " Webinar promoting eSports in India by Team Velocity",
-        category: "General Games & Events ",
+        category: "General Games & Events",
         description: "lzfjghsdkjfhgkjdfh",
         teamSize: "1/1 Teams",
         prize: "6000",
@@ -477,6 +477,6 @@ const Events = [
         day: "3",
         img: img.src
     }
-]
+];
 
 export default Events;

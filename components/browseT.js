@@ -13,7 +13,7 @@ const browseT = () => {
     const [eventList, setEventList] = useState(eventsJson);
     const [status, setStatus] = useState('');
     const [day, setDay] = useState('');
-    const [cat, setCat] = useState('');
+    const [cat, setCat] = useState(eventsJson);
     const handleChangeStatus = (event) => {
         setStatus(event.target.value);
     };
@@ -23,11 +23,18 @@ const browseT = () => {
     const handleChangeCat = (event) => {
         setCat(event.target.value);
     };
+    console.log(cat);
     const filterCards = (cardsDay) => {
         const updatedCards  = eventsJson.filter((oldData) => {
-            return oldData.day = cardsDay;
+            return oldData.day === cardsDay;
         });
         setEventList(updatedCards)
+    }
+    const filterCat = (cat) => {
+        const updatedCatCards  = eventsJson.filter((oldData) => {
+            return oldData.category === cat;
+        });
+        setCat(updatedCatCards)
     }
   return (
     <section style={{background: "#1D023E"}}>
@@ -84,17 +91,18 @@ const browseT = () => {
                         borderColor: "#eee",
                         color: "white",
                     }}
+                    onClick={() => filterCat(cat)}
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={cat}
                     label="Age"
                     onChange={handleChangeCat}
                     >
-                    <MenuItem value={10}>Major Events</MenuItem>
-                    <MenuItem value={20}>General Games & Events </MenuItem>
-                    <MenuItem value={30}>Events with Clubs</MenuItem>
-                    <MenuItem value={30}>Fun Events (Pre vridhi)</MenuItem>
-                    <MenuItem value={30}>Fun Events (games)</MenuItem>
+                    <MenuItem value="Major Events">Major Events</MenuItem>
+                    <MenuItem value="General Games & Events">General Games & Events </MenuItem>
+                    <MenuItem value="Events with Clubs">Events with Clubs</MenuItem>
+                    <MenuItem value="Fun Events (general and pre vridhi)">Fun Events (Pre vridhi)</MenuItem>
+                    <MenuItem value="Fun Events (games)">Fun Events (games)</MenuItem>
                     </Select>
             </FormControl>
             </div>
