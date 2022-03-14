@@ -344,6 +344,32 @@ a {
 }
 /************** / Event Page ************* */
 
+/***************** footerLogoBranding**************** */
+.footerLogoBranding{
+  width: 100%;
+  -moz-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+}
+.logosFooter{
+  margin-top: 15px;
+  padding-top: 15px;
+  width: 98%;
+  padding-left: 2%;
+  border-top: 0.05px solid rgba(255, 255, 255, 0.5);
+  -moz-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+}
+.logoNavBar{
+  height: 40px;
+  user-select: none;
+  cursor: pointer;
+}
+/***************** / footerLogoBranding**************** */
+
+
+
 /* *********Hero Text Gltch Effect********* */
 
 .heroText {
