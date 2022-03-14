@@ -4,7 +4,9 @@
   margin: 0;
   padding: 0;
 }
-
+.ytp-cued-thumbnail-overlay-image{
+  background-image: url(../public/game.png) !important;
+}
 body {
   background: #1d023e !important;
   position: relative;

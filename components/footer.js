@@ -1,6 +1,7 @@
 import { Instagram, LinkedIn, Phone, Twitter } from "@mui/icons-material";
 import { Link } from "@mui/material";
-import React from "react";
+import footerImg from '../public/logoBranding.png';
+import logos from '../public/logos.png';
 import {
     FooterAbout,
     FooterAboutDescription,
@@ -17,16 +18,27 @@ import {
 function Footer() {
     return (
         <FooterContainer container>
-            <FooterAbout item md={4} xs={12}>
-                <FooterAboutLogo>LOGO</FooterAboutLogo>
+            <FooterAbout item md={3} xs={12}>
+            <FooterTitle variant="h1">About</FooterTitle>
                 <FooterAboutDescription>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Rerum eveniet ab quasi! Assumenda, non totam! Eum velit odit
-                    distinctio sunt quasi nulla sequi, perferendis totam ullam.
-                    Rerum laboriosam animi sapiente.
+                Vriddhi 2021 intends to feature major E-sports tournaments and events such as Bgmi, Valorant, Chess, Fortnite, and much more.
                 </FooterAboutDescription>
+                <IconContainer>
+                    <Link href="/">
+                        <Twitter></Twitter>
+                    </Link>
+                    <Link href="/">
+                        <LinkedIn></LinkedIn>
+                    </Link>
+                    <Link href="/">
+                        <Instagram></Instagram>
+                    </Link>
+                    <Link href="/">
+                        <Phone></Phone>
+                    </Link>
+                </IconContainer>
             </FooterAbout>
-            <FooterQuickLink item md={1.3} xs={12}>
+            <FooterQuickLink item md={1.5} xs={12}>
                 <FooterTitle variant="h1">Quick Links</FooterTitle>
                 <FooterLink href="/" underline="none">
                     About Us
@@ -56,22 +68,10 @@ function Footer() {
                     Legality
                 </FooterLink>
             </FooterSupport>
-            <FooterCommunity item md={2} xs={12}>
-                <FooterTitle variant="h1">Community</FooterTitle>
-                <IconContainer>
-                    <Link href="/">
-                        <Twitter></Twitter>
-                    </Link>
-                    <Link href="/">
-                        <LinkedIn></LinkedIn>
-                    </Link>
-                    <Link href="/">
-                        <Instagram></Instagram>
-                    </Link>
-                    <Link href="/">
-                        <Phone></Phone>
-                    </Link>
-                </IconContainer>
+            <FooterCommunity item md={3} xs={12}>
+            <img className="footerLogoBranding" src={footerImg.src} alt="logoBranding"/>
+            <img className="logosFooter" src={logos.src} alt="logos"/>
+               
             </FooterCommunity>
         </FooterContainer>
     );
