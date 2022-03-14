@@ -20,6 +20,9 @@ const NavMenu = [
     {title:"ABOUT US",
     url:"about"
   },
+  {title:"OUR TEAM",
+    url:"team"
+  },
      {title:"CONTACT US",
      url:"contact"
     }

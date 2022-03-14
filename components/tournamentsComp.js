@@ -11,7 +11,7 @@ const tournamentsComp = (props) => {
             <div className="col-8 mx-auto py-3 px-0">
                 <p className="cardTitle">{props.name}</p>
                 <div className="row dataCard2">
-                <div className="col-5"><p>{props.teamSize}</p><p>Prizing - {props.prize}</p></div>
+                <div className="col-5"><p>Team Size: {props.teamSize}</p><p>Prizing - {props.prize}</p></div>
                 <div className="col-7"><p>Day - 0{props.day}</p><Button 
                     sx={{
                         borderRadius: "40px",

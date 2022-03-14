@@ -9,6 +9,11 @@ body {
   width: 100%;
   height: 100vh;
   font-family: "Martel", serif;
+  overflow-x: hidden !important;
+}
+a{
+  text-decoration: none !important;
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 .container-fluid{
   padding: 0 !important;
@@ -252,7 +257,97 @@ body {
 }
 /* *************** / TrendingVideos*************** */
 
+/************** Event Page ************* */
 
+.SimilarEventTitle{
+  text-align: left;
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 24px;
+}
+.EventPageSection{
+  background-image: url(../public/bg2.png);
+  background-position: bottom;
+  background-size: cover;
+  overflow-x: hidden !important;
+}
+.EventPageSection .eventDescription{
+  color: rgba(255, 255, 255, 0.651);
+}
+.EventPageSection .InputTeamID{
+  margin-top: 25px;
+}
+.EventPageSection .InputTeamID input{
+  color: rgba(255, 255, 255, 0.822);
+  background-color: transparent !important;
+  border: 1px solid #AA1EF1;
+}
+.EventPageSection .InputTeamID input:focus{
+  box-shadow: none !important;
+}
+.EventPageSection .InputTeamID .input-group-text{
+  background-color: transparent !important;
+  color: white;
+  border: 1px solid #AA1EF1;
+}
+.EventPageSection .eventsDate{
+  border: 1px solid #AA1EF1;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.705);
+  height: 100%;
+  /* margin: 6px 12px !important; */
+}
+.EventPageSection .eventsDate span{
+  font-size: 48px;
+  line-height: 42px;
+}
+.EventPageSection .downloadPDFcol .downloadPDF{
+  border: 1px solid #AA1EF1;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.705);
+  height: 100%;
+  width: 100% !important;
+}
+.EventPageSection .downloadPDFcol .downloadPDF img{
+  height: 30px !important;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+}
+.EventPageSection .downloadPDFcol .downloadPDF p{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0%;
+}
+.prizeAndDiscord .downloadPDFcol .downloadPDF, .prizeAndDiscord .eventsDate{
+  border-radius: 0 !important;
+}
+.prizeAndDiscord .eventsDate{
+  /* padd */
+  border-radius: 8px 0 0 8px !important;
+}
+.prizeAndDiscord .eventsDate span{
+  font-size: 24px;
+  color: #ba36fc;
+  padding-left: 8px;
+}
+.prizeAndDiscord .downloadPDFcol .downloadPDF p{
+  position:initial;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.prizeAndDiscord .downloadPDFcol .downloadPDF{
+  border-radius: 0 8px 8px 0 !important;
+}
+/************** / Event Page ************* */
 
 
 
