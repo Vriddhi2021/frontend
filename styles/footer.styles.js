@@ -18,8 +18,8 @@ export const FooterContainer = styled(Grid)`
 export const FooterAbout = styled(Grid)`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    ${'' /* align-items: center; */}
+    gap: 10px;
 
     @media (max-width: 900px) {
         align-items: flex-start;
@@ -31,6 +31,7 @@ export const FooterAboutLogo = styled.div`
 `;
 export const FooterAboutDescription = styled.div`
     text-align: justify;
+    color: #A3A3A3;
 `;
 
 export const FooterTitle = styled(Typography)`
@@ -49,8 +50,10 @@ export const FooterQuickLink = styled(Grid)`
 export const FooterLink = styled(Link)`
     cursor: pointer;
     color: inherit;
+    padding: 2px 0;
+    color: #A3A3A3 !important;
     &:hover {
-        color: #ba8ff5;
+        color: white;
     }
 `;
 
@@ -68,7 +71,8 @@ export const FooterCommunity = styled(Grid)`
 
 export const IconContainer = styled.div`
     display: flex;
-    gap: 8px;
+    margin-top: 10px;
+    gap: 10px;
 
     & svg {
         font-size: 30px;
