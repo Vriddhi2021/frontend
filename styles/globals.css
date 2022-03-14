@@ -1,25 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,200");
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: #1D023E !important;
+  background: #1d023e !important;
   position: relative;
   width: 100%;
   height: 100vh;
   font-family: "Martel", serif;
   overflow-x: hidden !important;
 }
-a{
+a {
   text-decoration: none !important;
   color: rgba(255, 255, 255, 0.8) !important;
 }
-.container-fluid{
+.container-fluid {
   padding: 0 !important;
 }
-.a__sportsBg{
-  background: url('../public/bg2.png');
+.a__sportsBg {
+  background: url("../public/bg2.png");
   background-position: center;
   background-size: cover;
 }
@@ -51,7 +53,7 @@ a{
   position: relative;
   width: 100%;
   height: 75vh;
-  background: linear-gradient(180deg, #AA1EF1 0%, rgba(170, 30, 241, 0) 100%);
+  background: linear-gradient(180deg, #aa1ef1 0%, rgba(170, 30, 241, 0) 100%);
   display: block;
   border-radius: 40px 40px 0 0;
   /* padding-bottom: 88px !important; */
@@ -98,7 +100,7 @@ a{
 }
 
 .arrow-right {
-  color: black; 
+  color: black;
   position: absolute;
   top: 50%;
   right: 0;
@@ -124,10 +126,9 @@ a{
 }
 /* / Contact us page */
 
-
 /******** tournamentsBrowseCards Styling ********/
 
-.tournamentsBrowseCards{
+.tournamentsBrowseCards {
   height: 300px !important;
   background-image: url(../public/game.png);
   border-radius: 20px;
@@ -138,10 +139,7 @@ a{
   background-repeat: no-repeat;
 }
 
-
-
-
-.tournamentsBrowseCards::after{
+.tournamentsBrowseCards::after {
   content: "";
   position: absolute;
   top: 0;
@@ -154,23 +152,18 @@ a{
   transition: transform 0.4s ease-in-out;
 }
 
-.tournamentsBrowseCards:focus::after, .tournamentsBrowseCards:hover::after {
+.tournamentsBrowseCards:focus::after,
+.tournamentsBrowseCards:hover::after {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-.tournamentsBrowseCards .cardTarsparent{
+.tournamentsBrowseCards .cardTarsparent {
   height: 60% !important;
   width: 100%;
   /* background-color: #2B0C52; */
 }
-.tournamentsBrowseCards .cardData{
-  background-color: #2B0C52;
+.tournamentsBrowseCards .cardData {
+  background-color: #2b0c52;
   color: rgba(225, 225, 225, 0.8) !important;
   border-radius: 0 0 20px 20px;
   position: absolute;
@@ -180,57 +173,56 @@ a{
   bottom: 0;
 }
 
-.tournamentsBrowseCards .cardData .roundBox{
+.tournamentsBrowseCards .cardData .roundBox {
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 20px;
 }
 
-.tournamentsBrowseCards .cardData .cardTitle{
+.tournamentsBrowseCards .cardData .cardTitle {
   font-size: 20px;
   /* font-weight: bold; */
   text-align: left !important;
   margin-bottom: 0.5rem !important;
   color: rgba(225, 225, 225, 0.8) !important;
 }
-.tournamentsBrowseCards .cardData .dataCard2 p{
+.tournamentsBrowseCards .cardData .dataCard2 p {
   margin-bottom: 0.5rem !important;
 }
-.tournamentsBrowseCards .roundBox span{
+.tournamentsBrowseCards .roundBox span {
   font-size: 48px;
   line-height: 44px;
 }
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
   color: white;
 }
-.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root{
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
   color: white;
 }
 /******** / tournamentsBrowseCards Styling ********/
 
-
 /* ***************TrendingVideos*************** */
-.trendingVideo{
+.trendingVideo {
   background-image: url(../public/bg2.png);
   background-size: cover;
   background-position: bottom;
 }
-.carousel-indicators{
+.carousel-indicators {
   display: none !important;
 }
-.carousel-control-prev{
+.carousel-control-prev {
   left: -100px !important;
 }
-.carousel-control-next{
+.carousel-control-next {
   right: -100px !important;
 }
-.carousel-item>div{
+.carousel-item > div {
   width: 100% !important;
 }
-.carousel-item{
+.carousel-item {
   border-radius: 20px !important;
   position: relative;
 }
-.carousel-item .carousel-caption{
+.carousel-item .carousel-caption {
   width: 100% !important;
   background-color: hsl(267, 74%, 18%) !important;
   position: absolute;
@@ -238,20 +230,20 @@ a{
   left: 0;
   right: 0;
 }
-.trendingHeading{
+.trendingHeading {
   text-align: left;
   padding-left: 24px !important;
   margin-top: 20px !important;
   line-height: 5px;
 }
-.trendingHeading p{
+.trendingHeading p {
   color: rgba(255, 255, 255, 0.425);
 }
-.carousel-control-next-icon{
+.carousel-control-next-icon {
   background-image: url(../public/nextIcon.png) !important;
   transform: scale(1.2);
 }
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
   background-image: url(../public/prevIcon.png) !important;
   transform: scale(1.2);
 }
@@ -259,38 +251,38 @@ a{
 
 /************** Event Page ************* */
 
-.SimilarEventTitle{
+.SimilarEventTitle {
   text-align: left;
   color: rgba(255, 255, 255, 0.8);
   padding-left: 24px;
 }
-.EventPageSection{
+.EventPageSection {
   background-image: url(../public/bg2.png);
   background-position: bottom;
   background-size: cover;
   overflow-x: hidden !important;
 }
-.EventPageSection .eventDescription{
+.EventPageSection .eventDescription {
   color: rgba(255, 255, 255, 0.651);
 }
-.EventPageSection .InputTeamID{
+.EventPageSection .InputTeamID {
   margin-top: 25px;
 }
-.EventPageSection .InputTeamID input{
+.EventPageSection .InputTeamID input {
   color: rgba(255, 255, 255, 0.822);
   background-color: transparent !important;
-  border: 1px solid #AA1EF1;
+  border: 1px solid #aa1ef1;
 }
-.EventPageSection .InputTeamID input:focus{
+.EventPageSection .InputTeamID input:focus {
   box-shadow: none !important;
 }
-.EventPageSection .InputTeamID .input-group-text{
+.EventPageSection .InputTeamID .input-group-text {
   background-color: transparent !important;
   color: white;
-  border: 1px solid #AA1EF1;
+  border: 1px solid #aa1ef1;
 }
-.EventPageSection .eventsDate{
-  border: 1px solid #AA1EF1;
+.EventPageSection .eventsDate {
+  border: 1px solid #aa1ef1;
   text-align: center;
   padding: 15px;
   border-radius: 8px;
@@ -298,12 +290,12 @@ a{
   height: 100%;
   /* margin: 6px 12px !important; */
 }
-.EventPageSection .eventsDate span{
+.EventPageSection .eventsDate span {
   font-size: 48px;
   line-height: 42px;
 }
-.EventPageSection .downloadPDFcol .downloadPDF{
-  border: 1px solid #AA1EF1;
+.EventPageSection .downloadPDFcol .downloadPDF {
+  border: 1px solid #aa1ef1;
   text-align: center;
   padding: 15px;
   border-radius: 8px;
@@ -311,45 +303,44 @@ a{
   height: 100%;
   width: 100% !important;
 }
-.EventPageSection .downloadPDFcol .downloadPDF img{
+.EventPageSection .downloadPDFcol .downloadPDF img {
   height: 30px !important;
   position: absolute;
   left: 50%;
   top: 25%;
   transform: translateX(-50%);
 }
-.EventPageSection .downloadPDFcol .downloadPDF p{
+.EventPageSection .downloadPDFcol .downloadPDF p {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0%;
 }
-.prizeAndDiscord .downloadPDFcol .downloadPDF, .prizeAndDiscord .eventsDate{
+.prizeAndDiscord .downloadPDFcol .downloadPDF,
+.prizeAndDiscord .eventsDate {
   border-radius: 0 !important;
 }
-.prizeAndDiscord .eventsDate{
+.prizeAndDiscord .eventsDate {
   /* padd */
   border-radius: 8px 0 0 8px !important;
 }
-.prizeAndDiscord .eventsDate span{
+.prizeAndDiscord .eventsDate span {
   font-size: 24px;
   color: #ba36fc;
   padding-left: 8px;
 }
-.prizeAndDiscord .downloadPDFcol .downloadPDF p{
-  position:initial;
+.prizeAndDiscord .downloadPDFcol .downloadPDF p {
+  position: initial;
   font-size: 16px;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.prizeAndDiscord .downloadPDFcol .downloadPDF{
+.prizeAndDiscord .downloadPDFcol .downloadPDF {
   border-radius: 0 8px 8px 0 !important;
 }
 /************** / Event Page ************* */
-
-
 
 /* *********Hero Text Gltch Effect********* */
 
@@ -819,3 +810,144 @@ a{
 }
 
 /* *********   / Hero Text Gltch Effect********* */
+
+/* ** Members */
+
+body {
+  font-family: Helvetica, san-serif;
+  background: -webkit-linear-gradient(
+    90deg,
+    #00aaee 10%,
+    #dd2476 90%
+  ); /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(
+    90deg,
+    #00aaee 10%,
+    #dd2476 90%
+  ); /* FF3.6+ */
+  background: -ms-linear-gradient(90deg, #00aaee 10%, #dd2476 90%); /* IE10 */
+  background: -o-linear-gradient(
+    90deg,
+    #00aaee 10%,
+    #dd2476 90%
+  ); /* Opera 11.10+ */
+  background: linear-gradient(90deg, #00aaee 10%, #dd2476 90%); /* W3C */
+}
+.transition {
+  transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+}
+.card {
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+  margin-bottom: 36px;
+}
+.card:hover {
+  height: 380px;
+  width: 300px;
+}
+.card:hover .cta-container {
+  display: inline;
+  margin-top: 380px;
+}
+.card:hover .card_circle {
+  background-size: cover;
+  border-radius: 0;
+  margin-top: -130px;
+}
+.card:hover h2 {
+  background: #3487f7;
+  color: #fff;
+  margin-top: 100px;
+  padding: 5px;
+}
+.card:hover h2 small {
+  color: #fff;
+}
+.card:hover p {
+  margin-top: 300px !important;
+}
+.card_circle {
+  background: url("/2.png") no-repeat center bottom;
+  background-color: #3487f7;
+  background-size: cover;
+  border-radius: 50% ;
+  height: 400px;
+  margin-left: -75px;
+  margin-top: -270px;
+  position: absolute;
+  width: 450px;
+}
+.card h2 {
+  color: #3487f7;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  margin-top: 150px!important;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+  
+}
+.card p {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Raleway", sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  margin-top: 200px !important;
+  position: absolute;
+  text-align: center;
+  z-index: 9999;
+}
+.cta-container {
+  display: none;
+  margin-top: 320px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+}
+.cta {
+  -moz-border-radius: 2px;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  -webkit-border-radius: 2px;
+  -webkit-transition: 0.2s ease-out;
+  background-clip: padding-box;
+  border: 2px solid #3487f7;
+  border-radius: 2px;
+  color: #3487f7;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  height: 36px;
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  margin-bottom: 15px;
+  padding: 0 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-out;
+}
+.cta:hover {
+  background-color: #3487f7;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #fff;
+  -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
