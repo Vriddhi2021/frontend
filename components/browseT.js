@@ -5,8 +5,9 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TournamentsComp from './tournamentsComp';
 import { useState } from 'react';
-import { TextField } from '@mui/material';
+import { Button, Link, TextField } from '@mui/material';
 import eventsJson from './eventsJson';
+import FlipMove from 'react-flip-move';
  
 
 const browseT = () => {
@@ -19,9 +20,9 @@ const browseT = () => {
     const handleChangeStatus = (event) => {
         setStatus(event.target.value);
     };
-    const handleChangeDay = (event) => {
-        setDay(event.target.value);
-    };
+    // const handleChangeDay = (event) => {
+    //     setDay(event.target.value);
+    // };
     const handleChangeCat = (event) => {
         setCat(event.target.value);
     };
@@ -50,11 +51,11 @@ const browseT = () => {
                 <option value="Ongoing">Ongoing</option>
                 <option value="Completed">Completed</option>
             </select>
-            <select onChange={handleChangeDay} value={day} onClick={() => filterDay(day)} class="form-select" aria-label="Default select example">
+            {/* <select onChange={handleChangeDay} value={day} onClick={() => filterDay(day)} class="form-select" aria-label="Default select example">
                 <option value="1" selected>Day 1</option>
                 <option value="2">Day 2</option>
                 <option value="3">Day 3</option>
-            </select>
+            </select> */}
 
             <select onChange={handleChangeCat} value={cat} onClick={() => filterCat(cat)} class="form-select" aria-label="Default select example">
                 {/* <option value="" selected>All Categories</option> */}
@@ -80,22 +81,41 @@ const browseT = () => {
             </div>
             </div>
             </Box>
-            <div className="row mx-auto my-5">
-            {catt.map((curData) => {
+            <div>
+            <FlipMove className="row mx-auto my-5">
+            {catt.map((old) => {
                 return (
-                    <TournamentsComp
-                        key={curData.id}
-                        id={curData.id}
-                        name={curData.name}
-                        day={curData.day}
-                        img={curData.img}
-                        date={curData.date}
-                        prize={curData.prize}
-                        teamSize={curData.teamSize}
-                        registerLink={curData.registerLink}
-                    />
+                    <div key={old.id} className="col-12 col-md-6 mx-auto px-4 py-2 my-4">
+        <div className="text-white tournamentsBrowseCards bg-dark p-2" style={{backgroundImage: `url(${old.img})`}}>
+        <div className="row cardTarsparent"></div>
+        <div className="row cardData">
+            <div className="col-4 mx-auto p-2 d-flex justify-content-center align-items-center"><div className="roundBox text-center px-2 py-3">March'22<br/><span>{old.date}</span></div></div>
+            <div className="col-8 mx-auto py-3 px-0">
+                <p className="cardTitle">{old.name}</p>
+                <div className="row dataCard2">
+                <div className="col-5"><p>Team Size: {old.teamSize}</p><p>Prizing - {old.prize}</p></div>
+                <div className="col-7"><p>Day - 0{old.day}</p><Button 
+                    sx={{
+                        borderRadius: "40px",
+                        border: "1px solid #8800CD",
+                        background: "#AA1EF1",
+                        color: "white",
+                        "&:hover": {
+                            backgroundColor: "transparent",
+                            color: "white",
+                            boxShadow: "none",
+                            border: "1px solid #8800CD",
+                        },
+                    }}
+                    variant="contained"><Link className="text-decoration-none text-white" href={`/tournaments/${old.id}`}>Register</Link></Button></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
                 )
             })}
+            </FlipMove>
             </div>
         </div>
     </section>

@@ -12,9 +12,6 @@ import logo from '../public/logoBranding.png';
 import { useState } from "react";
 
 const NavMenu = [
-   { title:"TOURNAMENT",
-    url:"tournaments"
-  },
    { title:"GALLERY",
    url:"gallery"
   },
@@ -31,6 +28,14 @@ const NavMenu = [
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const handleOpenNavMenu = (e) => {
     setAnchorElNav(true);
@@ -79,6 +84,45 @@ const Navbar = () => {
               }}
               sx={{ display: { sm: "block", md: "none" }, padding: 0 }}
             >
+            <MenuItem
+                  sx={{
+                    backgroundColor: "#18082E",
+                    color: "white",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#18082E",
+                      color: "white",
+                    },
+                  }}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Typography sx={{ padding: 3 }}><Link className="text-decoration-none text-white" href="/tournaments">
+                  <div>
+                      <Button
+                        id="basic-button"
+                        aria-controls={open ? 'basic-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}
+                      >
+                        TOURNAMENT
+                      </Button>
+                      <Menu
+                        id="basic-menu"
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        MenuListProps={{
+                          'aria-labelledby': 'basic-button',
+                        }}
+                      >
+                        <MenuItem onClick={handleClose}>Profile</MenuItem>
+                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                      </Menu>
+                    </div>
+                  </Link></Typography>
+                </MenuItem>
               {NavMenu.map((item, i) => (
                 <MenuItem
                   key={i}
@@ -136,6 +180,45 @@ const Navbar = () => {
               color: "#B7B7B7",
             }}
           >
+          <MenuItem
+                  sx={{
+                    backgroundColor: "#18082E",
+                    color: "white",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#18082E",
+                      color: "white",
+                    },
+                  }}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Typography sx={{ padding: 3 }}><Link className="text-decoration-none text-white" href="/tournaments">
+                  <div>
+                      <Button
+                        id="basic-button"
+                        aria-controls={open ? 'basic-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}
+                      >
+                        TOURNAMENT
+                      </Button>
+                      <Menu
+                        id="basic-menu"
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        MenuListProps={{
+                          'aria-labelledby': 'basic-button',
+                        }}
+                      >
+                        <MenuItem onClick={handleClose}>Profile</MenuItem>
+                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                      </Menu>
+                    </div>
+                  </Link></Typography>
+                </MenuItem>
             {NavMenu.map((item, i) => (
               <Typography sx={{ padding: 3, cursor: "pointer" }} key={i}>
                 <Link className="text-decoration-none text-white" href={`/${item.url}`}>{item.title}</Link>
