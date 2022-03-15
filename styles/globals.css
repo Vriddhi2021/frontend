@@ -357,6 +357,13 @@ a {
   background: linear-gradient(241.86deg, #C249FF 0.95%, #AA1EF1 34.48%, #9611D9 56.15%, #7A00B8 86.07%);
   padding: 20px 10px;
 }
+.browseTSelect.browseTSelected{
+  background-color: #810abd56 !important;
+  border-radius: 0px 8px 8px 0 !important;
+}
+.browseTSelect.browseTSelecting{
+  border-radius: 8px 0 0 8px !important;
+}
 /************** / Event Page ************* */
 
 /***************** footerLogoBranding**************** */
@@ -395,11 +402,49 @@ user-select: none;
   pointer-events: none;
     will-change: transform;
 }
-.ytp-embed:not(.ad-showing) .ytp-title-text {
-  display: none !important;
-}
+
 /***************** / footerLogoBranding**************** */
 
+/********* Tournaments Format ******** */
+
+
+.tournament{
+  margin: 5rem auto;
+}
+.rotateImg{
+  transform: rotate(270deg);
+}
+.arroww{
+  transform: rotate(-15deg);
+ 
+}
+.icons p{
+  font-size: smaller;
+  
+}
+.icons i{
+  color: blueviolet;
+}
+.tournament img{
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 768px) {
+  .arroww{
+      transform: rotate(45deg);
+     
+  }
+  .rotateImg{
+      transform: rotate(45deg);
+     
+  }
+  .tournament img{
+      width: 50px;
+      height: 50px;
+  }
+}
+
+/********* Tournaments Format ******** */
 
 
 /* *********Hero Text Gltch Effect********* */

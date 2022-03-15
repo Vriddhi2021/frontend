@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import TournamentsFormat from "../components/tournamentsFormat";
 // import "./styles.css";
 import SwiperCore, {
     EffectCoverflow,
@@ -13,9 +14,9 @@ SwiperCore.use([EffectCoverflow, Navigation]);
 
 export default function AppCarousel() {
     return (
-       <div className="mx-auto a__sportsBg">
+       <div className="mx-auto a__sportsBg mt-5">
             <div className="col-11 col-md-10 mx-auto py-5">
-            <div className="container-fluid containerBg py-5">
+            <div className="container-fluid containerBg mt-4 py-5">
                 <p className="_text" style={{ color: "white", textAlign: "center", padding:'10px', fontSize:'30px', fontWeight: 'bold'}}>AVAILABLE ESPORTS</p>
                 <Swiper
                     navigation={true}
@@ -63,6 +64,7 @@ export default function AppCarousel() {
 
                 </Swiper>
             </div>
+            <TournamentsFormat/>
         </div>
        </div>
     );
