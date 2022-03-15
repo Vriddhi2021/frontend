@@ -2,6 +2,8 @@ import { Instagram, LinkedIn, Phone, Twitter } from "@mui/icons-material";
 import { Link } from "@mui/material";
 import footerImg from '../public/logoBranding.png';
 import logos from '../public/logos.png';
+// import jq from './jquery';
+
 import {
     FooterAbout,
     FooterAboutDescription,
@@ -16,8 +18,11 @@ import {
 } from "../styles/footer.styles";
 
 function Footer() {
+   
     return (
-        <FooterContainer container>
+        <>
+            <span id="circle" class="circleCursor"></span>
+            <FooterContainer container>
             <FooterAbout item md={3} xs={12}>
             <FooterTitle variant="h1">About</FooterTitle>
                 <FooterAboutDescription>
@@ -74,6 +79,7 @@ function Footer() {
                
             </FooterCommunity>
         </FooterContainer>
+        </>
     );
 }
 

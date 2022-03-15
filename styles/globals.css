@@ -366,6 +366,20 @@ user-select: none;
   user-select: none;
   cursor: pointer;
 }
+.css-19mxba5-MuiTypography-root {
+  padding: 0 !important;
+}
+
+.circleCursor {
+	position: absolute;
+  border: solid 1px #9d1ddd;
+	width: 60px; 
+	height: 60px; 
+  border-radius: 50%;  
+  z-index: 9999999;
+  pointer-events: none;
+    will-change: transform;
+}
 /***************** / footerLogoBranding**************** */
 
 
