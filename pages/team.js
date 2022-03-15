@@ -9,20 +9,20 @@ import Footer from '../components/footer';
 const team = () => {
   return (
     <>
-      <Navbar />
-      <Hero
+     <Navbar/>
+     <Hero
         title="Our Team"
         img={bgHero.src}
-      />
-      <TrendingVideo />
-      <section>
-        <section>
-          <Card />
-          <Card />
-          <Card />
-        </section>
-      </section>
-      <Footer />
-    </>
+     />
+    <TrendingVideo/>
+    <section>
+    <section>
+    <Card/>
+    <Card/>
+    <Card/>
+    </section>
+    </section>
+    <Footer/>
+     </>
   )
 }
