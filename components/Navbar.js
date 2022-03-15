@@ -98,12 +98,18 @@ const Navbar = () => {
                 >
                   <Typography sx={{ padding: 3 }}><Link className="text-decoration-none text-white" href="/tournaments">
                   <div>
-                      <Button
+                      <Button className="NavButtonTournaments"
                         id="basic-button"
                         aria-controls={open ? 'basic-menu' : undefined}
                         aria-haspopup="true"
                         aria-expanded={open ? 'true' : undefined}
                         onClick={handleClick}
+                        sx={{
+                            backgroundColor: "transparent",
+                            color: "#ffffffcc",
+                            cursor: "pointer",
+                            padding: "0"
+                          }}
                       >
                         TOURNAMENT
                       </Button>
@@ -194,12 +200,17 @@ const Navbar = () => {
                 >
                   <Typography sx={{ padding: 3 }}><Link className="text-decoration-none text-white" href="/tournaments">
                   <div>
-                      <Button
+                      <Button className="NavButtonTournaments"
                         id="basic-button"
                         aria-controls={open ? 'basic-menu' : undefined}
                         aria-haspopup="true"
                         aria-expanded={open ? 'true' : undefined}
                         onClick={handleClick}
+                        sx={{
+                            backgroundColor: "transparent",
+                            color: "#ffffffcc",
+                            cursor: "pointer",
+                          }}
                       >
                         TOURNAMENT
                       </Button>

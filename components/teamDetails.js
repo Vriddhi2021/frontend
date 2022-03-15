@@ -1,4 +1,6 @@
+import noImg from "../public/team details/nan.jpg";
 import tech1 from "../public/team details/Tech Team/Mohammad Sahil.png";
+import tech4 from "../public/team details/Tech Team/kushidhar.jpeg";
 import design1 from "../public/team details/Design core team/Dinesh Kumar Behera_ VRIDDHI design core.JPG";
 import design2 from "../public/team details/Design core team/Pranav Kumar Dwivedi_ Design team.JPG";
 import design3 from "../public/team details/Design core team/PANCHIREDDI YASWANTH_VRIDDI DESIGN.jpg";
@@ -6,7 +8,7 @@ import dbm2 from "../public/team details/DBM Core team/Kumar swamy Rowthu_.jpg";
 import dbm3 from "../public/team details/DBM Core team/SOUMYA DASH.jpg";
 import publicity1 from "../public/team details/Publicity Core/Ayusman arya_.jpg";
 import sponsership1 from "../public/team details/Sponsorship core/SquarePic_20211219_00245330.jpg";
-import sponsership2 from "../public/team details/Sponsorship core/nic.jfif";
+import sponsership2 from "../public/team details/Sponsorship core/nic.jpg";
 import pr1 from "../public/team details/PR Team/Rohit Mohanty.jpg";
 import pr2 from "../public/team details/PR Team/Vardhan Gudla_.jpg";
 import em1 from "../public/team details/EM Core Team/Sravya Anupoju.jpg";
@@ -17,7 +19,7 @@ import ia3 from "../public/team details/IA team/Sidhant_Patra.jpg";
 import cm1 from "../public/team details/Crew Core Team/IMG_20220207_212958_271.jpg";
 import cm2 from "../public/team details/Crew Core Team/Mohit Kumar Sahu.jpg";
 import streaming1 from "../public/team details/Streaming team/DSC_0018-01.jpeg";
-import streaming2 from "../public/team details/Streaming team/IMG_3488.heif";
+import streaming2 from "../public/team details/Streaming team/IMG_3488.jpg";
 import workshop1 from "../public/team details/Workshop Core Team/Rajesh Sabat.jpeg";
 import workshop2 from "../public/team details/Workshop Core Team/Soubhagya kumar parida.jpeg";
 import convener1 from "../public/team details/Conveners/Chandan Kumar Ghosh.jpg";
@@ -37,42 +39,42 @@ const TeamDetails = [
         name: "Shailesh Patro",
         post: "Core Team",
         team: "Tech Team",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 3,
         name: "Aditya Malik",
         post: "Core Team",
         team: "Tech Team",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 4,
         name: "Kushidhar",
         post: "Core Team",
         team: "Tech Team",
-        img: tech1.src,
+        img: tech4.src,
     },
     {
         id: 5,
         name: "Ayan Daripa",
         post: "Core Team",
         team: "Content Team",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 6,
         name: "Ashis Tripathy",
         post: "Core Team",
         team: "Content Team",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 7,
         name: "Swagatika Jena",
         post: "Core Team",
         team: "Content Team",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 8,
@@ -100,7 +102,7 @@ const TeamDetails = [
         name: "K S S V Kishore",
         post: "Core Team",
         team: "DBM Team",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 12,
@@ -128,7 +130,7 @@ const TeamDetails = [
         name: "Gobinda Pradeep",
         post: "Core Team",
         team: "Publicity Team",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 16,
@@ -191,7 +193,7 @@ const TeamDetails = [
         name: "Samit Ranjan Patro",
         post: "Core Team",
         team: "IA Team",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 25,
@@ -219,7 +221,7 @@ const TeamDetails = [
         name: "Pradeep Ku. Behera",
         post: "Core Team",
         team: "CM Team",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 29,
@@ -252,21 +254,21 @@ const TeamDetails = [
     {
         id: 33,
         name: "Chandan Ku. Ghosh",
-        post: "Conveners",
+        post: "Convener",
         team: "",
         img: convener1.src,
     },
     {
         id: 34,
         name: "K. Santhosh Prathik",
-        post: "Conveners",
+        post: "Convener",
         team: "",
         img: convener2.src,
     },
     {
         id: 35,
         name: "Sohan Ku. Panda",
-        post: "Conveners",
+        post: "Convener",
         team: "",
         img: convener3.src,
     },
@@ -275,21 +277,21 @@ const TeamDetails = [
         name: "Prof A. Ghosh",
         post: "V.P Games and Sports Society",
         team: "",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 37,
         name: "Prof M. Dwivedi",
         post: "V.P Games and Sports Society",
         team: "",
-        img: tech1.src,
+        img: noImg.src,
     },
     {
         id: 38,
         name: "Prof. P. Singh",
         post: "President SAC",
         team: "",
-        img: tech1.src,
+        img: noImg.src,
     },
 ];
 
