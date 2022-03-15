@@ -3,15 +3,15 @@ import eventsJson from './eventsJson';
 import { useState } from 'react';
 
 const tournamentEvents = () => {
-  const majorEvents = eventsJson.filter((oldData) =>  {return oldData.category === "Major Events"} );
-  const GeneralGames = eventsJson.filter((oldData) =>  oldData.category ===  "General Games & Events" );
+  const majorEvents = eventsJson.filter((oldData) =>  {return oldData.category === "Major Event"} );
+  const GeneralGames = eventsJson.filter((oldData) =>  oldData.category ===  "General Games & events" );
   const EventswithClubs = eventsJson.filter((oldData) =>  oldData.category ===  "Events with Clubs" );
-  const FunEvents = eventsJson.filter((oldData) =>  oldData.category ===  "Fun Events (general and pre vridhi)" );
+  const FunEvents = eventsJson.filter((oldData) =>  oldData.category ===  "Fun-event" );
  
   return (
     <div className="col-11 col-md-10 mx-auto">
         <section id="majorEvents" className="row my-2">
-          <h2 className="text-white" style={{textAlign: "left", fontSize: "48px"}}>Major Events</h2><br/>
+          <h2 className="text-center mt-5 text-white" style={{textAlign: "left", fontSize: "48px"}}>Major Events</h2><br/>
           <div className="row mx-auto my-5">
             {majorEvents.map((curData) => {
                 return (
@@ -31,7 +31,7 @@ const tournamentEvents = () => {
             </div>
         </section>
         <section id="GeneralGames" className="row my-2">
-          <h2 className="text-white" style={{textAlign: "left", fontSize: "48px"}}>General Games & Events</h2><br/>
+          <h2 className="text-center mt-5 text-white" style={{textAlign: "left", fontSize: "48px"}}>General Games & Events</h2><br/>
           <div className="row mx-auto my-5">
             {GeneralGames.map((curData) => {
                 return (
@@ -51,7 +51,7 @@ const tournamentEvents = () => {
             </div>
         </section>
         <section id="EventswithClubs" className="row my-2">
-          <h2 className="text-white" style={{textAlign: "left", fontSize: "48px"}}>Events with Clubs</h2><br/>
+          <h2 className="text-center mt-5 text-white" style={{textAlign: "left", fontSize: "48px"}}>Events with Clubs</h2><br/>
           <div className="row mx-auto my-5">
             {EventswithClubs.map((curData) => {
                 return (
@@ -71,7 +71,7 @@ const tournamentEvents = () => {
             </div>
         </section>
         <section id="FunEvents" className="row my-2">
-          <h2 className="text-white" style={{textAlign: "left", fontSize: "48px"}}>Fun Events</h2><br/>
+          <h2 className="text-center mt-5 text-white" style={{textAlign: "left", fontSize: "48px"}}>Fun Events</h2><br/>
           <div className="row mx-auto my-5">
             {FunEvents.map((curData) => {
                 return (

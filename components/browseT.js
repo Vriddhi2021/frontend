@@ -44,40 +44,35 @@ const browseT = () => {
         <div className="col-11 col-md-10 mx-auto my-5">
             <h1 className="text-white text-center py-5">Browse Tournament</h1>
             <Box sx={{ minWidth: 120 }}>
-            <div className="row mx-auto">
-            <div className="col-8 d-flex">
-            <select value={status} class="form-select" aria-label="Default select example">
+            <div className="row mx-auto mt-5">
+            <div className="col-8 d-flex justify-content-between">
+            <select value={status} className="form-select mx-2 browseTSelect browseTSelectSelect" aria-label="Default select example">
                 <option selected value="Upcoming">Upcoming</option>
                 <option value="Ongoing">Ongoing</option>
                 <option value="Completed">Completed</option>
             </select>
-            {/* <select onChange={handleChangeDay} value={day} onClick={() => filterDay(day)} class="form-select" aria-label="Default select example">
+            {/* <select onChange={handleChangeDay} value={day} onClick={() => filterDay(day)} className="form-select" aria-label="Default select example">
                 <option value="1" selected>Day 1</option>
                 <option value="2">Day 2</option>
                 <option value="3">Day 3</option>
             </select> */}
 
-            <select onChange={handleChangeCat} value={cat} onClick={() => filterCat(cat)} class="form-select" aria-label="Default select example">
+            <select onChange={handleChangeCat} value={cat} onClick={() => filterCat(cat)} className="mx-2 form-select browseTSelect browseTSelectSelect" aria-label="Default select example">
                 {/* <option value="" selected>All Categories</option> */}
-                <option value="Major Events" selected>Major Events</option>
+                <option value="Major Event" selected>Major Events</option>
+                <option value="General Games & events">General Games & Events</option>
                 <option value="Events with Clubs">Events with Clubs</option>
-                <option value="Fun Events (general and pre vridhi)">Fun Events (Pre vridhi)</option>
-                <option value="General Games & Events">General Games & Events</option>
-                <option value="Fun Events (games)">Fun Events (games)</option>
+                <option value="Fun-event">Fun Event</option>
             </select>
             </div>
             <div className="col-4">
-            <FormControl fullWidth>
-                    <TextField
-                    sx={{
-                        borderRadius: "8px",
-                        borderColor: "#eee",
-                        color: "white",
-                        outline: "white"
-                    }}
-                    inputProps={{ style: {color: 'white'}}}
-                    id="outlined-basic" label="Search" variant="outlined" />
-            </FormControl>
+            
+                <form className="form-inline d-flex">
+                <label className="sr-only" for="inlineFormInputName2">Name</label>
+                <input type="text" className="browseTSelect form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="e.g: Valorant"/>
+                <button type="submit" className="browseTSelect btn btn-primary mb-2">Submit</button>
+                </form>
+
             </div>
             </div>
             </Box>
