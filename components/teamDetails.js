@@ -14,9 +14,10 @@ import em2 from "../public/team details/EM Core Team/Mihir Panda.jpg";
 import em3 from "../public/team details/EM Core Team/Riya Priyadarshini.jpg";
 import ia1 from "../public/team details/IA team/Sripriya M.jpg";
 import ia3 from "../public/team details/IA team/Sidhant_Patra.jpg";
+import cm1 from "../public/team details/Crew Core Team/IMG_20220207_212958_271.jpg";
 import cm2 from "../public/team details/Crew Core Team/Mohit Kumar Sahu.jpg";
-// import cm from "../public/team details/Crew Core Team/IMG_20220207_212958_271.jpg";
-// import streaming from "../public/team details/Streaming team/DSC_0018-01.jpeg";
+import streaming1 from "../public/team details/Streaming team/DSC_0018-01.jpeg";
+import streaming2 from "../public/team details/Streaming team/IMG_3488.heif";
 import workshop1 from "../public/team details/Workshop Core Team/Rajesh Sabat.jpeg";
 import workshop2 from "../public/team details/Workshop Core Team/Soubhagya kumar parida.jpeg";
 import convener1 from "../public/team details/Conveners/Chandan Kumar Ghosh.jpg";
@@ -204,7 +205,7 @@ const TeamDetails = [
         name: "Harsh Rangwani",
         post: "Core Team",
         team: "CM Team",
-        img: tech1.src,
+        img: cm1.src,
     },
     {
         id: 27,
@@ -225,14 +226,14 @@ const TeamDetails = [
         name: "Jnana S S Adapa",
         post: "Core Team",
         team: "Streaming Team",
-        img: tech1.src,
+        img: streaming1.src,
     },
     {
         id: 30,
         name: "Sathwik Sekharamantri",
         post: "Core Team",
         team: "Streaming Team",
-        img: tech1.src,
+        img: streaming2.src,
     },
     {
         id: 31,
