@@ -8,6 +8,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Link from 'next/link'
+import logo from '../public/logoBranding.png';
 import { useState } from "react";
 
 const NavMenu = [
@@ -44,7 +45,7 @@ const Navbar = () => {
       <AppBar sx={{ backgroundColor: "#18082E" }} position="static">
         <Toolbar>
         <Link href="/"><Box sx={{ flexGrow: { lg: 0, md: 0, sm: 1, xs: 1 } }}>
-            <Typography>LOGO</Typography>
+            <Typography><img className="logoNavBar" src={logo.src} alt="Logo"/></Typography>
           </Box></Link>
            
           <Box
