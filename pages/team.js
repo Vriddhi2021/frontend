@@ -17,15 +17,13 @@ const team = () => {
       />
       <TrendingVideo />
       <section>
-        <section>
-          <Grid container spacing={{ xs: 2, md: 6 }} columns={{ xs: 2, sm: 8, md: 12 }} style={{ margin: 'auto', }}>
-            {Array.from(Array(6)).map((_, index) => (
-              <Grid item xs={2} sm={4} md={4} key={index}>
-                <Card style={{ margin: '16px', }} />
-              </Grid>
-            ))}
-          </Grid>
-        </section>
+        <div className="row">
+          <div className="col-11 col-md-10 mx-auto">
+            <div className="row">
+            <Card/><Card/><Card/>
+            </div>
+          </div>
+        </div>
       </section>
       <Footer />
     </>
