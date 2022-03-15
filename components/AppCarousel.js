@@ -6,11 +6,10 @@ import "swiper/css/pagination";
 // import "./styles.css";
 import SwiperCore, {
     EffectCoverflow,
-    Pagination,
     Navigation
 } from "swiper/core";
 
-SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
+SwiperCore.use([EffectCoverflow, Navigation]);
 
 export default function AppCarousel() {
     return (
@@ -31,9 +30,6 @@ export default function AppCarousel() {
                         // depth: 5,
                         modifier: 5,
                         slideShadows: false
-                    }}
-                    pagination={{
-                        clickable: true
                     }}
                     className="mySwiper"
                 >
@@ -60,6 +56,9 @@ export default function AppCarousel() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src="/3.png" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src="/6.png" />
                     </SwiperSlide>
 
                 </Swiper>

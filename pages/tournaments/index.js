@@ -17,7 +17,7 @@ function tournaments() {
         <TrendingVideo/>
         <AppCarousel/>
         <section style={{background: "#1D023E"}}>
-          <h1 className='text-center text-white py-5'>Tournaments</h1>
+          {/* <h1 className='text-center text-white py-5'>Tournaments</h1> */}
           <TournamentEvents/>
         </section>
         <Footer/>

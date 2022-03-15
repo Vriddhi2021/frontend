@@ -122,9 +122,10 @@ const Navbar = () => {
                           'aria-labelledby': 'basic-button',
                         }}
                       >
-                        <MenuItem onClick={handleClose}>Profile</MenuItem>
-                        <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        <MenuItem onClick={handleClose}><Link href='/tournaments#majorEvents' className='text-decoration-none'>Major Event</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link href='/tournaments#GeneralGames' className='text-decoration-none'>General Games & Events</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link href='/tournaments#EventswithClubs' className='text-decoration-none'>Events with Clubs</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link href='/tournaments#FunEvents' className='text-decoration-none'>Fun Event</Link></MenuItem>
                       </Menu>
                     </div>
                   </Link></Typography>
@@ -198,7 +199,7 @@ const Navbar = () => {
                   }}
                   onClick={handleCloseNavMenu}
                 >
-                  <Typography sx={{ padding: 3 }}><Link className="text-decoration-none text-white" href="/tournaments">
+                  <Typography sx={{ padding: 3 }}>
                   <div>
                       <Button className="NavButtonTournaments"
                         id="basic-button"
@@ -222,13 +223,19 @@ const Navbar = () => {
                         MenuListProps={{
                           'aria-labelledby': 'basic-button',
                         }}
+                        // sx={{
+                        //     backgroundColor: "black",
+                        //     color: "#ffffffcc",
+                        //     cursor: "pointer",
+                        //   }}
                       >
-                        <MenuItem onClick={handleClose}>Profile</MenuItem>
-                        <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        <MenuItem onClick={handleClose}><Link href='/tournaments#majorEvents' className='text-decoration-none'>Major Event</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link href='/tournaments#GeneralGames' className='text-decoration-none'>General Games & Events</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link href='/tournaments#EventswithClubs' className='text-decoration-none'>Events with Clubs</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link href='/tournaments#FunEvents' className='text-decoration-none'>Fun Event</Link></MenuItem>
                       </Menu>
                     </div>
-                  </Link></Typography>
+                  </Typography>
                 </MenuItem>
             {NavMenu.map((item, i) => (
               <Typography sx={{ padding: 3, cursor: "pointer" }} key={i}>
