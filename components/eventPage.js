@@ -1,6 +1,6 @@
 import { Button, Link } from "@mui/material";
 
-const eventPage = (props) => {
+const EventPage = (props) => {
     const Actionform = (e) => {
         e.preventDefault();
         // alert(e);
@@ -36,7 +36,7 @@ const eventPage = (props) => {
                                 <input name="teamName" type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
                                 </div>
 
-                     </div><p>Fill your team mates' ID</p>{Array(Number(props.teamSize)).fill().map((_, i) => {
+                     </div><p>Fill your team mates&apos; ID</p>{Array(Number(props.teamSize)).fill().map((_, i) => {
                         return <div key={i} className="col-6 mx-auto">
                                 <div className="input-group input-group-sm mb-3">
                                 <div className="input-group-prepend">
@@ -80,4 +80,4 @@ const eventPage = (props) => {
   )
 }
 
-export default eventPage
+export default EventPage;

@@ -10,7 +10,7 @@ import eventsJson from './eventsJson';
 import FlipMove from 'react-flip-move';
  
 
-const browseT = () => {
+const BrowseT = () => {
     const [eventList, setEventList] = useState(eventsJson);
     const [status, setStatus] = useState('');
     const [cat, setCat] = useState('Major Events');
@@ -68,7 +68,7 @@ const browseT = () => {
             <div className="col-12 col-md-4 browseSearch mx-auto">
             
                 <form className="form-inline d-flex">
-                <label className="sr-only" for="inlineFormInputName2">Name</label>
+                <label className="sr-only" htmlFor="inlineFormInputName2">Name</label>
                 <input type="text" className="browseTSelect form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="e.g: Valorant"/>
                 <button type="submit" className="browseTSelect btn btn-primary mb-2">Submit</button>
                 </form>
@@ -117,4 +117,4 @@ const browseT = () => {
   )
 }
 
-export default browseT
+export default BrowseT;

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const registerUser = () => {
+const RegisterUser = () => {
     const [email, setEmail] = useState();
     const [checknitr, setChecknitr] = useState(false);
     const [submitUser, setSubmitUser] = useState(true);
@@ -26,7 +26,7 @@ const registerUser = () => {
              
             <div className="input_field checkbox_option">
             	<input onChange={(e) => setChecknitr(e.target.value)} value={checknitr} type="checkbox" id="cb1"/>
-    			<label for="cb1">I'm a NIT Rourkela student</label>
+    			<label htmlFor="cb1">I&apos;m a NIT Rourkela student</label>
             </div>
           <input onClick={(e) => setSubmitUser(false)} className="button" type="submit" value="Register" />
         </form></> :  <form onSubmit={(e) => {e.preventDefault()}}>
@@ -51,4 +51,4 @@ const registerUser = () => {
   )
 }
 
-export default registerUser
+export default RegisterUser;
