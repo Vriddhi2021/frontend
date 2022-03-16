@@ -31,7 +31,7 @@ const RegisterUser = () => {
           <input onClick={(e) => setSubmitUser(false)} className="button" type="submit" value="Register" />
         </form></> :  <form onSubmit={(e) => {e.preventDefault()}}>
         <div className="input_field"> <span><i className="fa fa-key" aria-hidden="true"></i></span>
-            <input type="text" name="otp" placeholder="Enter your OTP" autocomplete="off"  required />
+            <input type="text" name="otp" placeholder="Enter your OTP" autoComplete="off"  required />
           </div>
           <input onClick={(e) => setSubmitUser(false)} className="button" type="submit" value="Verify" />
         </form>}

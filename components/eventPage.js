@@ -50,7 +50,7 @@ const EventPage = (props) => {
                     
                     <div className="row mx-auto px-0 my-1">
                     <div className="col-6 mx-auto">
-                        <div className="eventsDate">March'22<br/><span>{props.date}</span></div>
+                        <div className="eventsDate">March&apos;22<br/><span>{props.date}</span></div>
                     </div>
                     <div className="col-6 mx-auto downloadPDFcol">
                         <Button style={{position: "relative"}} variant="outlined" className="text-capitalize downloadPDF"><img className="downloadPDFimg" src="https://breslin.biz/wp-content/uploads/2016/10/icon-pdf-white.png" alt="pdfImg"/><br/><p><Link href={props.pdfLink} className="text-decoration-none">Event Details</Link></p></Button>
