@@ -3,7 +3,7 @@ import AppCarousel from "../components/AppCarousel";
 import BrowseTournament from "../components/BrowseTournament";
 import Footer from "../components/footer";
 import Navbar from "../components/Navbar";
-import TournamentHead from "../Components/TournamentHead";
+import TournamentHead from "../components/tournamentHead";
 import BrowseT from '../components/browseT';
 import TrendingVideo from '../components/trendingVideo';
 import TournamentsFormat from '../components/tournamentsFormat';
