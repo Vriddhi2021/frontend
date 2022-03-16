@@ -23,8 +23,8 @@ import streaming2 from "../public/team details/Streaming team/IMG_3488.jpg";
 import workshop1 from "../public/team details/Workshop Core Team/Rajesh Sabat.jpeg";
 import workshop2 from "../public/team details/Workshop Core Team/Soubhagya kumar parida.jpeg";
 import convener1 from "../public/team details/Conveners/Chandan Kumar Ghosh.jpg";
-import convener2 from "../public/team details/Conveners/K. Santhosh Prathik.jpg";
-import convener3 from "../public/team details/Conveners/Sohan Kumar Panda.jpeg";
+import convener3 from "../public/team details/Conveners/K. Santhosh Prathik.jpg";
+import convener2 from "../public/team details/Conveners/Sohan Kumar Panda.jpeg";
 
 const TeamDetails = [
     {
@@ -252,6 +252,13 @@ const TeamDetails = [
         img: workshop2.src,
     },
     {
+        id: 35,
+        name: "Sohan Ku. Panda",
+        post: "Convener",
+        team: "",
+        img: convener3.src,
+    },
+    {
         id: 33,
         name: "Chandan Ku. Ghosh",
         post: "Convener",
@@ -264,13 +271,6 @@ const TeamDetails = [
         post: "Convener",
         team: "",
         img: convener2.src,
-    },
-    {
-        id: 35,
-        name: "Sohan Ku. Panda",
-        post: "Convener",
-        team: "",
-        img: convener3.src,
     },
     {
         id: 36,

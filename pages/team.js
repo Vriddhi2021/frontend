@@ -19,7 +19,7 @@ const team = () => {
       <section>
         <div className="row mt-5">
           <div className="col-11 col-md-10 mx-auto">
-          <div className="row">
+          <div className="row mx-auto">
           <h2 className="teamPageHeading text-white">Conveners</h2>
             {teamDetails.filter((old) => (old.post === "Convener")).map((oldData) => {
               return <Card
