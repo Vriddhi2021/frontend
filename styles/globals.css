@@ -1086,6 +1086,11 @@ ul {
 
 /* ******* register form *******  */
 
+.registerForm{
+  position: absolute;
+  top: 0;
+  right: 10%;
+}
 
 .clearfix:after {
   content: "";
