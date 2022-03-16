@@ -2,7 +2,7 @@
 const Card = (props) => {
     return (
         <div className="col-10 col-md-4 mx-auto">
-            <div className="card my-4">
+            <div className="card mx-auto my-4">
             <div className="img-bx">
                 <img src={props.img} alt="img" />
             </div>

@@ -21,10 +21,10 @@ export default function AppCarousel() {
                 <Swiper
                     navigation={true}
                     effect={"coverflow"}
-                    centeredSlides={false}
+                    centeredSlides={true}
                     // slidesPerView={window.innerWidth < 768 ? 1 : "auto"}
-                    slidesPerView={5}
-                    loop={false}
+                    slidesPerView={3}
+                    loop={true}
                     coverflowEffect={{
                         rotate: 0,
                         stretch: 0,
@@ -32,19 +32,8 @@ export default function AppCarousel() {
                         modifier: 5,
                         slideShadows: false
                     }}
-                    breakpoints={{
-                            // when window width is >= 640px
-                            640: {
-                            width: 640,
-                            slidesPerView: 2,
-                            },
-                            // when window width is >= 768px
-                            768: {
-                            width: 768,
-                            slidesPerView: 2,
-                            },
-                        }}
-                    className="mySwiper"
+                    
+                    className="mySwiper mx-auto"
                 >
                     <SwiperSlide>
                         <img src="/4.png" />

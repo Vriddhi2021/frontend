@@ -18,6 +18,7 @@
 .header{
     color: #ffffff;
     font-size: 2rem;  
+    margin-bottom: 20px;
     font-weight: 300;
 }
 
@@ -26,7 +27,9 @@
     font-size: 3rem;
     font-weight:600;
 }
-
+.header__main .heroText.glitch{
+  font-size: 48px !important;
+}
 div.hero__layout{
     display : flex;
     flex-direction: column;
@@ -41,8 +44,9 @@ div.hero__layout h1{
     letter-spacing: 0;
 }
 p.hero__text{
-    color:#ffffff;
+    color:#CFCFCF;
     font-size:1.5rem;
+    line-height: 1.6rem;
     max-width: 35vw;
     min-width: 100px;
 }
@@ -197,5 +201,8 @@ p.hero__text{
     }
     .hero__icons h1{
         font-size: 25px !important;
+    }
+    .header{
+      margin-bottom: 30px !important;
     }
 }
