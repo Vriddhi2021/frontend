@@ -1,6 +1,6 @@
 import Card from '../components/Card';
 import Navbar from '../components/Navbar';
-import bgHero from '../public/gellery.png';
+import bgHero from '../public/team.png';
 import Hero from '../components/hero';
 import TrendingVideo from '../components/trendingVideo';
 import teamDetails from '../components/teamDetails';

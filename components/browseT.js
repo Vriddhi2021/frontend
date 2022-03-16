@@ -42,10 +42,10 @@ const browseT = () => {
   return (
     <section style={{background: "#1D023E"}}>
         <div className="col-11 col-md-10 mx-auto my-5">
-            <h1 className="text-white text-center py-5">Browse Tournament</h1>
+            <h1 className="text-white text-center pt-5">Browse Tournament</h1>
             <Box sx={{ minWidth: 120 }}>
-            <div className="row mx-auto mt-5">
-            <div className="col-8 d-flex justify-content-between">
+            <div className="row mx-auto BrowseTournamentsPadding mt-5">
+            <div className="col-12 mx-auto col-md-8 d-flex justify-content-between">
             <select value={status} className="form-select mx-2 browseTSelect browseTSelectSelect" aria-label="Default select example">
                 <option selected value="Upcoming">Upcoming</option>
                 <option value="Ongoing">Ongoing</option>
@@ -65,7 +65,7 @@ const browseT = () => {
                 <option value="Fun-event">Fun Event</option>
             </select>
             </div>
-            <div className="col-4">
+            <div className="col-12 col-md-4 browseSearch mx-auto">
             
                 <form className="form-inline d-flex">
                 <label className="sr-only" for="inlineFormInputName2">Name</label>
@@ -88,7 +88,7 @@ const browseT = () => {
             <div className="col-8 mx-auto py-3 px-0">
                 <p className="cardTitle">{old.name}</p>
                 <div className="row dataCard2">
-                <div className="col-5"><p>Team Size: {old.teamSize}</p><p>Prizing - {old.prize}</p></div>
+                <div className="col-5"><p>Team Size: {old.teamSize}</p><p>Prize - ₹{old.prize}</p></div>
                 <div className="col-7"><p>Day - 0{old.day}</p><Button 
                     sx={{
                         borderRadius: "40px",

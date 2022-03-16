@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import TournamentHead from "../Components/TournamentHead";
 import BrowseT from '../components/browseT';
 import TrendingVideo from '../components/trendingVideo';
+import TournamentsFormat from '../components/tournamentsFormat';
 
 const Home = () => {
   return (
