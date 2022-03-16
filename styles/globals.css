@@ -1208,10 +1208,10 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 .registerForm .form_wrapper input[type=submit]:hover {
-  background: #e1a70a;
+  background: #640494;
 }
 .registerForm .form_wrapper input[type=submit]:focus {
-  background: #e1a70a;
+  background: #640494;
 }
 .registerForm .form_wrapper input[type=checkbox], .registerForm .form_wrapper input[type=radio] {
   border: 0;
