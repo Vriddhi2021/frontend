@@ -31,17 +31,18 @@ div.hero__layout{
     display : flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 }
 div.hero__layout h1{
-    font-family: Montserrat, sans-serif;
+    /* font-family: Montserrat, sans-serif; */
+    font-family: cursive !important;
     font-weight: 900;
     word-spacing: 0ch !important;
     letter-spacing: 0;
 }
 p.hero__text{
     color:#ffffff;
-    font-size:1rem;
+    font-size:1.5rem;
     max-width: 35vw;
     min-width: 100px;
 }
@@ -50,7 +51,8 @@ p.hero__text{
     background-color: #a81eed;
     border-radius: 3rem;
     color: #ffffff;
-    font-family: roboto;
+    max-width: 200px !important;
+    text-align: center;
     font-size: 1.3rem;
     font-weight: 100;
     overflow: hidden;
@@ -128,10 +130,44 @@ p.hero__text{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* transform: translateY(rem); */
-    /* margin-top: 12rem; */
+    overflow: hidden !important;
     background-color: rgba(255,255,255,0.20);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    background-color: #e74c3c;
+    color: white;
+    font-family: Gelasio;
+    font-size: 18px;
+  }
+  
+.bar_content {
+    display: block;
+    width: 100%;
+    transform: translateX(100%);
+    animation: move 30s linear infinite;
+  }
+  /* @keyframes move {
+    to { transform: translateX(-100%); }
+  } */
+
+  @keyframes move {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
 /* .hero__icons::before{
     content: "";
     background-color: linear-gradient(to right,#f3ebeb,#ffffff,0.2);
@@ -144,4 +180,22 @@ p.hero__text{
     height: 10rem;
     z-index: 999;
     opacity: 100%;
+}
+@media(max-width: 768px){
+    .hero{
+        /* background-position: left !important; */
+    }
+    p.hero__text{
+        max-width: 95%;
+    }
+    .header{
+        margin-bottom: 0 !important;
+    }
+    .hero__icons{
+        height:50px;
+        /* width: 500vw; */
+    }
+    .hero__icons h1{
+        font-size: 25px !important;
+    }
 }

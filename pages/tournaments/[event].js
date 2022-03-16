@@ -4,8 +4,7 @@ import { useRouter } from "next/router";
 import Hero from '../../components/hero';
 import EventPage from '../../components/eventPage'
 import eventJson from '../../components/eventsJson';
-import bgHero from '../../public/contactBanner.png';
-import { useEffect, useState } from "react";
+import bgHero from '../../public/event.png';
 import TournamentsComp from '../../components/tournamentsComp';
 
 

@@ -1,8 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,200");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face {
+  font-family: 'Gamerock';
+  src: url('./webfont/Gamerock.otf') format('woff2'),
+      url('./webfont/Gamerock.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   margin: 0;
   padding: 0;
+  /* font-family: 'Montserrat', sans-serif; */
 }
 .ytp-cued-thumbnail-overlay-image{
   background-image: url(../public/game.png) !important;
@@ -12,7 +22,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  font-family: "Martel", serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden !important;
 }
 a {
@@ -1041,4 +1051,98 @@ user-select: none;
 
 ul {
   padding-left: 0 rem !important;
+}
+.heroText.glitch{
+  letter-spacing: 0 !important;
+  font-size: 48px !important;
+}
+.formatTitle.tournamentsFormat{
+  margin-top: 50px;
+}
+.tournament{
+  margin: 60px 0 !important;
+}
+.browseTSelect *
+{
+ background-color: #AA1EF1 !important;
+}
+.css-1u97i3d-MuiButtonBase-root-MuiMenuItem-root{
+  background: transparent;
+}
+.css-1u97i3d-MuiButtonBase-root-MuiMenuItem-root:hover{
+  background: transparent;
+}
+.fontSizeEvents .Eventsh2{
+  font-size: 48px;
+}
+.heroText.glitch{
+  font-family: 'Gamerock' !important;
+  font-size: 108px !important;
+  letter-spacing: 3px !important;
+  text-align: center !important;
+  line-height: 150px !important; 
+}
+@media(max-width: 768px){
+  .heroText.glitch{
+    font-size: 42px !important;
+    margin-bottom: 0 !important;
+    letter-spacing: 1px !important;
+    line-height: 40px !important;
+}
+.formatTitle{
+  /* font-size: 24px !important; */
+  font-size: 27px !important;
+  margin-top: 0px !important;
+}
+.formatTitle.tournamentsFormat{
+  margin-top: 70px !important;
+}
+.tournament{
+  margin: 40px 0 !important;
+}
+.browseSearch{
+  margin-top: 20px !important;
+  padding: 0 20px !important;
+}
+.carousel-control-next{
+  right: -16% !important;
+}
+.carousel-control-prev{
+  left: -16% !important;
+}
+.cardTitle{
+  font-size: 16px !important;
+}
+.dataCard2{
+  transform: scale(0.9);
+}
+.cardData{
+  padding: 0 18px;
+}
+.dataCard2 p{
+  font-size: 10px;
+}
+.tournamentsBrowseCards .roundBox span {
+  font-size: 36px !important;
+  line-height: 32px;
+}
+.tournamentsBrowseCards .cardData .roundBox{
+  border-radius: 16px;
+  font-size: 12px;
+}
+.css-phtd2x-MuiButtonBase-root-MuiMenuItem-root{
+  background: transparent !important;
+}
+.swiper-container {
+  width: 768px;
+}
+.mySwiper{
+  left: -30px !important;
+}
+.fontSizeEvents .Eventsh2{
+  font-size: 30px;
+}
+}
+@media(max-width: 426px){
+
 }

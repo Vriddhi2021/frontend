@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Gamerock';
+    src: url('Gamerock.woff2') format('woff2'),
+        url('Gamerock.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
