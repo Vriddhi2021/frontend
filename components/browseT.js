@@ -84,7 +84,7 @@ const BrowseT = () => {
         <div className="text-white tournamentsBrowseCards bg-dark p-2" style={{backgroundImage: `url(${old.img})`}}>
         <div className="row cardTarsparent"></div>
         <div className="row cardData">
-            <div className="col-4 mx-auto p-2 d-flex justify-content-center align-items-center"><div className="roundBox text-center px-2 py-3">March'22<br/><span>{old.date}</span></div></div>
+            <div className="col-4 mx-auto p-2 d-flex justify-content-center align-items-center"><div className="roundBox text-center px-2 py-3">March&apos;22<br/><span>{old.date}</span></div></div>
             <div className="col-8 mx-auto py-3 px-0">
                 <p className="cardTitle">{old.name}</p>
                 <div className="row dataCard2">

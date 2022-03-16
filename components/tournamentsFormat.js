@@ -52,7 +52,7 @@ const tournamentsFormat = () => {
                             <EmojiEventsIcon style={{fontSize: "34px", color: "#AA1EF1", width: "45px", height: "45px"}}/>
                         </div>
                         <h4 className="fs-6 fw-normal text-white mt-2">WIN & EARN</h4>
-                        <p className='text-white'>All set,let's go!!!</p>
+                        <p className='text-white'>All set,let&apos;s go!!!</p>
                     </div>
                     
            
