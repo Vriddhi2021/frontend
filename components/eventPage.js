@@ -15,7 +15,7 @@ const EventPage = (props) => {
                 <div className="col-12 col-md-6 mx-auto">
                     <img style={{width:"100%", height: "100%"}} src={props.img} alt="Event img" className="img-fluid rounded"/>
                 </div>
-                <div className="col-12 col-md-6 mx-auto">
+                <div className="col-12 col-md-6 mx-auto eventDetailsSection">
                     <h2>{props.name}</h2>
                     <p className="eventDescription">{props.description}</p>
                     <div className="row mx-auto px-0 my-1 prizeAndDiscord">
@@ -23,7 +23,7 @@ const EventPage = (props) => {
                         <div className="eventsDate">Prize:<span>{props.prize}</span></div>
                     </div>
                     <div className="col-6 px-0 mx-auto downloadPDFcol">
-                        <Button style={{position: "relative"}} variant="outlined" className="text-capitalize downloadPDF"><p><Link href={props.discord} className="text-decoration-none">Discord Link</Link></p></Button>
+                        <Button style={{position: "relative"}} variant="outlined" className="text-capitalize downloadPDF"><p className="discordPdfLink"><Link href={props.discord} className="text-decoration-none">Discord Link</Link></p></Button>
                     </div>
                     </div>
                     <form onSubmit={Actionform} method="POST" action="/teamDetails">
@@ -37,7 +37,7 @@ const EventPage = (props) => {
                                 </div>
 
                      </div><p>Fill your team mates&apos; ID</p>{Array(Number(props.teamSize)).fill().map((_, i) => {
-                        return <div key={i} className="col-6 mx-auto">
+                        return <div key={i} className="col-12 col-md-6 mx-auto">
                                 <div className="input-group input-group-sm mb-3">
                                 <div className="input-group-prepend">
                                     <span className="input-group-text" id="inputGroup-sizing-sm">Person {i+1}*</span>
@@ -53,7 +53,7 @@ const EventPage = (props) => {
                         <div className="eventsDate">March&apos;22<br/><span>{props.date}</span></div>
                     </div>
                     <div className="col-6 mx-auto downloadPDFcol">
-                        <Button style={{position: "relative"}} variant="outlined" className="text-capitalize downloadPDF"><img className="downloadPDFimg" src="https://breslin.biz/wp-content/uploads/2016/10/icon-pdf-white.png" alt="pdfImg"/><br/><p><Link href={props.pdfLink} className="text-decoration-none">Event Details</Link></p></Button>
+                        <Button style={{position: "relative"}} variant="outlined" className="text-capitalize downloadPDF"><img className="downloadPDFimg" src="https://breslin.biz/wp-content/uploads/2016/10/icon-pdf-white.png" alt="pdfImg"/><br/><p className="discordPdfLink"><Link href={props.pdfLink} className="text-decoration-none">Event Details</Link></p></Button>
                     </div>
                     </div>
                     <div className="row mt-3">

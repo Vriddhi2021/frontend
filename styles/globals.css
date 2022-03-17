@@ -1568,7 +1568,12 @@ ul {
 .aboutCountUp {
   margin-top: -50px !important;
 }
-
+.eventDetailsSection{
+  margin-top: 30px !important;
+}
+.discordPdfLink{
+  font-size: 11px !important;
+}
 }
 @media(max-width: 426px){
 
