@@ -1121,6 +1121,18 @@ ul {
 }
 /* ****** /// contact us form ******  */
 
+.aboutCountUp .aboutCountUpIcon{
+  font-size: 70px;
+  margin-bottom: 10px;
+  color: #b542ee !important;
+}
+.aboutCountUp p{
+  color: rgba(255, 255, 255, 0.9);
+}
+.aboutCountUp h1{
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
 
 /* ******* register form *******  */
 
@@ -1543,6 +1555,18 @@ ul {
 }
 .sendMessage .sam2{
   margin-top: 16px !important;
+}
+.aboutUsContent{
+  margin-top: 30px !important;
+}
+.aboutUsContent p{
+  font-size: 14px;
+}
+.aboutUsPage{
+  padding-bottom: -10px !important;
+}
+.aboutCountUp {
+  margin-top: -50px !important;
 }
 
 }
