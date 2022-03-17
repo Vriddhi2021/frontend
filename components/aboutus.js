@@ -19,6 +19,15 @@ const Aboutus = () => {
               <div className="col-12 col-md-6 mx-auto">
               <img src={aboutImg.src} alt='image' style={{borderRadius : "20px",height:"100%",width:"100%"}}/>
               </div>
+              <div className="col-12 col-md-6 text-white mx-auto d-flex justify-content-center align-items-center">
+                <div className="aboutUsContent">
+                <h4>About Vriddhi</h4>
+                <h1>Vriddhi'2021</h1>
+                <p className="text-justify">We, at the National Institute of Technology, Rourkela, feel thrilled to announce the much-awaited next edition of our very own SPORTS fest, VRIDDHI,2021. <br/>Initiated in 2017-2018, VRIDDHI continues to carry on its motto to incite enthusiasm and sportsmanship among the contenders. It has gained national stature and established its niche as one of the largest SPORTS fests in EASTERN INDIA.<br/><br/> With the unprecedented outbreak of the novel coronavirus, VRIDDHI this year has gone online. Still, the fun and grandeur of the fest remain the same. The power-packed fest welcomes its viewers to dive into the world of E-SPORTS and have the time of their lives and embrace the gamer in them by featuring major E-SPORTS tournaments and events such as Bgmi, VALORANT, CHESS, and many more; the jazzy event will take place right on your screens.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </section>
     <section className='text-white aboutCountUp my-5 py-5'>
@@ -74,36 +83,6 @@ const Aboutus = () => {
     <TrendingVideo />
     </section>
 
-<<<<<<< HEAD
-    <section className={compstyles.counters} style ={{flex: "1",
-        height: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",flexDirection: "column"
-	}}>
-
-			<div className={compstyles.container}>
-				<div>
-					<div className={compstyles.counter}>1500</div>
-					<h3>Participants</h3>
-				</div>
-				<div>
-					<div className={compstyles.counter}>15+</div>
-					<h3>Events</h3>
-				</div>
-				<div>
-					<div className={compstyles.counter}>2000</div>
-					<h3>Followers</h3>
-				</div>
-				<div>
-					<div className={compstyles.counter}>200</div>
-					<h3>Visits</h3>
-				</div>
-			</div>
-      
-		</section>
-=======
->>>>>>> a6d9bcdf47db236e47efef31c8f1f0d9bed40d5e
     </>
    
 
@@ -111,4 +90,4 @@ const Aboutus = () => {
   )
 }
 
-export default aboutus
+export default Aboutus
