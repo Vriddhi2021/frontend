@@ -1,28 +1,80 @@
 import styles from '../styles/TournamentHead.module.css';
 import compstyles from '../styles/about.module.css';
+import aboutImg from '../public/esports.png';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import bg from '../public/bg2.png';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
+import TrendingVideo from '../components/trendingVideo';
 
-const aboutus = () => {
+const Aboutus = () => {
   return (
     <>
-       <section className='text-center text-white p-5 display-1' style ={{flex: "1",display:"flex" ,height: "100%",alignItems: "center",
-        justifyContent: "center",flexDirection : "row"}}>
-        <div className='LeftImagePart' style={{paddingLeft:"100px"}}>
-          <img src='https://as2.ftcdn.net/v2/jpg/01/17/16/11/1000_F_117161164_mBhUQUTj1vXMJYlBLVBnwgaoeNihNv00.jpg' alt='image' style ={{borderRadius : "50%",height:"300px",width:"300px"}}/>
-        </div>
-        <div className='RightTextPart' style={{paddingLeft:"100px",textAlign:"left"}}> 
-          <div  className={styles.hero__layout}>
-                  <h2 className={styles.header}>About Vriddhi</h2>
-                  <h3 className={styles.header__main}>Mauris semper nulla est, nulla est, sollicitudin et faucibus integer.Lorem ipsu</h3>
-                  <p className={styles.hero__text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Mauris semper nulla est, sollicitudin et faucibus integer.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Mauris semper nulla est, sollicitudin et faucibus integer.Mauris semper nulla est, sollicitudin et faucibus integer.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Mauris semper nulla est, sollicitudin et faucibus integer.Mauris semper nulla est, sollicitudin et faucibus integer.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Mauris semper nulla est, sollicitudin et faucibus integer.
-                  </p>
+    <section className='py-5 aboutUsPage' style={{backgroundImage: `url(${bg.src})`, backgroundPosition: "bottom", backgroundSize: "cover"}}>
+        <div className="row my-5 mx-auto">
+          <div className="col-11 col-md-10 mx-auto">
+            <div className="row">
+              <div className="col-12 col-md-6 mx-auto">
+              <img src={aboutImg.src} alt='image' style={{borderRadius : "20px",height:"100%",width:"100%"}}/>
               </div>
         </div>
     </section>
+    <section className='text-white aboutCountUp my-5 py-5'>
+      <div className="row mx-auto">
+        <div className="col-11 col-md-10 mx-auto">
+          <div className="row">
+            <div className="col-10 col-md-8 mx-auto">
+              <div className="row mx-auto">
+                <div className="col-12 col-md-4 mx-auto text-center py-3">
+                  <SportsEsportsIcon className='aboutCountUpIcon'/>
+                  <p className='display-4'><strong><CountUp suffix="+" end={25} redraw={true}>
+        {({ countUpRef, start }) => (
+            <VisibilitySensor onChange={start} delayedCall>
+                <span ref={countUpRef} />
+            </VisibilitySensor>
+        )}
+    </CountUp></strong></p>
+                  <h1>Number of Events</h1>
+                </div>
+                <div className="col-12 col-md-4 mx-auto text-center py-3">
+                <FacebookIcon className='aboutCountUpIcon'/>
+                  <p className='display-4'><strong><CountUp suffix="+" end={900} redraw={true}>
+        {({ countUpRef, start }) => (
+            <VisibilitySensor onChange={start} delayedCall>
+                <span ref={countUpRef} />
+            </VisibilitySensor>
+        )}
+    </CountUp></strong></p>
+                  <h1>Number of Likes</h1>
+                </div>
+                <div className="col-12 col-md-4 mx-auto text-center py-3">
+                <InstagramIcon className='aboutCountUpIcon'/>
+                  <p className='display-4'><strong>
 
+                  <CountUp suffix="+" end={1850} redraw={true}>
+        {({ countUpRef, start }) => (
+            <VisibilitySensor onChange={start} delayedCall>
+                <span ref={countUpRef} />
+            </VisibilitySensor>
+        )}
+    </CountUp>
+
+                  </strong></p>
+                  <h1>Number of Followers</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+    <TrendingVideo />
+    </section>
+
+<<<<<<< HEAD
     <section className={compstyles.counters} style ={{flex: "1",
         height: "100%",
         display: "flex",
@@ -50,6 +102,8 @@ const aboutus = () => {
 			</div>
       
 		</section>
+=======
+>>>>>>> a6d9bcdf47db236e47efef31c8f1f0d9bed40d5e
     </>
    
 
