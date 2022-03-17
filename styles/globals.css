@@ -1084,6 +1084,44 @@ ul {
   line-height: 150px !important; 
 }
 
+/* ****** contact us form ******  */
+
+.contactusPage .sendMessage{
+  background: rgba(255, 255, 255, 0.1) !important;
+  mix-blend-mode: luminosity;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);
+}
+.contactusPage .contactInfo{
+  height: 100%;
+  min-height: 360px;
+}
+.soci_wrap li a i{
+  padding-bottom: 30px !important;
+}
+.locatinIcon, .soci_wrap li a i{
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.sendMessage .sam1{
+  margin-right: 5px !important;
+}
+.sendMessage .sam2{
+  margin-left: 5px !important;
+}
+.accordion__button{
+  background-color: #2B0C52 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.accordion__panel {
+  background-color: #2B0C52;
+  mix-blend-mode: luminosity;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* ****** /// contact us form ******  */
+
+
 /* ******* register form *******  */
 
 .registerForm{
@@ -1484,6 +1522,29 @@ ul {
 .teamPageHeading{
   text-align: center;
 }
+.sendMessage h4, .contactInfo h4{
+  text-align: center !important;
+}
+.soci_wrap {
+  position: relative;
+  bottom: 0;
+}
+.soci_wrap a i{
+  font-size: 23px;
+}
+.contactusPage .contactInfo {
+  padding: 2rem !important;
+}
+.locatinIcon p{
+  font-size: 14px;
+}
+.sendMessage .sam1, .sendMessage .sam2{
+  margin: 0 !important;
+}
+.sendMessage .sam2{
+  margin-top: 16px !important;
+}
+
 }
 @media(max-width: 426px){
 
