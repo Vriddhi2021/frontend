@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <script>
+      // function onOpenHandler () {
+      //   alert('Payments Modal is Opened');
+      // }
+
+      // function onCloseHandler () {
+      //   alert('Payments Modal is Closed');
+      // }
+
+      async function onPaymentSuccessHandler(response) {
+        // alert('Payment Success');
+        // console.log('Payment Success Response', response);
+        let url = 'https://api.vriddhinitr.com/payment';
+        let method = 'POST';
+        let body = {
+          "userid": "Adi72Hzb" // change this with curruser ID. {using context}
+        };
+        let headers = {};
+        let res = await fetch(url,{
+          method,
+          body,
+          headers
+        });
+        console.log(res);
+      }
+
+      function onPaymentFailureHandler (response) {
+        alert('Payment Failure');
+        console.log('Payment Failure Response', response);
+      }
+      /* End client-defined Callback Handler Functions */
+
+      /* Configuring Handlers */
+      Instamojo.configure({
+        handlers: {
+          // onOpen: onOpenHandler,
+          // onClose: onCloseHandler,
+          onSuccess: onPaymentSuccessHandler,
+          onFailure: onPaymentFailureHandler
+        }
+      });
+        Instamojo.open("https://www.instamojo.com/@StudentActivityCenter/la20282e39ada4703a73fb132612a7eff/");
+      </script>
+  </body>
+</html>
