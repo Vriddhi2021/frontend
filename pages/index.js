@@ -1,12 +1,10 @@
 import Head from "next/head";
 import AppCarousel from "../components/AppCarousel";
-import BrowseTournament from "../components/BrowseTournament";
 import Footer from "../components/footer";
 import Navbar from "../components/Navbar";
-import TournamentHead from "../components/tournamentHead";
+import HeaderTourna from "../components/HeaderTourna";
 import BrowseT from '../components/browseT';
 import TrendingVideo from '../components/trendingVideo';
-import TournamentsFormat from '../components/tournamentsFormat';
 
 const Home = () => {
   return (
@@ -25,7 +23,7 @@ const Home = () => {
         </h1> */}
         <div className=""></div>
       </main>
-      <TournamentHead />
+      <HeaderTourna/>
       <AppCarousel />
       <BrowseT/>
       <TrendingVideo/>

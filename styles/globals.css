@@ -1,18 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,200");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@font-face {
-  font-family: 'Gamerock';
-  src: url('./webfont/Gamerock.otf') format('woff2'),
-      url('./webfont/Gamerock.ttf') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 * {
   margin: 0;
   padding: 0;
-  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
 }
 .ytp-cued-thumbnail-overlay-image{
   background-image: url(../public/game.png) !important;

@@ -132,7 +132,7 @@ function contact() {
                 </Button>
                 <AccordionItemPanel>
                     <p>
-                    Anyone can participate no matter who you are, be it a school-going student, a pro gamer, or an amateur in gaming. It's time to embrace the gamer in yourself
+                    Anyone can participate no matter who you are, be it a school-going student, a pro gamer, or an amateur in gaming. It&apos;s time to embrace the gamer in yourself
                     </p>
                 </AccordionItemPanel>
               </AccordionItem>
