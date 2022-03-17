@@ -18,7 +18,8 @@ function TournamentHead(){
             </div>
             </div>
             </div>
-            <div className={styles.hero__icons}>
+            {/* <div className={styles.hero__icons}> */}
+            <div className="d-none">
                 <h1 className='text-white display-4 text-uppercase bar'><span className='bar_content'>Welcome to first ever E-sports fest of Eastern India. So don&apos;t hold back and mark the date. 25th - 27th March&apos;2020</span></h1>
             </div>
         </section>
