@@ -20,7 +20,7 @@ function Footer() {
    
     return (
         <>
-            <span id="circle" className="circleCursor"></span>
+            {/* <span id="circle" className="circleCursor"></span> */}
             <FooterContainer container>
             <FooterAbout item md={3} xs={12}>
             <FooterTitle variant="h1">About</FooterTitle>
