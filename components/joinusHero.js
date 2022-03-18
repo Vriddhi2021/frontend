@@ -7,7 +7,7 @@ const joinusHero = () => {
     <div className='d-flex justify-content-center align-items-center' style={{height: "100%"}}>
     <div className='col-11 col-md-10 mx-auto'>
         <div className={styles.hero__layout} style={{alignItems: "center !important"}}>
-            <h1 className="heroText glitch layersText text-white text-center text-uppercase" data-text="JOIN US" style={{fontSize: "78px", textAlign: "left !important"}}><span>Join us</span></h1>
+            <h1 className="heroText glitch heroTextGlitch layersText text-white text-center text-uppercase" data-text="JOIN US" style={{fontSize: "78px", marginLeft: "-512px"}}><span>Join us</span></h1>
         </div>
         </div>
         </div>
