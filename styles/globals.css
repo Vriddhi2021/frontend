@@ -1520,8 +1520,8 @@ ul {
   /* background-color: white; */
 }
 .mySwiper .swiper-wrapper{
-  /* left: -90px; */
-  transform: scale(0.7) !important;
+  left: -90px;
+  /* transform: scale(0.7) !important; */
 }
 .fontSizeEvents .Eventsh2{
   font-size: 30px;
