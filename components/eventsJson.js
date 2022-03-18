@@ -1,13 +1,13 @@
-import img from "../public/game.png";
+import img from "../public/events/commonImg.png";
 import valorant from "../public/events/vALORANT.jpg";
 import csgo from "../public/events/CSGO-Operation-10-Details.jpg";
 import codm from "../public/events/CODM.jpg";
-import clashRoyale from "../public/events/Clash Royale.png";
-import rocketLeague from "../public/events/Rocket league.jpg";
-import freeFire from "../public/events/Free Fire max.png";
-import fantasyCricket from "../public/events/Fanatsy Cricket Betting.jpeg";
+import clashRoyale from "../public/events/ClashRoyale.png";
+import rocketLeague from "../public/events/Rocketleague.jpg";
+import freeFire from "../public/events/FreeFiremax.png";
+import fantasyCricket from "../public/events/FanatsyCricketBetting.jpeg";
 import skribble from "../public/events/Skribble.png";
-import amongUs from "../public/events/Among Us.jpg";
+import amongUs from "../public/events/AmongUs.jpg";
 import sudduko from "../public/events/sudoku.jpg";
 import typeracer from "../public/events/typeracer.jpg";
 import ludo from "../public/events/Ludo.jpg";
@@ -190,7 +190,7 @@ const Events = [
     },
     {
         id: 14,
-        name: "Debate (Clarion)",
+        name: "Wrangle of Wits (Clarion)",
         category: "Events with Clubs",
         description: "Debate Event",
         teamSize: 1,

@@ -14,7 +14,7 @@ SwiperCore.use([EffectCoverflow, Navigation]);
 
 export default function AppCarousel() {
     return (
-       <div className="mx-auto a__sportsBg mt-5">
+       <div id="esports" className="mx-auto a__sportsBg mt-5">
             <div className="col-11 col-md-10 mx-auto py-5">
             <div className="container-fluid containerBg mt-4 py-5">
                 <p className="_text formatTitle" style={{ color: "white", textAlign: "center", padding:'10px', fontSize:'30px', fontWeight: 'bold'}}>AVAILABLE ESPORTS</p>

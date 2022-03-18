@@ -1,21 +1,18 @@
+import Navbar from '../../components/Navbar';
 import Head from "next/head";
-import AppCarousel from "../components/AppCarousel";
-import Footer from "../components/footer";
-import Navbar from "../components/Navbar";
-import HeaderTourna from "../components/HeaderTourna";
-import BrowseT from '../components/browseT';
-import TrendingVideo from '../components/trendingVideo';
+import Footer from '../../components/footer';
+import RegisterUser from '../../components/registerUser';
+import JoinusHero from '../../components/joinusHero';
 
-const Home = () => {
+const Register = () => {
   return (
-    <div className="container-fluid">
-      <Head>
-        <title>Vriddhi NITR- E-sports Fest</title>
+    <>
+        <Head>
+        <title>Vriddhi - Register</title>
 
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
-
         {/* *********** Meta SEO***********  */}
         <meta property="og:title" content="Vriddhi'21, E-sports is a place for all of you, so don't hold back. Embrace the gamer in you as you will have the most fantastic time during Vriddhi 2021 this year" />
         <meta name="keywords"  content="vriddhinitr,vriddhinitrkl,vriddhinitrourkela, vriddhi, fest nitr, fest, festnitr, festnitrkl, nitr,nitrkl,nitrourkela,nit,rourkela,nit rourkela,esports fest,esports" />
@@ -30,21 +27,12 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Navbar />
+        <Navbar/>
+        <JoinusHero/>
+        <RegisterUser/>
+        <Footer/>
+    </>
+  )
+}
 
-      <main className="">
-        {/* <h1 className={styles.title}>
-          Welcome to <a href="#">Vriddhi 2021</a>
-        </h1> */}
-        <div className=""></div>
-      </main>
-      <HeaderTourna/>
-      <AppCarousel />
-      <BrowseT/>
-      <TrendingVideo/>
-      <Footer />
-    </div>
-  );
-};
-
-export default Home;
+export default Register
