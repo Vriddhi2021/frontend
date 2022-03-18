@@ -55,9 +55,9 @@ const OtpVerify = () => {
                     required
                   />
                 </div>
-                <button type="submit" className="button" onClick={handleSubmit}>
-                  Verify OTP
-                </button>
+                <input type="submit" value="Verify OTP" className="button" onClick={handleSubmit}/>
+                  
+ 
               </form>
             </div>
           </div>
