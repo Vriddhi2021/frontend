@@ -1069,7 +1069,8 @@ ul {
 }
 
 .heroText.glitch{
-  font-family: 'Gamerock' !important;
+  /* font-family: 'Gamerock' !important; */
+  font-weight: 900;
   font-size: 108px !important;
   letter-spacing: 3px !important;
   text-align: center !important;
