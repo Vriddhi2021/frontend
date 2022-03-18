@@ -18,7 +18,7 @@ function HeaderTourna() {
                 className="text-uppercase heroText glitch layersText"
                 data-text="VRIDDHI'2021"
                 style={{
-                  fontSize: "30px !important",
+                  fontSize: "60px !important",
                   // lineHeight: "40px !important",
                 }}
               >
