@@ -7,26 +7,18 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import Link from 'next/link'
-import logo from '../public/logoBranding.png';
+import Link from "next/link";
+import logo from "../public/logoBranding.png";
 import { useState } from "react";
 import { ClassNames } from "@emotion/react";
 import { theme } from "@mui/system";
 import { makeStyles } from '@material-ui/styles'
 
 const NavMenu = [
-   { title:"GALLERY",
-   url:"gallery"
-  },
-    {title:"ABOUT US",
-    url:"about"
-  },
-  {title:"OUR TEAM",
-    url:"team"
-  },
-     {title:"CONTACT US",
-     url:"contact"
-    }
+  { title: "GALLERY", url: "gallery" },
+  { title: "ABOUT US", url: "about" },
+  { title: "OUR TEAM", url: "team" },
+  { title: "CONTACT US", url: "contact" },
 ];
 
 export const useStyles = makeStyles((theme) => ({
@@ -58,15 +50,22 @@ const Navbar = () => {
   const handleCloseNavMenu = (e) => {
     setAnchorElNav(false);
   };
+  const openOauth = () => {
+    window.open("https://api.vriddhinitr.com/auth/google", "_self");
+  };
 
   return (
     <div>
       <AppBar sx={{ background: "#18082E !important" }} position="static">
         <Toolbar>
-        <Link href="/"><Box sx={{ flexGrow: { lg: 0, md: 0, sm: 1, xs: 1 } }}>
-            <Typography><img className="logoNavBar" src={logo.src} alt="Logo"/></Typography>
-          </Box></Link>
-           
+          <Link href="/">
+            <Box sx={{ flexGrow: { lg: 0, md: 0, sm: 1, xs: 1 } }}>
+              <Typography>
+                <img className="logoNavBar" src={logo.src} alt="Logo" />
+              </Typography>
+            </Box>
+          </Link>
+
           <Box
             sx={{
               flexGrow: 1,
@@ -102,28 +101,29 @@ const Navbar = () => {
                   sx={{
                     backgroundColor: "#18082E !important",
                     color: "white",
-                    cursor: "pointer",
-                    "&:hover": {
-                      backgroundColor: "#18082E",
-                      color: "white",
-                    },
-                  }}
-                  onClick={handleCloseNavMenu}
-                >
-                  <Typography sx={{ padding: 3 }}><Link className="text-decoration-none text-white" href="/tournaments">
-                  <div>
-                      <Button className="NavButtonTournaments"
+                  },
+                }}
+                onClick={handleCloseNavMenu}
+              >
+                <Typography sx={{ padding: 3 }}>
+                  <Link
+                    className="text-decoration-none text-white"
+                    href="/tournaments"
+                  >
+                    <div>
+                      <Button
+                        className="NavButtonTournaments"
                         id="basic-button"
-                        aria-controls={open ? 'basic-menu' : undefined}
+                        aria-controls={open ? "basic-menu" : undefined}
                         aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
+                        aria-expanded={open ? "true" : undefined}
                         onClick={handleClick}
                         sx={{
-                            backgroundColor: "transparent",
-                            color: "#ffffffcc",
-                            cursor: "pointer",
-                            padding: "0"
-                          }}
+                          backgroundColor: "transparent",
+                          color: "#ffffffcc",
+                          cursor: "pointer",
+                          padding: "0",
+                        }}
                       >
                         TOURNAMENT
                       </Button>
@@ -133,18 +133,47 @@ const Navbar = () => {
                         open={open}
                         onClose={handleClose}
                         MenuListProps={{
-                          'aria-labelledby': 'basic-button',
+                          "aria-labelledby": "basic-button",
                         }}
                         className={ClassNames.menu}
                       >
-                        <MenuItem onClick={handleClose}><Link href='/tournaments#majorEvents' className='text-decoration-none'>Major Event</Link></MenuItem>
-                        <MenuItem onClick={handleClose}><Link href='/tournaments#GeneralGames' className='text-decoration-none'>General Games & Events</Link></MenuItem>
-                        <MenuItem onClick={handleClose}><Link href='/tournaments#EventswithClubs' className='text-decoration-none'>Events with Clubs</Link></MenuItem>
-                        <MenuItem onClick={handleClose}><Link href='/tournaments#FunEvents' className='text-decoration-none'>Fun Event</Link></MenuItem>
+                        <MenuItem onClick={handleClose}>
+                          <Link
+                            href="/tournaments#majorEvents"
+                            className="text-decoration-none"
+                          >
+                            Major Event
+                          </Link>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                          <Link
+                            href="/tournaments#GeneralGames"
+                            className="text-decoration-none"
+                          >
+                            General Games & Events
+                          </Link>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                          <Link
+                            href="/tournaments#EventswithClubs"
+                            className="text-decoration-none"
+                          >
+                            Events with Clubs
+                          </Link>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                          <Link
+                            href="/tournaments#FunEvents"
+                            className="text-decoration-none"
+                          >
+                            Fun Event
+                          </Link>
+                        </MenuItem>
                       </Menu>
                     </div>
-                  </Link></Typography>
-                </MenuItem>
+                  </Link>
+                </Typography>
+              </MenuItem>
               {NavMenu.map((item, i) => (
                 <MenuItem
                   key={i}
@@ -161,7 +190,6 @@ const Navbar = () => {
                 >
                   <Typography sx={{ padding: 3, lineHeight: "50px"  }}><Link className="text-decoration-none text-white" href={`/${item.url}`}>{item.title}</Link></Typography>
                 </MenuItem>
-                
               ))}
 
               <MenuItem
@@ -180,6 +208,7 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
               >
                 <Button
+                  onClick={openOauth}
                   sx={{
                     borderRadius: "40px",
                     borderColor: "#AA1EF1",
@@ -202,56 +231,85 @@ const Navbar = () => {
               color: "#B7B7B7",
             }}
           >
-          <MenuItem
-                  sx={{
-                    backgroundColor: "#18082E",
-                    color: "white",
-                    cursor: "pointer",
-                    "&:hover": {
-                      backgroundColor: "#18082E",
-                      color: "white",
-                    },
-                  }}
-                  onClick={handleCloseNavMenu}
-                >
-                  <Typography sx={{ padding: 3 }}>
-                  <div>
-                      <Button className="NavButtonTournaments"
-                        id="basic-button"
-                        aria-controls={open ? 'basic-menu' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
-                        sx={{
-                            backgroundColor: "transparent",
-                            color: "#ffffffcc",
-                            cursor: "pointer",
-                          }}
+            <MenuItem
+              sx={{
+                backgroundColor: "#18082E",
+                color: "white",
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "#18082E",
+                  color: "white",
+                },
+              }}
+              onClick={handleCloseNavMenu}
+            >
+              <Typography sx={{ padding: 3 }}>
+                <div>
+                  <Button
+                    className="NavButtonTournaments"
+                    id="basic-button"
+                    aria-controls={open ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? "true" : undefined}
+                    onClick={handleClick}
+                    sx={{
+                      backgroundColor: "transparent",
+                      color: "#ffffffcc",
+                      cursor: "pointer",
+                    }}
+                  >
+                    TOURNAMENT
+                  </Button>
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    MenuListProps={{
+                      "aria-labelledby": "basic-button",
+                    }}
+                    // sx={{
+                    //     backgroundColor: "black",
+                    //     color: "#ffffffcc",
+                    //     cursor: "pointer",
+                    //   }}
+                  >
+                    <MenuItem onClick={handleClose}>
+                      <Link
+                        href="/tournaments#majorEvents"
+                        className="text-decoration-none"
                       >
-                        TOURNAMENT
-                      </Button>
-                      <Menu
-                        id="basic-menu"
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                        MenuListProps={{
-                          'aria-labelledby': 'basic-button',
-                        }}
-                        // sx={{
-                        //     backgroundColor: "black",
-                        //     color: "#ffffffcc",
-                        //     cursor: "pointer",
-                        //   }}
+                        Major Event
+                      </Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Link
+                        href="/tournaments#GeneralGames"
+                        className="text-decoration-none"
                       >
-                        <MenuItem onClick={handleClose}><Link href='/tournaments#majorEvents' className='text-decoration-none'>Major Event</Link></MenuItem>
-                        <MenuItem onClick={handleClose}><Link href='/tournaments#GeneralGames' className='text-decoration-none'>General Games & Events</Link></MenuItem>
-                        <MenuItem onClick={handleClose}><Link href='/tournaments#EventswithClubs' className='text-decoration-none'>Events with Clubs</Link></MenuItem>
-                        <MenuItem onClick={handleClose}><Link href='/tournaments#FunEvents' className='text-decoration-none'>Fun Event</Link></MenuItem>
-                      </Menu>
-                    </div>
-                  </Typography>
-                </MenuItem>
+                        General Games & Events
+                      </Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Link
+                        href="/tournaments#EventswithClubs"
+                        className="text-decoration-none"
+                      >
+                        Events with Clubs
+                      </Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Link
+                        href="/tournaments#FunEvents"
+                        className="text-decoration-none"
+                      >
+                        Fun Event
+                      </Link>
+                    </MenuItem>
+                  </Menu>
+                </div>
+              </Typography>
+            </MenuItem>
             {NavMenu.map((item, i) => (
               <Typography sx={{ padding: 3, cursor: "pointer", lineHeight: "50px" }} key={i}>
                 <Link className="text-decoration-none text-white" href={`/${item.url}`}>{item.title}</Link>
@@ -266,6 +324,7 @@ const Navbar = () => {
             }}
           >
             <Button
+              onClick={openOauth}
               sx={{
                 borderRadius: "40px",
                 borderColor: "#AA1EF1",
