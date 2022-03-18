@@ -42,11 +42,14 @@ const RegisterUser = () => {
     let token = getCookie("jwt");
     try {
       axios.post("https://api.vriddhinitr.com/User/Register", person, {
-        header: {
-          authorization: `${token}`,
+        headers: {
+          authorization: String(token),
+          mode: "no-cors",
         },
       });
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <section className="py-5 my-5 registerForm">

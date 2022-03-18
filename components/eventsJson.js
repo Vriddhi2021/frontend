@@ -11,6 +11,7 @@ import amongUs from "../public/events/AmongUs.jpg";
 import sudduko from "../public/events/sudoku.jpg";
 import typeracer from "../public/events/typeracer.jpg";
 import ludo from "../public/events/Ludo.jpg";
+import pubg from "../public/events/PUBG.png";
 
 const Events = [
     {
@@ -24,7 +25,7 @@ const Events = [
         day: 3,
         date: 27,
         discord: "#",
-        img: img.src,
+        img: pubg.src,
     },
     {
         id: 2,
@@ -37,7 +38,7 @@ const Events = [
         day: 2,
         date: 26,
         discord: "#",
-        img: img.src,
+        img: pubg.src,
     },
     {
         id: 3,
@@ -48,7 +49,7 @@ const Events = [
         prize: "20,000",
         pdfLink:
             "https://docs.google.com/document/d/1NGDTX5HF8aDsKyP5mpu5Q4DveD1n6ARopIMyJgF34Xs/edit?usp=sharing",
-        day: "1,2",
+        day: "1,02",
         date: 25,
         discord: "#",
         img: valorant.src,
@@ -131,7 +132,7 @@ const Events = [
         prize: "3,000",
         pdfLink:
             "https://docs.google.com/document/d/1cH1QFjHo2wDaQyTZRP2psKe1QN0pnq8LCE3xLvzyWn0/edit?usp=sharing",
-        day: "2,3",
+        day: "2,03",
         date: 26,
         discord: "#",
         img: fantasyCricket.src,

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 const OtpVerify = () => {
   const [person, setPerson] = useState({
@@ -10,10 +11,16 @@ const OtpVerify = () => {
     const value = e.target.value;
     setPerson({ ...person, [name]: value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     try {
-      axios.post("https://api.vriddhinitr.com/auth/Email-send", person);
+      await axios.post("https://api.vriddhinitr/User/auth/otp-verify", {nitrMail:person.nitrMail});
+    } catch (err) {}
+  };
+  const handleSubmit2 = async (e) => {
+    e.preventDefault();
+    try {
+      const data = await axios.post("https://api.vriddhinitr/User/auth/otp-verify2", person);
     } catch (err) {}
   };
   return (
@@ -40,6 +47,7 @@ const OtpVerify = () => {
                     pattern=".+@nitrkl\.ac\.in"
                   />
                 </div>
+                <input type="submit" value="Send OTP" className="button" onClick={handleSubmit}/>
                 <div className="input_field">
                   {" "}
                   <span>
@@ -55,7 +63,7 @@ const OtpVerify = () => {
                     required
                   />
                 </div>
-                <input type="submit" value="Verify OTP" className="button" onClick={handleSubmit}/>
+                <input type="submit" value="Verify OTP" className="button" onClick={handleSubmit2}/>
                   
  
               </form>
