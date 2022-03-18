@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from 'axios';
 
 const RegisterUser = () => {
   const [isNitr, setIsNitr] = useState(false);
@@ -6,6 +7,7 @@ const RegisterUser = () => {
     name: "",
     collegeName: "",
     nitrMail: "",
+    isNitr: isNitr
   });
   const handleChange = (e) => {
     const name = e.target.name;
@@ -13,9 +15,12 @@ const RegisterUser = () => {
     setPerson({ ...person, [name]: value });
   };
   const handleChange2 = (e) => {
-    setIsNitr(!isNitr);
+    if(isNitr)
+      setIsNitr(false);
+    else
+      setIsNitr(true);
     const name = e.target.name;
-    setPerson({ ...person, [name]: isNitr });
+    setPerson({ ...person, [name]: !isNitr });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
