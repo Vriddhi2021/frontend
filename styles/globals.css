@@ -355,9 +355,9 @@ a {
 .browseTSelect.browseTSelectSelect{
   background-image: url('https://www.pngkit.com/png/full/49-493567_want-to-build-a-new-income-stream-online.png') !important;
 }
-.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper{
+.MuiPaper-root{
   background: linear-gradient(241.86deg, #C249FF 0.95%, #AA1EF1 34.48%, #9611D9 56.15%, #7A00B8 86.07%);
-  padding: 20px 10px;
+  /* padding: 20px 10px !important; */
 }
 .browseTSelect.browseTSelected{
   background-color: #810abd56 !important;
