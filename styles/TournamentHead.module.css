@@ -3,7 +3,7 @@
     top:0;
     left: 0;
     /* background :linear-gradient(to right , #1d023e 0%, #0e011f ) ; */
-    background-image: url('../public/banner.png');
+    background-image: url('/banner.png');
     background-position: center center;
     background-size: cover;
     width : 100%;
