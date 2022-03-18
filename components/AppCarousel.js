@@ -59,9 +59,9 @@ export default function AppCarousel() {
                     <SwiperSlide>
                         <img src="/3.png" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                         <img src="/6.png" />
-                    </SwiperSlide>
+                    </SwiperSlide> */}
 
                 </Swiper>
             </div>

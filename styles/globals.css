@@ -1074,7 +1074,7 @@ ul {
   font-size: 108px !important;
   letter-spacing: 3px !important;
   text-align: center !important;
-  line-height: 150px !important; 
+  /* line-height: 150px !important;  */
 }
 
 /* ****** contact us form ******  */
