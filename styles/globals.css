@@ -1131,7 +1131,8 @@ ul {
 
 .registerForm{
   position: absolute;
-  top: 0;
+  top: 47%;
+  transform: translateY(-50%);
   right: 10%;
 }
 
@@ -1567,6 +1568,15 @@ ul {
 }
 .discordPdfLink{
   font-size: 11px !important;
+}
+.registerForm{
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%) scale(0.8);
+}
+.heroTextGlitch{
+  margin-left: 0 !important;
+  margin-top: -90%;
 }
 }
 @media(max-width: 426px){
