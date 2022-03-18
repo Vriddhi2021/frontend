@@ -1,5 +1,6 @@
 import noImg from "../public/team details/nan.jpg";
 import tech1 from "../public/team details/Tech Team/Mohammad Sahil.png";
+import tech3 from "../public/team details/Tech Team/Adi72Hzb.jpg";
 import tech4 from "../public/team details/Tech Team/kushidhar.jpeg";
 import design1 from "../public/team details/Design core team/Dinesh Kumar Behera_ VRIDDHI design core.JPG";
 import design2 from "../public/team details/Design core team/Pranav Kumar Dwivedi_ Design team.JPG";
@@ -46,7 +47,7 @@ const TeamDetails = [
         name: "Aditya Malik",
         post: "Core Team",
         team: "Tech Team",
-        img: noImg.src,
+        img: tech3.src,
     },
     {
         id: 4,
