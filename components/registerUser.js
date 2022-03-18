@@ -23,7 +23,7 @@ const RegisterUser = () => {
     setPerson({ ...person, [name]: !isNitr });
   };
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     function getCookie(cname) {
       let name = cname + "=";
       let decodedCookie = decodeURIComponent(document.cookie);
@@ -61,7 +61,7 @@ const RegisterUser = () => {
           <div className="row clearfix">
             <div className="">
               <>
-                <form onSubmit={e => e.preventDefault()}>
+                <form>
                   <div className="input_field">
                    
                     <span>
