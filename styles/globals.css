@@ -25,7 +25,7 @@ a {
   padding: 0 !important;
 }
 .a__sportsBg {
-  background: url("../public/bg2.png");
+  background: url("/bg2.png");
   background-position: center;
   background-size: cover;
 }
@@ -207,7 +207,7 @@ a {
 
 /* ***************TrendingVideos*************** */
 .trendingVideo {
-  background-image: url(../public/bg2.png);
+  background-image: url(/bg2.png);
   background-size: cover;
   background-position: bottom;
 }
@@ -262,7 +262,7 @@ a {
   padding-left: 24px;
 }
 .EventPageSection {
-  background-image: url(../public/bg2.png);
+  background-image: url(/bg2.png);
   background-position: bottom;
   background-size: cover;
   overflow-x: hidden !important;
