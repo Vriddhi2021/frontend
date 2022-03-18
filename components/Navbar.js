@@ -101,7 +101,6 @@ const Navbar = () => {
                   sx={{
                     backgroundColor: "#18082E !important",
                     color: "white",
-                  },
                 }}
                 onClick={handleCloseNavMenu}
               >
