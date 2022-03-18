@@ -53,9 +53,9 @@ const RegisterUser = () => {
           <div className="row clearfix">
             <div className="">
               <>
-                <form>
+                <form onSubmit={e => e.preventDefault()}>
                   <div className="input_field">
-                    {" "}
+                   
                     <span>
                       <i aria-hidden="true" className="fa fa-user"></i>
                     </span>
@@ -70,7 +70,7 @@ const RegisterUser = () => {
                   </div>
 
                   <div className="input_field">
-                    {" "}
+                   
                     <span>
                       <i className="fa fa-university" aria-hidden="true"></i>
                     </span>
@@ -87,34 +87,34 @@ const RegisterUser = () => {
                   <div className="input_field checkbox_option">
                     <input
                       name="isNitr"
-                      onClick={handleChange2}
+                      onChange={handleChange2}
                       value={isNitr}
                       type="checkbox"
                       id="cb1"
                     />
-                    <label htmlFor="cb1">I&apos;m a NIT Rourkela student</label>
+                    <label style={{paddingLeft: "8px"}} htmlFor="cb1">I&apos;m a student of NIT Rourkela</label>
                   </div>
-                  <div className="input_field">
-                    {" "}
-                    <span>
-                      <i aria-hidden="true" className="fa fa-envelope"></i>
-                    </span>
-                    <input
-                      value={person.nitrMail}
-                      type="email"
-                      name="nitrMail"
-                      placeholder="Nitrkl Email"
-                      onChange={handleChange}
-                      pattern=".+@nitrkl\.ac\.in"
-                    />
-                  </div>
-                  <button
+                {isNitr ? <><div className="input_field">
+                  <span>
+                    <i aria-hidden="true" className="fa fa-envelope"></i>
+                  </span>
+                  <input
+                    value={person.nitrMail}
+                    type="email"
+                    name="nitrMail"
+                    placeholder="Nitrkl Email ID"
+                    onChange={handleChange}
+                    pattern=".+@nitrkl\.ac\.in"
+                  required/>
+                </div></> : null}
+                  <input
                     type="submit"
                     className="button"
                     onClick={handleSubmit}
-                  >
-                    Register
-                  </button>
+                    value="Register"
+                  />
+                    
+                  
                 </form>
               </>
             </div>
