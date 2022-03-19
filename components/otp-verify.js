@@ -22,10 +22,9 @@ const OtpVerify = () => {
   const handleSubmit2 = async (e) => {
     e.preventDefault();
     try {
-      const data = await axios.post("https://api.vriddhinitr.com/User/auth/otp-verify2", person , { headers: {
+      const data = await axios.post("http://api.vriddhinitr.com/User/auth/otp-verify2", person , { headers: {
         mode: "no-cors",
       }});
-
       if(data.status == 200)//OTP successfully verified.
         window.open("https://vriddhinitr.com", "_self");
     } catch (err) {}
