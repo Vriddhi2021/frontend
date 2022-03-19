@@ -24,7 +24,7 @@ const RegisterUser = () => {
     setPerson({ ...person, [name]: !isNitr });
   };
   const handleSubmit = async (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     function getCookie(cname) {
       let name = cname + "=";
       let decodedCookie = decodeURIComponent(document.cookie);
