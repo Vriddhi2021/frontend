@@ -42,13 +42,12 @@ const RegisterUser = () => {
     }
     let token = getCookie("jwt");
     try {
-      axios.post("https://api.vriddhinitr.com/User/Register", person, {
+      let data = await axios.post("https://api.vriddhinitr.com/User/Register", person, {
         headers: {
           authorization: String(token),
           mode: "no-cors",
         },
       });
-      console.log(isNitr);
       if(isNitr)
         window.open("https://vriddhinitr.com/User/otp", "_self");
       else
