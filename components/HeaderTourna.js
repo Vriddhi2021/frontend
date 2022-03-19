@@ -1,8 +1,25 @@
 import styles from "../styles/TournamentHead.module.css";
+import Snackbar from '@mui/material/Snackbar';
+import * as React from 'react';
+// import './globals.css';
 
 function HeaderTourna() {
+  const [state, setState] = React.useState({
+    open: false,
+    vertical: 'top',
+    horizontal: 'center',
+  });
+  const { vertical, horizontal, open } = state;
   const openOauth = () => {
-    window.open("https://api.vriddhinitr.com/auth/google", "_self");
+    // window.open("https://api.vriddhinitr.com/auth/google", "_self");
+    setState({ ...state, open: true });
+  };
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setState({ ...state, open: false });
   };
   return (
     <section className={styles.hero}>
@@ -33,6 +50,16 @@ function HeaderTourna() {
             <a onClick={openOauth} className={styles.coolBeans} href="#">
               Register Now
             </a>
+            <Snackbar
+              // bodyStyle={{ maxWidth: '100%', height: '30%' }}
+              // bodyStyle={{ height: '200%', width: '200%', flexGrow: 0 }}
+              anchorOrigin={{ vertical, horizontal }}
+              open={open}
+              autoHideDuration={6000}
+              onClose={handleClose}
+              message="The registration and payment gateway will be live from 21 March 2022 6PM. STAY TUNED !!"
+              // action={action}
+            />
           </div>
         </div>
       </div>
