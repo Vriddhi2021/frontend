@@ -7,7 +7,8 @@ const RegisterUser = () => {
     name: "",
     collegeName: "",
     nitrMail: "",
-    isNitr: isNitr
+    isNitr: isNitr,
+    contact:""
   });
   const handleChange = (e) => {
     const name = e.target.name;
@@ -47,6 +48,13 @@ const RegisterUser = () => {
           mode: "no-cors",
         },
       });
+      console.log(isNitr);
+      if(isNitr)
+        window.open("https://vriddhinitr.com/User/otp", "_self");
+      else
+        window.open("https://vriddhinitr.com/paymentHTML.html","_self");
+
+
     } catch (err) {
       console.log(err);
     }
@@ -91,7 +99,20 @@ const RegisterUser = () => {
                       required
                     />
                   </div>
-
+                  <div className="input_field">
+                   
+                   <span>
+                     <i className="fa fa-whatsapp" aria-hidden="true"></i>
+                   </span>
+                   <input
+                     type="text"
+                     name="contact"
+                     placeholder="Whatsapp Number"
+                     value={person.contact}
+                     onChange={handleChange}
+                     required
+                   />
+                 </div>
                   <div className="input_field checkbox_option">
                     <input
                       name="isNitr"
