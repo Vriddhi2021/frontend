@@ -8,9 +8,30 @@ import { useState } from 'react';
 import { Button, Link, TextField } from '@mui/material';
 import eventsJson from './eventsJson';
 import FlipMove from 'react-flip-move';
+import Snackbar from '@mui/material/Snackbar';
+import * as React from 'react';
  
 
 const BrowseT = () => {
+    const [state, setState] = React.useState({
+        open: false,
+        vertical: 'top',
+        horizontal: 'center',
+      });
+      const { vertical, horizontal, open } = state;
+
+      const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+        setState({ ...state, open: false });
+      };
+      
+      
+    const openOauth = () => {
+        setState({ ...state, open: true });
+      };
+
     const [eventList, setEventList] = useState(eventsJson);
     const [status, setStatus] = useState('');
     const [cat, setCat] = useState('Major Events');
@@ -89,7 +110,8 @@ const BrowseT = () => {
                 <p className="cardTitle">{old.name}</p>
                 <div className="row dataCard2">
                 <div className="col-5"><p>Team Size: {old.teamSize}</p><p>Prize - ₹{old.prize}</p></div>
-                <div className="col-7"><p>Day - 0{old.day}</p><Button 
+                <div className="col-7"><p>Day - 0{old.day}</p>
+                <Button onClick={openOauth}
                     sx={{
                         borderRadius: "40px",
                         border: "1px solid #8800CD",
@@ -102,7 +124,18 @@ const BrowseT = () => {
                             border: "1px solid #8800CD",
                         },
                     }}
-                    variant="contained"><Link className="text-decoration-none text-white" href={`/tournaments/${old.id}`}>Register</Link></Button></div>
+                    variant="contained">
+                    {/* <Link className="text-decoration-none text-white" href={`/tournaments/${old.id}`}>Register</Link> */}
+                    Register
+                    </Button>
+                    <Snackbar
+                    anchorOrigin={{ vertical, horizontal }}
+                    open={open}
+                    autoHideDuration={6000}
+                    onClose={handleClose}
+                    message="The registration and payment gateway will be live from 21 March 2022 6PM. STAY TUNED !!"
+                />
+                    </div>
                 </div>
             </div>
         </div>
