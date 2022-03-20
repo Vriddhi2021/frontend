@@ -110,7 +110,7 @@ const Navbar = () => {
                     href="/tournaments"
                   >
                     <div>
-                      {/* <Button
+                      <Button
                         className="NavButtonTournaments"
                         id="basic-button"
                         aria-controls={open ? "basic-menu" : undefined}
@@ -125,7 +125,7 @@ const Navbar = () => {
                         }}
                       >
                         TOURNAMENT
-                      </Button> */}
+                      </Button>
                       <Menu
                         id="basic-menu"
                         anchorEl={anchorEl}
@@ -244,7 +244,7 @@ const Navbar = () => {
             >
               <Typography sx={{ padding: 3 }}>
                 <div>
-                  {/* <Button
+                  <Button
                     className="NavButtonTournaments"
                     id="basic-button"
                     aria-controls={open ? "basic-menu" : undefined}
@@ -258,7 +258,7 @@ const Navbar = () => {
                     }}
                   >
                     TOURNAMENT
-                  </Button> */}
+                  </Button>
                   <Menu
                     id="basic-menu"
                     anchorEl={anchorEl}
@@ -322,7 +322,7 @@ const Navbar = () => {
               display: { xs: "none", sm: "none", md: "flex" },
             }}
           >
-            {/* <Button
+            <Button
               onClick={openOauth}
               sx={{
                 borderRadius: "40px",
@@ -332,7 +332,7 @@ const Navbar = () => {
               variant="outlined"
             >
               Join now
-            </Button> */}
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
