@@ -49,10 +49,13 @@ const BrowseT = () => {
         setCat(event.target.value);
     };
     const seachItem = (searchValue) => {
-        setSearch(searchValue)
-        APIData.filter((item) => {
+        setSearch(searchValue);
+        searchValue.preventDefault();
+        const filteredItems = eventsJson.filter((item) => {
             return Object.values(item).join('').toLowerCase().includes(search.toLowerCase())
         });
+        setCatt(filteredItems);
+        setSearch('');
     }
     console.log(cat);
     const filterDay = (cardsDay) => {
@@ -98,7 +101,7 @@ const BrowseT = () => {
                 <form className="form-inline d-flex" onSubmit={seachItem}>
                 <label className="sr-only" htmlFor="inlineFormInputName2">Name</label>
                 <input type="text" onChange={(e) => (setSearch(e.target.value))} value={search} className="browseTSelect form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="e.g: Valorant"/>
-                <button onClick={seachItem} type="submit" className="browseTSelect btn btn-primary mb-2">Submit</button>
+                <button type="submit" className="browseTSelect btn btn-primary mb-2">Submit</button>
                 </form>
 
             </div>
