@@ -8,7 +8,7 @@ const RegisterUser = () => {
     collegeName: "",
     nitrMail: "",
     isNitr: isNitr,
-    contact:""
+    contact: ""
   });
   const handleChange = (e) => {
     const name = e.target.name;
@@ -16,7 +16,7 @@ const RegisterUser = () => {
     setPerson({ ...person, [name]: value });
   };
   const handleChange2 = (e) => {
-    if(isNitr)
+    if (isNitr)
       setIsNitr(false);
     else
       setIsNitr(true);
@@ -24,7 +24,7 @@ const RegisterUser = () => {
     setPerson({ ...person, [name]: !isNitr });
   };
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault();  
     function getCookie(cname) {
       let name = cname + "=";
       let decodedCookie = decodeURIComponent(document.cookie);
@@ -48,10 +48,11 @@ const RegisterUser = () => {
           mode: "no-cors",
         },
       });
-      if(isNitr)
+      console.log(data);
+      if (isNitr)
         window.open("https://vriddhinitr.com/User/otp", "_self");
       else
-        window.open("https://vriddhinitr.com/paymentHTML.html","_self");
+        window.open("https://vriddhinitr.com/paymentHTML.html", "_self");
 
 
     } catch (err) {
@@ -70,7 +71,7 @@ const RegisterUser = () => {
               <>
                 <form>
                   <div className="input_field">
-                   
+
                     <span>
                       <i aria-hidden="true" className="fa fa-user"></i>
                     </span>
@@ -85,7 +86,7 @@ const RegisterUser = () => {
                   </div>
 
                   <div className="input_field">
-                   
+
                     <span>
                       <i className="fa fa-university" aria-hidden="true"></i>
                     </span>
@@ -99,19 +100,19 @@ const RegisterUser = () => {
                     />
                   </div>
                   <div className="input_field">
-                   
-                   <span>
-                     <i className="fa fa-whatsapp" aria-hidden="true"></i>
-                   </span>
-                   <input
-                     type="text"
-                     name="contact"
-                     placeholder="Whatsapp Number"
-                     value={person.contact}
-                     onChange={handleChange}
-                     required
-                   />
-                 </div>
+
+                    <span>
+                      <i className="fa fa-whatsapp" aria-hidden="true"></i>
+                    </span>
+                    <input
+                      type="text"
+                      name="contact"
+                      placeholder="Whatsapp Number"
+                      value={person.contact}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                   <div className="input_field checkbox_option">
                     <input
                       name="isNitr"
@@ -120,29 +121,29 @@ const RegisterUser = () => {
                       type="checkbox"
                       id="cb1"
                     />
-                    <label style={{paddingLeft: "8px"}} htmlFor="cb1">I&apos;m a student of NIT Rourkela</label>
+                    <label style={{ paddingLeft: "8px" }} htmlFor="cb1">I&apos;m a student of NIT Rourkela</label>
                   </div>
-                {isNitr ? <><div className="input_field">
-                  <span>
-                    <i aria-hidden="true" className="fa fa-envelope"></i>
-                  </span>
-                  <input
-                    value={person.nitrMail}
-                    type="email"
-                    name="nitrMail"
-                    placeholder="Nitrkl Email ID"
-                    onChange={handleChange}
-                    pattern=".+@nitrkl\.ac\.in"
-                  required/>
-                </div></> : null}
+                  {isNitr ? <><div className="input_field">
+                    <span>
+                      <i aria-hidden="true" className="fa fa-envelope"></i>
+                    </span>
+                    <input
+                      value={person.nitrMail}
+                      type="email"
+                      name="nitrMail"
+                      placeholder="Nitrkl Email ID"
+                      onChange={handleChange}
+                      pattern=".+@nitrkl\.ac\.in"
+                      required />
+                  </div></> : null}
                   <input
                     type="submit"
                     className="button"
                     onClick={handleSubmit}
                     value="Register"
                   />
-                    
-                  
+
+
                 </form>
               </>
             </div>
