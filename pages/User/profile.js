@@ -10,7 +10,7 @@ const profile = () => {
         <>
             <Navbar />
             <Hero
-                title="Contact us"
+                title="Dashboard"
                 img={bgHero.src}
             />
             <UserProfile />

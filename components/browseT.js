@@ -38,6 +38,7 @@ const BrowseT = () => {
     const [catt, setCatt] = useState(eventsJson);
     const [day, setDay] = useState(1);
     const [dayy, setDayy] = useState([]);
+    const [search, setSearch] = useState('');
     const handleChangeStatus = (event) => {
         setStatus(event.target.value);
     };
@@ -47,6 +48,12 @@ const BrowseT = () => {
     const handleChangeCat = (event) => {
         setCat(event.target.value);
     };
+    const seachItem = (searchValue) => {
+        setSearch(searchValue)
+        APIData.filter((item) => {
+            return Object.values(item).join('').toLowerCase().includes(search.toLowerCase())
+        });
+    }
     console.log(cat);
     const filterDay = (cardsDay) => {
         const updatedCardss  = catt.filter((oldData) => {
@@ -88,10 +95,10 @@ const BrowseT = () => {
             </div>
             <div className="col-12 col-md-4 browseSearch mx-auto">
             
-                <form className="form-inline d-flex">
+                <form className="form-inline d-flex" onSubmit={seachItem}>
                 <label className="sr-only" htmlFor="inlineFormInputName2">Name</label>
-                <input type="text" className="browseTSelect form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="e.g: Valorant"/>
-                <button type="submit" className="browseTSelect btn btn-primary mb-2">Submit</button>
+                <input type="text" onChange={(e) => (setSearch(e.target.value))} value={search} className="browseTSelect form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="e.g: Valorant"/>
+                <button onClick={seachItem} type="submit" className="browseTSelect btn btn-primary mb-2">Submit</button>
                 </form>
 
             </div>
