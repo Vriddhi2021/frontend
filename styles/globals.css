@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,200");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,900;1,400&display=swap');
 
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 .ytp-cued-thumbnail-overlay-image{
   background-image: url(../public/game.png) !important;
@@ -12,7 +14,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  font-family: "Martel", serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden !important;
 }
 a {
@@ -23,7 +25,7 @@ a {
   padding: 0 !important;
 }
 .a__sportsBg {
-  background: url("../public/bg2.png");
+  background: url("/bg2.png");
   background-position: center;
   background-size: cover;
 }
@@ -46,9 +48,10 @@ a {
 
 .swiper-slide img {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   object-fit: cover;
+  transform: scale(0.8);
 }
 
 .containerBg {
@@ -204,7 +207,7 @@ a {
 
 /* ***************TrendingVideos*************** */
 .trendingVideo {
-  background-image: url(../public/bg2.png);
+  background-image: url(/bg2.png);
   background-size: cover;
   background-position: bottom;
 }
@@ -259,7 +262,7 @@ a {
   padding-left: 24px;
 }
 .EventPageSection {
-  background-image: url(../public/bg2.png);
+  background-image: url(/bg2.png);
   background-position: bottom;
   background-size: cover;
   overflow-x: hidden !important;
@@ -342,6 +345,27 @@ a {
 .prizeAndDiscord .downloadPDFcol .downloadPDF {
   border-radius: 0 8px 8px 0 !important;
 }
+.browseTSelect{
+  background-color: transparent !important;
+  border: 1px solid #AA1EF1 !important;
+  color: white !important;
+  box-shadow: none !important;
+  height: 50px !important;
+}
+.browseTSelect.browseTSelectSelect{
+  background-image: url('https://www.pngkit.com/png/full/49-493567_want-to-build-a-new-income-stream-online.png') !important;
+}
+.MuiPaper-root{
+  background: linear-gradient(241.86deg, #C249FF 0.95%, #AA1EF1 34.48%, #9611D9 56.15%, #7A00B8 86.07%);
+  /* padding: 20px 10px !important; */
+}
+.browseTSelect.browseTSelected{
+  background-color: #810abd56 !important;
+  border-radius: 0px 8px 8px 0 !important;
+}
+.browseTSelect.browseTSelecting{
+  border-radius: 8px 0 0 8px !important;
+}
 /************** / Event Page ************* */
 
 /***************** footerLogoBranding**************** */
@@ -366,8 +390,63 @@ user-select: none;
   user-select: none;
   cursor: pointer;
 }
+.css-19mxba5-MuiTypography-root {
+  padding: 0 !important;
+}
+
+.circleCursor {
+	position: absolute;
+  border: solid 1px #9d1ddd;
+	width: 60px; 
+	height: 60px; 
+  border-radius: 50%;  
+  z-index: 9999999;
+  pointer-events: none;
+    will-change: transform;
+}
+
 /***************** / footerLogoBranding**************** */
 
+/********* Tournaments Format ******** */
+
+
+.tournament{
+  margin: 5rem auto;
+}
+.rotateImg{
+  transform: rotate(270deg);
+}
+.arroww{
+  transform: rotate(-15deg);
+ 
+}
+.icons p{
+  font-size: smaller;
+  
+}
+.icons i{
+  color: blueviolet;
+}
+.tournament img{
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 768px) {
+  .arroww{
+      transform: rotate(45deg);
+     
+  }
+  .rotateImg{
+      transform: rotate(45deg);
+     
+  }
+  .tournament img{
+      width: 50px;
+      height: 50px;
+  }
+}
+
+/********* Tournaments Format ******** */
 
 
 /* *********Hero Text Gltch Effect********* */
@@ -844,14 +923,31 @@ user-select: none;
 .card {
   position: relative;
   width: 300px;
-  height: 400px;
-  background: #fff;
+  height: 380px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background: inherit !important;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 .5em 1em rgba(0,0,0,.3);
 }
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0; right: 0; bottom: 0; left: 0;
+  filter: blur(80px);
+  background: inherit;
+  box-shadow: inset 0 0 3000px rgba(255,255,255,.5);
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin: -20px;
+}
+.card:hover::before {
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  filter: blur(30px);
+}
+
 
 .img-bx {
   position: absolute;
@@ -871,7 +967,12 @@ user-select: none;
   left: 0;
   width: 100%;
   height: 100%;
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
   object-fit: cover;
+}
+.card:hover .img-bx img{
+  transform: scale(1.1) !important;
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .content {
@@ -882,6 +983,7 @@ user-select: none;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 30px;
+  color: white !important;
 }
 
 .content .detail {
@@ -893,15 +995,19 @@ user-select: none;
 }
 
 .content .detail h2 {
-  color: #444;
+  color: rgb(255, 255, 255);
   font-size: 1.6em;
   font-weight: bolder;
+  margin-bottom: 2px !important;
 }
 
 .content .detail h2 span {
   font-size: 0.7em;
-  color: #03a9f4;
-  font-weight: bold;
+  color: #ffffff9a;
+  font-weight: normal;
+}
+.content .detail p{
+  color: #cd68ff;
 }
 
 .sci {
@@ -937,4 +1043,542 @@ user-select: none;
 
 ul {
   padding-left: 0 rem !important;
+}
+.heroText.glitch{
+  letter-spacing: 0 !important;
+  font-size: 48px !important;
+}
+.formatTitle.tournamentsFormat{
+  margin-top: 50px;
+}
+.tournament{
+  margin: 60px 0 !important;
+}
+.browseTSelect *
+{
+ background-color: #AA1EF1 !important;
+}
+.css-1u97i3d-MuiButtonBase-root-MuiMenuItem-root{
+  background: transparent;
+}
+.css-1u97i3d-MuiButtonBase-root-MuiMenuItem-root:hover{
+  background: transparent;
+}
+.fontSizeEvents .Eventsh2{
+  font-size: 48px;
+}
+
+.heroText.glitch{
+  /* font-family: 'Gamerock' !important; */
+  font-weight: 900;
+  font-size: 108px !important;
+  letter-spacing: 3px !important;
+  text-align: center !important;
+  /* line-height: 150px !important;  */
+}
+
+/* ****** contact us form ******  */
+
+.contactusPage .sendMessage{
+  background: rgba(255, 255, 255, 0.1) !important;
+  mix-blend-mode: luminosity;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);
+}
+.contactusPage .contactInfo{
+  height: 100%;
+  min-height: 360px;
+}
+.soci_wrap li a i{
+  padding-bottom: 30px !important;
+}
+.locatinIcon, .soci_wrap li a i{
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.sendMessage .sam1{
+  margin-right: 5px !important;
+}
+.sendMessage .sam2{
+  margin-left: 5px !important;
+}
+.accordion__button{
+  background-color: #2B0C52 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.accordion__panel {
+  background-color: #2B0C52;
+  mix-blend-mode: luminosity;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* ****** /// contact us form ******  */
+
+.aboutCountUp .aboutCountUpIcon{
+  font-size: 70px;
+  margin-bottom: 10px;
+  color: #b542ee !important;
+}
+.aboutCountUp p{
+  color: rgba(255, 255, 255, 0.9);
+}
+.aboutCountUp h1{
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ******* register form *******  */
+
+.registerForm{
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  right: 10%;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.registerForm .form_wrapper {
+  background: #fff;
+  width: 400px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 8% auto 0;
+  position: relative;
+  z-index: 1;
+  border-top: 5px solid #AA1EF1;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  -webkit-transition: none;
+  transition: none;
+  -webkit-animation: expand 0.8s 0.6s ease-out forwards;
+  animation: expand 0.8s 0.6s ease-out forwards;
+  opacity: 0;
+}
+.registerForm .form_wrapper h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 0;
+}
+.registerForm .form_wrapper .title_container {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.registerForm .form_wrapper h3 {
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0;
+}
+.registerForm .form_wrapper label {
+  font-size: 12px;
+}
+.registerForm .form_wrapper .row {
+  margin: 10px -15px;
+}
+.registerForm .form_wrapper .row > div {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.registerForm .form_wrapper .col_half {
+  width: 50%;
+  float: left;
+}
+.registerForm .form_wrapper .input_field {
+  position: relative;
+  margin-bottom: 20px;
+  -webkit-animation: bounce 0.6s ease-out;
+  animation: bounce 0.6s ease-out;
+}
+.registerForm .form_wrapper .input_field > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #333;
+  height: 100%;
+  border-right: 1px solid #cccccc;
+  text-align: center;
+  width: 30px;
+}
+.registerForm .form_wrapper .input_field > span > i {
+  padding-top: 10px;
+}
+.registerForm .form_wrapper .textarea_field > span > i {
+  padding-top: 10px;
+}
+.registerForm .form_wrapper input[type=text], .registerForm .form_wrapper input[type=email], .registerForm .form_wrapper input[type=password] {
+  width: 100%;
+  padding: 8px 10px 9px 35px;
+  height: 35px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.registerForm .form_wrapper input[type=text]:hover, .registerForm .form_wrapper input[type=email]:hover, .registerForm .form_wrapper input[type=password]:hover {
+  background: #fafafa;
+}
+.registerForm .form_wrapper input[type=text]:focus, .registerForm .form_wrapper input[type=email]:focus, .registerForm .form_wrapper input[type=password]:focus {
+  -webkit-box-shadow: 0 0 2px 1px #AA1EF1;
+  -moz-box-shadow: 0 0 2px 1px #AA1EF1;
+  box-shadow: 0 0 2px 1px #AA1EF1;
+  border: 1px solid #AA1EF1;
+  background: #fafafa;
+}
+.registerForm .form_wrapper input[type=submit] {
+  background: #AA1EF1;
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.registerForm .form_wrapper input[type=submit]:hover {
+  background: #640494;
+}
+.registerForm .form_wrapper input[type=submit]:focus {
+  background: #640494;
+}
+.registerForm .form_wrapper input[type=checkbox], .registerForm .form_wrapper input[type=radio] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.registerForm .form_container .row .col_half.last {
+  border-left: 1px solid #cccccc;
+}
+
+.registerForm .checkbox_option label {
+  margin-right: 1em;
+  position: relative;
+}
+.registerForm .checkbox_option label:before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.5em;
+  vertical-align: -2px;
+  border: 2px solid #cccccc;
+  padding: 0.12em;
+  background-color: transparent;
+  background-clip: content-box;
+  transition: all 0.2s ease;
+}
+.registerForm .checkbox_option label:after {
+  border-right: 2px solid #000000;
+  border-top: 2px solid #000000;
+  content: "";
+  height: 20px;
+  left: 2px;
+  position: absolute;
+  top: 7px;
+  transform: scaleX(-1) rotate(135deg);
+  transform-origin: left top;
+  width: 7px;
+  display: none;
+}
+.registerForm .checkbox_option input:hover + label:before {
+  border-color: #000000;
+}
+.registerForm .checkbox_option input:checked + label:before {
+  border-color: #000000;
+}
+.registerForm .checkbox_option input:checked + label:after {
+  -moz-animation: check 0.8s ease 0s running;
+  -webkit-animation: check 0.8s ease 0s running;
+  animation: check 0.8s ease 0s running;
+  display: block;
+  width: 7px;
+  height: 20px;
+  border-color: #000000;
+}
+
+@-webkit-keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  25% {
+    height: 0;
+    width: 7px;
+  }
+  50% {
+    height: 20px;
+    width: 7px;
+  }
+}
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  25% {
+    height: 0;
+    width: 7px;
+  }
+  50% {
+    height: 20px;
+    width: 7px;
+  }
+}
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: scale3d(1, 0, 1);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale3d(1, 1.2, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1, 0.85, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+@keyframes expand {
+  0% {
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale3d(1, 1.2, 1);
+    transform: scale3d(1, 1.2, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1, 0.85, 1);
+    transform: scale3d(1, 0.85, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1, 1.05, 1);
+    transform: scale3d(1, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translate3d(0, 10px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -6px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 2px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -6px, 0);
+    transform: translate3d(0, -6px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 2px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+
+/* ******* / register form *******  */
+
+
+@media (max-width: 600px) {
+  .registerForm .form_wrapper .col_half {
+    width: 100%;
+    float: none;
+  }
+
+  .bottom_row .col_half {
+    width: 50%;
+    float: left;
+  }
+
+  .registerForm .form_container .row .col_half.last {
+    border-left: none;
+  }
+
+  .remember_me {
+    padding-bottom: 20px;
+  }
+}
+
+@media(max-width: 768px){
+  .heroText.glitch{
+    font-size: 42px !important;
+    margin-bottom: 0 !important;
+    letter-spacing: 1px !important;
+    line-height: 40px !important;
+}
+.formatTitle{
+  /* font-size: 24px !important; */
+  font-size: 27px !important;
+  margin-top: 0px !important;
+}
+.formatTitle.tournamentsFormat{
+  margin-top: 70px !important;
+}
+.tournament{
+  margin: 40px 0 !important;
+}
+.browseSearch{
+  margin-top: 20px !important;
+  padding: 0 20px !important;
+}
+.carousel-control-next{
+  right: -16% !important;
+}
+.carousel-control-prev{
+  left: -16% !important;
+}
+.cardTitle{
+  font-size: 16px !important;
+}
+.dataCard2{
+  transform: scale(0.9);
+}
+.cardData{
+  padding: 0 18px;
+}
+.dataCard2 p{
+  font-size: 10px;
+}
+.tournamentsBrowseCards .roundBox span {
+  font-size: 36px !important;
+  line-height: 32px;
+}
+.tournamentsBrowseCards .cardData .roundBox{
+  border-radius: 16px;
+  font-size: 12px;
+}
+.css-phtd2x-MuiButtonBase-root-MuiMenuItem-root{
+  background: transparent !important;
+}
+.swiper-container {
+  width: 768px;
+}
+.mySwiper{
+  /* background-color: white; */
+}
+.mySwiper .swiper-wrapper{
+  left: -90px;
+  /* transform: scale(0.7) !important; */
+}
+.fontSizeEvents .Eventsh2{
+  font-size: 30px;
+}
+.teamPageHeading{
+  text-align: center;
+}
+.sendMessage h4, .contactInfo h4{
+  text-align: center !important;
+}
+.soci_wrap {
+  position: relative;
+  bottom: 0;
+}
+.soci_wrap a i{
+  font-size: 23px;
+}
+.contactusPage .contactInfo {
+  padding: 2rem !important;
+}
+.locatinIcon p{
+  font-size: 14px;
+}
+.sendMessage .sam1, .sendMessage .sam2{
+  margin: 0 !important;
+}
+.sendMessage .sam2{
+  margin-top: 16px !important;
+}
+.aboutUsContent{
+  margin-top: 30px !important;
+}
+.aboutUsContent p{
+  font-size: 14px;
+}
+.aboutUsPage{
+  padding-bottom: -10px !important;
+}
+.aboutCountUp {
+  margin-top: -50px !important;
+}
+.eventDetailsSection{
+  margin-top: 30px !important;
+}
+.discordPdfLink{
+  font-size: 11px !important;
+}
+.registerForm{
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%) scale(0.8);
+}
+.heroTextGlitch{
+  margin-left: 0 !important;
+  margin-top: -90%;
+}
+}
+@media(max-width: 426px){
+
 }

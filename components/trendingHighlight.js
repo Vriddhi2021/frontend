@@ -28,7 +28,7 @@ const trendinghighlight = (props) => {
                     <p>{props.p}</p>
                     <h6>{props.title}</h6>
                 </div>
-                <div className="col-3">
+                <div className="col-3 trendingIcon">
                     <PlayCircleOutlineIcon style={{fontSize: "70px", color: "#AA1EF1"}}/>
                 </div>
             </div>
