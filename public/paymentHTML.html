@@ -37,7 +37,8 @@
           return "";
         }
         let user = getCookie("userid");
-        let url = 'https://api.vriddhinitr.com/payment/test';
+        // let url = 'https://api.vriddhinitr.com/payment/test';
+        let url = 'http://localhost:3000/payment/test'
         let method = 'POST';
         let body = {
           "userid":  user // change this with curruser ID. {using context}
