@@ -82,7 +82,7 @@ function HeaderTourna() {
             >
             Register Events
             </a> : <a
-            // onClick={openOauth}
+            onClick={openOauth}
             className={styles.coolBeans} href="#">
               Join now
             </a>}
