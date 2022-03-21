@@ -1,7 +1,28 @@
 import { useState } from "react";
 import axios from "axios";
+import Snackbar from '@mui/material/Snackbar';
 
 const OtpVerify = () => {
+  const [state, setState] = useState({
+    open: false,
+    vertical: 'top',
+    horizontal: 'center',
+    message : ''
+  });
+
+  const { vertical, horizontal, open} = state;
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setState({ ...state, open: false });
+  };
+
+  const popup = (m) => {
+    setState({ ...state, open: true , message : m});
+  };
+
   const [person, setPerson] = useState({
     otpCode: "",
     nitrMail: "",
@@ -17,7 +38,8 @@ const OtpVerify = () => {
       const data = await axios.post("https://api.vriddhinitr.com/User/auth/otp-verify", {nitrMail:person.nitrMail}, { headers: {
         mode: "no-cors",
       }});
-      console.log(data);
+      // console.log(data);
+      popup(data.data.message);
     } catch (err) {}
   };
   const handleSubmit2 = async (e) => {
@@ -26,7 +48,8 @@ const OtpVerify = () => {
       const data = await axios.post("https://api.vriddhinitr.com/User/auth/otp-verify2", person , { headers: {
         mode: "no-cors",
       }});
-      if(data.status == 200)//OTP successfully verified.
+      popup(data.data.message);
+      if(data.data.message === "Your Zimbra mail was successfully verified.Thank You!")//OTP successfully verified.
         window.open("https://vriddhinitr.com", "_self");
     } catch (err) {}
   };
@@ -78,6 +101,13 @@ const OtpVerify = () => {
           </div>
         </div>
       </div>
+      <Snackbar
+        anchorOrigin={{ vertical, horizontal }}
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message= {state.message}
+    />
     </section>
   );
 };

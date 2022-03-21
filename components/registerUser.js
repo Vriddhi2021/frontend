@@ -1,7 +1,27 @@
 import { useState } from "react";
 import axios from 'axios';
+import Snackbar from '@mui/material/Snackbar';
 
 const RegisterUser = () => {
+  const [state, setState] = useState({
+    open: false,
+    vertical: 'top',
+    horizontal: 'center',
+    message : ''
+  });
+  const { vertical, horizontal, open} = state;
+
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setState({ ...state, open: false });
+  };
+
+  const popup = (m) => {
+    setState({ ...state, open: true , message : m});
+  };
   const [isNitr, setIsNitr] = useState(false);
   const [person, setPerson] = useState({
     name: "",
@@ -50,23 +70,26 @@ const RegisterUser = () => {
       });
       console.log(person);
       console.log(data);
-      let success = false;
       console.log(data.data.message);
       if(data.data.message === 'Successfully Registered')
-        success = true;
-
-      console.log(data.data);
-//       if (success && isNitr)
-//         window.open("https://vriddhinitr.com/User/otp", "_self");
-//       else if(success)
-//         window.open("https://vriddhinitr.com/paymentHTML.html", "_self");
-
+      {
+        console.log(data.data);
+        if (isNitr)
+          window.open("https://vriddhinitr.com/User/otp", "_self");
+        else 
+          window.open("https://vriddhinitr.com/paymentHTML.html", "_self");
+      }
+      else{
+        popup(data.data.message);
+      }
 
     } catch (err) {
+      // popup(err);
       console.log(err);
     }
   };
   return (
+    
     <section className="py-5 my-5 registerForm">
       <div className="form_wrapper">
         <div className="form_container">
@@ -157,6 +180,13 @@ const RegisterUser = () => {
           </div>
         </div>
       </div>
+      <Snackbar
+          anchorOrigin={{ vertical, horizontal }}
+          open={open}
+          autoHideDuration={6000}
+          onClose={handleClose}
+          message= {state.message}
+        />
     </section>
   );
 };

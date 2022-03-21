@@ -121,7 +121,8 @@ const BrowseT = () => {
                 <div className="row dataCard2">
                 <div className="col-5"><p>Team Size: {old.teamSize}</p><p>Prize - ₹{old.prize}</p></div>
                 <div className="col-7"><p>Day - 0{old.day}</p>
-                <Button onClick={openOauth}
+                <Button 
+                // onClick={openOauth}
                     sx={{
                         borderRadius: "40px",
                         border: "1px solid #8800CD",
@@ -135,16 +136,15 @@ const BrowseT = () => {
                         },
                     }}
                     variant="contained">
-                    {/* <Link className="text-decoration-none text-white" href={`/tournaments/${old.id}`}>Register</Link> */}
-                    Register
+                    <Link className="text-decoration-none text-white" href={`/tournaments/${old.id}`}>Register</Link>
                     </Button>
-                    <Snackbar
+                    {/* <Snackbar
                     anchorOrigin={{ vertical, horizontal }}
                     open={open}
                     autoHideDuration={6000}
                     onClose={handleClose}
                     message="The registration and payment gateway will be live from 21 March 2022 6PM. STAY TUNED !!"
-                />
+                /> */}
                     </div>
                 </div>
             </div>
