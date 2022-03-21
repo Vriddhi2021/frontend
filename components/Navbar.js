@@ -9,10 +9,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 import logo from "../public/logoBranding.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from 'axios';
 import { ClassNames } from "@emotion/react";
 import { theme } from "@mui/system";
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/styles';
 
 const NavMenu = [
   { title: "GALLERY", url: "gallery" },
@@ -35,6 +36,48 @@ export const useStyles = makeStyles((theme) => ({
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
+  const [user, setUser] = useState(null);
+  const [ userDetails, setUserDetails ] = useState(null);
+
+  // const [state, setState] = React.useState({
+  //   open: false,
+  //   vertical: 'top',
+  //   horizontal: 'center',
+  // });
+
+  useEffect(() => {
+    function getCookie(cname) {
+      let name = cname + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(";");
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == " ") {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+    
+    let token = getCookie("jwt");
+    let userId = getCookie("userid");
+    const userData = async () => {
+      const userD = await axios.get(`https://api.vriddhinitr.com/user/${userId}`)
+      .then(function() {
+        console.log(userD);
+        setUserDetails(userD);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+    }
+    userData();
+    setUser(token);
+  },[]);
+
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -206,7 +249,13 @@ const Navbar = () => {
                 }}
                 onClick={handleCloseNavMenu}
               >
-                <Button
+                { user ? <Button 
+                  sx={{
+                    borderRadius: "40px",
+                    borderColor: "#AA1EF1",
+                    color: "white",
+                  }}
+                  >{`Hey, ${userDetails.name}`}</Button> : <Button
                   onClick={openOauth}
                   sx={{
                     borderRadius: "40px",
@@ -216,7 +265,7 @@ const Navbar = () => {
                   variant="outlined"
                 >
                   Join now
-                </Button>
+                </Button>}
               </MenuItem>
             </Menu>
           </Box>
