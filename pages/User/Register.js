@@ -26,8 +26,14 @@ const Register = () => {
         .then((resObject) => {
           console.log(resObject);
           console.log(resObject.userFound);
-          document.cookie = `jwt=${resObject.jwt}`;
-          document.cookie = `userid=${resObject.userid}`;
+          var now = new Date();
+          var time = now.getTime();
+          var expireTime = time + 1000*36000;
+          now.setTime(expireTime);
+          document.cookie = `jwt=${resObject.jwt}`+';expires='+now.toUTCString()+';path=/';
+          document.cookie = `userid=${resObject.userid}`+'expires='+now.toUTCString()+';path=/';
+          // document.cookie = `jwt=${resObject.jwt}`;
+          // document.cookie = `userid=${resObject.userid}`;
           if (resObject.userFound) {
             console.log(1);
             window.open("https://www.vriddhinitr.com/", "_self");
