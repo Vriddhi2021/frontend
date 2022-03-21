@@ -86,6 +86,7 @@ const RegisterUser = () => {
       }
       else{
         // popup(data.data.message);
+        console.log(data.data.message);
         alert(data.data.message);
       }
 
