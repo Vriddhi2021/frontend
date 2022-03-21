@@ -24,7 +24,7 @@ const RegisterUser = () => {
     setPerson({ ...person, [name]: !isNitr });
   };
   const handleSubmit = async (e) => {
-    e.preventDefault();  
+    e.preventDefault();
     function getCookie(cname) {
       let name = cname + "=";
       let decodedCookie = decodeURIComponent(document.cookie);
@@ -48,7 +48,7 @@ const RegisterUser = () => {
           mode: "no-cors",
         },
       });
-      console.log(data);
+      // console.log(data.data);
       if (isNitr)
         window.open("https://vriddhinitr.com/User/otp", "_self");
       else

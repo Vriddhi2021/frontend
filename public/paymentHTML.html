@@ -21,10 +21,26 @@
       async function onPaymentSuccessHandler(response) {
         // alert('Payment Success');
         // console.log('Payment Success Response', response);
+        function getCookie(cname) {
+          let name = cname + "=";
+          let decodedCookie = decodeURIComponent(document.cookie);
+          let ca = decodedCookie.split(";");
+          for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == " ") {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+        let user = getCookie("userid");
         let url = 'https://api.vriddhinitr.com/payment';
         let method = 'POST';
         let body = {
-          "userid":  "Adi72Hzb"// change this with curruser ID. {using context}
+          "userid":  user // change this with curruser ID. {using context}
         };
         let headers = {};
         let res = await fetch(url,{

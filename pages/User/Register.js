@@ -25,11 +25,14 @@ const Register = () => {
         })
         .then((resObject) => {
           console.log(resObject);
+          console.log(resObject.userFound);
           document.cookie = `jwt=${resObject.jwt}`;
           document.cookie = `userid=${resObject.userid}`;
-          // if (resObject.user) {
-          //   window.open("https://localhost:3001/", "_self");
-          // }
+          if (resObject.userFound) {
+            console.log(1);
+            window.open("https://www.vriddhinitr.com/", "_self");
+            console.log(2);
+          }
         })
         .catch((err) => {
           console.log(err);
