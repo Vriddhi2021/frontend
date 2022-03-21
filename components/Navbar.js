@@ -65,8 +65,8 @@ const Navbar = () => {
     let token = getCookie("jwt");
     let userId = getCookie("userid");
     const userData = async () => {
-      const userD = await axios.get(`https://api.vriddhinitr.com/user/${userId}`)
-      .then(function() {
+      await axios.get(`https://api.vriddhinitr.com/user/${userId}`)
+      .then((userD) => {
         console.log(userD);
         setUserDetails(userD);
       })
