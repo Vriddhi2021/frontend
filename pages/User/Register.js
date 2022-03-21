@@ -27,9 +27,9 @@ const Register = () => {
           console.log(resObject);
           document.cookie = `jwt=${resObject.jwt}`;
           document.cookie = `userid=${resObject.userid}`;
-          // if (resObject.user) {
-          //   window.open("https://localhost:3001/", "_self");
-          // }
+          if (resObject.userFound) {
+            window.open("https://www.vriddhinitr.com/", "_self");
+          }
         })
         .catch((err) => {
           console.log(err);
