@@ -80,7 +80,8 @@ const RegisterUser = () => {
           window.open("https://vriddhinitr.com/paymentHTML.html", "_self");
       }
       else{
-        popup(data.data.message);
+        // popup(data.data.message);
+        alert(data.data.message);
       }
 
     } catch (err) {
@@ -180,13 +181,13 @@ const RegisterUser = () => {
           </div>
         </div>
       </div>
-      <Snackbar
+      {/* <Snackbar
           anchorOrigin={{ vertical, horizontal }}
           open={open}
           autoHideDuration={6000}
           onClose={handleClose}
           message= {state.message}
-        />
+        /> */}
     </section>
   );
 };
