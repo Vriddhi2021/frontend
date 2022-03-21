@@ -27,11 +27,15 @@ const Register = () => {
           console.log(resObject);
           console.log(resObject.userFound);
           var now = new Date();
+          var now2 = new Date();
           var time = now.getTime();
-          var expireTime = time + 1000*36000;
+          var expireTime = time + 10*24*60*60*1000;
+          var exp2 = time + 2*60*1000;
           now.setTime(expireTime);
+          now2.setTime(exp2);
           document.cookie = `jwt=${resObject.jwt}`+';expires='+now.toUTCString()+';path=/';
-          document.cookie = `userid=${resObject.userid}`+'expires='+now.toUTCString()+';path=/';
+          document.cookie = `userid=${resObject.userid}`+';expires='+now.toUTCString()+';path=/';
+          document.cookie = `temp=${test}`+';expires='+now2.toUTCString()+';path=/'
           // document.cookie = `jwt=${resObject.jwt}`;
           // document.cookie = `userid=${resObject.userid}`;
           if (resObject.userFound) {
