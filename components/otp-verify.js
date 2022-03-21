@@ -14,9 +14,10 @@ const OtpVerify = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try {
-      await axios.post("https://api.vriddhinitr.com/User/auth/otp-verify", {nitrMail:person.nitrMail}, { headers: {
+      const data = await axios.post("https://api.vriddhinitr.com/User/auth/otp-verify", {nitrMail:person.nitrMail}, { headers: {
         mode: "no-cors",
       }});
+      console.log(data);
     } catch (err) {}
   };
   const handleSubmit2 = async (e) => {

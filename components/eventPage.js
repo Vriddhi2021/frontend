@@ -1,11 +1,51 @@
 import { Button, Link } from "@mui/material";
+import { useState } from "react";
+import axios from 'axios';
 
 const EventPage = (props) => {
-    const Actionform = (e) => {
+    const [teamName,setTeamName]=useState("");
+    const [team, setTeam] = useState({
+        person1: "",
+        person2: "",
+        person3: "",
+        person4: "",
+        person5: ""
+      });
+      const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setTeam({ ...team, [name]: value });
+      };
+      const handleChange2 = (e) => {
+        const value = e.target.value;
+        setTeamName(value);
+      };
+    const Actionform = async (e) => {
         e.preventDefault();
         // alert(e);
-        console.log(e)
-        this.append('<input type="hidden" name="eventID" value="Sahil"}>');
+        // console.log(team);
+        console.log(props.id);
+        let tm = [] ;
+        for(let key in team){
+            let curritem = team[key];
+            if(curritem)
+                tm.push(curritem);
+        }
+        console.log(tm);
+        let body = {
+            name : teamName,
+            eventId : props.id,
+            teamMembers : tm
+        }
+        // console.log(body);
+        // let res = await axios.;
+        try {
+            const res = await axios.post("https://api.vriddhinitr.com/Team/Register", body , { headers: {
+              mode: "no-cors",
+            }});
+            console.log(res);
+          } catch (err) {}
+        // this.append('<input type="hidden" name="eventID" value="Sahil"}>');
     }
   return (
     <section className="EventPageSection">
@@ -33,7 +73,7 @@ const EventPage = (props) => {
                                 <div className="input-group-prepend">
                                     <span className="input-group-text" id="inputGroup-sizing-sm">Team Name*</span>
                                 </div>
-                                <input name="teamName" type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
+                                <input name="teamName" type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" onChange={handleChange2} value={teamName}/>
                                 </div>
 
                      </div><p>Fill your team mates&apos; ID</p>{Array(Number(props.teamSize)).fill().map((_, i) => {
@@ -42,7 +82,7 @@ const EventPage = (props) => {
                                 <div className="input-group-prepend">
                                     <span className="input-group-text" id="inputGroup-sizing-sm">Person {i+1}*</span>
                                 </div>
-                                <input name={`id${i}`} type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
+                                <input name={`person${i}`} type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value={team[`person${i}`]} onChange={handleChange}/>
                                 </div>
 
                                 </div>
