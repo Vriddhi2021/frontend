@@ -48,10 +48,17 @@ const RegisterUser = () => {
           mode: "no-cors",
         },
       });
-      // console.log(data.data);
-      if (isNitr)
+      console.log(person);
+      console.log(data);
+      let success = false;
+
+      if(data.data.message === 'Successfully Registered')
+        success = true;
+
+      console.log(data.data);
+      if (success && isNitr)
         window.open("https://vriddhinitr.com/User/otp", "_self");
-      else
+      else if(success)
         window.open("https://vriddhinitr.com/paymentHTML.html", "_self");
 
 
