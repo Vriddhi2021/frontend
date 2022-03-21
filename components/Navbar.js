@@ -10,7 +10,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 import logo from "../public/logoBranding.png";
 import { useEffect, useState } from "react";
-import axios from 'axios';
 import { ClassNames } from "@emotion/react";
 import { theme } from "@mui/system";
 import { makeStyles } from '@material-ui/styles';
@@ -63,18 +62,7 @@ const Navbar = () => {
     }
     
     let token = getCookie("jwt");
-    let userId = getCookie("userid");
-    const userData = async () => {
-      await axios.get(`https://api.vriddhinitr.com/user/${userId}`)
-      .then((userD) => {
-        console.log(userD);
-        setUserDetails(userD);
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-    }
-    userData();
+    // let userId = getCookie("userid");
     setUser(token);
   },[]);
 
@@ -249,13 +237,17 @@ const Navbar = () => {
                 }}
                 onClick={handleCloseNavMenu}
               >
-                { user ? <Button 
+                { user ? <Button
+                  onClick={openOauth}
                   sx={{
                     borderRadius: "40px",
                     borderColor: "#AA1EF1",
                     color: "white",
                   }}
-                  >{`Hey, ${userDetails.name}`}</Button> : <Button
+                  variant="outlined"
+                >
+                  Dashboard
+                </Button> : <Button
                   onClick={openOauth}
                   sx={{
                     borderRadius: "40px",
