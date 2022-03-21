@@ -37,7 +37,7 @@
           return "";
         }
         let user = getCookie("userid");
-        let url = 'https://api.vriddhinitr.com/payment';
+        let url = 'https://api.vriddhinitr.com/payment/test';
         let method = 'POST';
         let body = {
           "userid":  user // change this with curruser ID. {using context}
@@ -45,16 +45,18 @@
         let headers = {
           mode: "no-cors"
         };
+
+        console.log(user);
         try{
             let res = await fetch(url,{
             method,
             body,
             headers
           });
+          console.log(res);
         }catch(err){}
         
-        console.log(res);
-        console.log(user);
+        
         //payment Successful
         // window.open("https://vriddhinitr.com", "_self");
       }
