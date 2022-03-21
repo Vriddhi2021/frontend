@@ -60,10 +60,8 @@ const Navbar = () => {
       }
       return "";
     }
-    
     let token = getCookie("jwt");
     let userid = getCookie("userid")
-    // let userId = getCookie("userid");
     console.log(token);
     console.log(userid);
     setUser(token);
@@ -248,6 +246,7 @@ const Navbar = () => {
                     color: "white",
                   }}
                   variant="outlined"
+                  disabled={true}
                 >
                   Dashboard
                 </Button> : <Button
@@ -258,6 +257,7 @@ const Navbar = () => {
                     color: "white",
                   }}
                   variant="outlined"
+                  disabled={true}
                 >
                   Join now
                 </Button>}
@@ -366,17 +366,29 @@ const Navbar = () => {
               display: { xs: "none", sm: "none", md: "flex" },
             }}
           >
-            <Button
-              onClick={openOauth}
-              sx={{
-                borderRadius: "40px",
-                borderColor: "#AA1EF1",
-                color: "white",
-              }}
-              variant="outlined"
-            >
-              Join now
-            </Button>
+            { user ? <Button
+                  onClick={openOauth}
+                  sx={{
+                    borderRadius: "40px",
+                    borderColor: "#AA1EF1",
+                    color: "white",
+                  }}
+                  variant="outlined"
+                  disabled={true}
+                >
+                  Dashboard
+                </Button> : <Button
+                  onClick={openOauth}
+                  sx={{
+                    borderRadius: "40px",
+                    borderColor: "#AA1EF1",
+                    color: "white",
+                  }}
+                  variant="outlined"
+                  disabled={true}
+                >
+                  Join now
+                </Button>}
           </Box>
         </Toolbar>
       </AppBar>
