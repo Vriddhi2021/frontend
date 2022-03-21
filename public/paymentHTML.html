@@ -42,15 +42,18 @@
         let body = {
           "userid":  user // change this with curruser ID. {using context}
         };
-        let headers = {};
+        let headers = {
+          mode: "no-cors"
+        };
         let res = await fetch(url,{
           method,
           body,
           headers
         });
-        // console.log(res);
+        console.log(res);
+        console.log(user);
         //payment Successful
-        window.open("https://vriddhinitr.com", "_self");
+        // window.open("https://vriddhinitr.com", "_self");
       }
 
       function onPaymentFailureHandler (response) {
