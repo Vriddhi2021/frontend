@@ -62,7 +62,10 @@ const Navbar = () => {
     }
     
     let token = getCookie("jwt");
+    let userid = getCookie("userid")
     // let userId = getCookie("userid");
+    console.log(token);
+    console.log(userid);
     setUser(token);
   },[]);
 
