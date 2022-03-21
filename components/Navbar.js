@@ -257,6 +257,7 @@ const Navbar = () => {
                     color: "white",
                   }}
                   variant="outlined"
+                  disabled={true}
                 >
                   Join now
                 </Button>}
@@ -384,6 +385,7 @@ const Navbar = () => {
                     color: "white",
                   }}
                   variant="outlined"
+                  disabled={true}
                 >
                   Join now
                 </Button>}
