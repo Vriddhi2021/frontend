@@ -1,14 +1,45 @@
 import styles from "../styles/TournamentHead.module.css";
 import Snackbar from '@mui/material/Snackbar';
-import * as React from 'react';
+import { useEffect, useState } from "react";
 // import './globals.css';
 
 function HeaderTourna() {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     open: false,
     vertical: 'top',
     horizontal: 'center',
   });
+  const [user, setUser] = useState(null);
+  
+
+  // const [state, setState] = React.useState({
+  //   open: false,
+  //   vertical: 'top',
+  //   horizontal: 'center',
+  // });
+
+  useEffect(() => {
+    function getCookie(cname) {
+      let name = cname + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(";");
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == " ") {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+    let token = getCookie("jwt");
+    let userid = getCookie("userid")
+     console.log(token);
+    console.log(userid);
+    setUser(userid);
+  },[]);
   const { vertical, horizontal, open } = state;
   const openOauth = () => {
     window.open("https://api.vriddhinitr.com/auth/google", "_self");
@@ -18,7 +49,6 @@ function HeaderTourna() {
     if (reason === 'clickaway') {
       return;
     }
-
     setState({ ...state, open: false });
   };
   return (
@@ -47,9 +77,15 @@ function HeaderTourna() {
               Embrace the gamer in you as you will have the most fantastic time
               during Vriddhi 2021 this year.
             </p>
-            <a onClick={openOauth} className={styles.coolBeans} href="#">
-              Join Now
-            </a>
+            {user ? <a className={styles.coolBeans}
+            // href="/tournaments"
+            >
+            Register Events
+            </a> : <a
+            // onClick={openOauth}
+            className={styles.coolBeans} href="#">
+              Join now
+            </a>}
             <Snackbar
               // bodyStyle={{ maxWidth: '100%', height: '30%' }}
               // bodyStyle={{ height: '200%', width: '200%', flexGrow: 0 }}
