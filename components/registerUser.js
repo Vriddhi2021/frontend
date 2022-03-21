@@ -6,7 +6,7 @@ const RegisterUser = () => {
   const [person, setPerson] = useState({
     name: "",
     collegeName: "",
-    nitrMail: "",
+    nitrMail: "nil",
     isNitr: isNitr,
     contact: ""
   });
@@ -51,7 +51,7 @@ const RegisterUser = () => {
       console.log(person);
       console.log(data);
       let success = false;
-
+      console.log(data.data.message);
       if(data.data.message === 'Successfully Registered')
         success = true;
 
@@ -140,7 +140,7 @@ const RegisterUser = () => {
                       name="nitrMail"
                       placeholder="Nitrkl Email ID"
                       onChange={handleChange}
-                      pattern=".+@nitrkl\.ac\.in"
+                      // pattern=".+@nitrkl\.ac\.in"
                       required />
                   </div></> : null}
                   <input
