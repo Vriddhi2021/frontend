@@ -6,7 +6,7 @@ const RegisterUser = () => {
   const [person, setPerson] = useState({
     name: "",
     collegeName: "",
-    nitrMail: "",
+    nitrMail: "nil",
     isNitr: isNitr,
     contact: ""
   });
@@ -140,7 +140,7 @@ const RegisterUser = () => {
                       name="nitrMail"
                       placeholder="Nitrkl Email ID"
                       onChange={handleChange}
-                      pattern=".+@nitrkl\.ac\.in"
+                      // pattern=".+@nitrkl\.ac\.in"
                       required />
                   </div></> : null}
                   <input
