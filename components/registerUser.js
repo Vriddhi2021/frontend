@@ -51,7 +51,7 @@ const RegisterUser = () => {
       console.log(person);
       console.log(data);
       let success = false;
-
+      console.log(data.data.message);
       if(data.data.message === 'Successfully Registered')
         success = true;
 
