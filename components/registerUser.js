@@ -26,7 +26,7 @@ const RegisterUser = () => {
   const [person, setPerson] = useState({
     name: "",
     collegeName: "",
-    nitrMail: "nil",
+    nitrMail: "",
     isNitr: isNitr,
     contact: ""
   });
@@ -62,13 +62,18 @@ const RegisterUser = () => {
     }
     let token = getCookie("jwt");
     try {
+      if(person.nitrMail === "")
+        person.nitrMail = person.name + person.contact + String(Math.floor(Math.random() * 1000));
+
+      person.nitrMail = person.nitrMail.toLowerCase();
+      console.log(person);
       let data = await axios.post("https://api.vriddhinitr.com/User/Register", person, {
         headers: {
           authorization: String(token),
           mode: "no-cors",
         },
       });
-      console.log(person);
+      // console.log(person);
       console.log(data);
       console.log(data.data.message);
       if(data.data.message === 'Successfully Registered')
