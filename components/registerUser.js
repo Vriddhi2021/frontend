@@ -56,10 +56,10 @@ const RegisterUser = () => {
         success = true;
 
       console.log(data.data);
-      if (success && isNitr)
-        window.open("https://vriddhinitr.com/User/otp", "_self");
-      else if(success)
-        window.open("https://vriddhinitr.com/paymentHTML.html", "_self");
+//       if (success && isNitr)
+//         window.open("https://vriddhinitr.com/User/otp", "_self");
+//       else if(success)
+//         window.open("https://vriddhinitr.com/paymentHTML.html", "_self");
 
 
     } catch (err) {
