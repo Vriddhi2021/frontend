@@ -45,11 +45,14 @@
         let headers = {
           mode: "no-cors"
         };
-        let res = await fetch(url,{
-          method,
-          body,
-          headers
-        });
+        try{
+            let res = await fetch(url,{
+            method,
+            body,
+            headers
+          });
+        }catch(err){}
+        
         console.log(res);
         console.log(user);
         //payment Successful
