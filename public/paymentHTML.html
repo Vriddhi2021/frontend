@@ -37,8 +37,10 @@
           return "";
         }
         let user = getCookie("userid");
-        // let url = 'https://api.vriddhinitr.com/payment/test';
-        let url = 'http://localhost:3000/payment/test'
+        console.log(user);
+        // let user = "adi72hzb";
+        let url = `https://api.vriddhinitr.com/payment/test?valid=${user}`;
+        // let url = `http://localhost:3000/payment/test?valid=${user}`;
         let method = 'POST';
         let body = {
           "userid":  user // change this with curruser ID. {using context}
@@ -48,6 +50,7 @@
         };
 
         console.log(user);
+        console.log(body);
         try{
             let res = await fetch(url,{
             method,
