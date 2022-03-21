@@ -35,7 +35,7 @@ const Register = () => {
           now2.setTime(exp2);
           document.cookie = `jwt=${resObject.jwt}`+';expires='+now.toUTCString()+';path=/';
           document.cookie = `userid=${resObject.userid}`+';expires='+now.toUTCString()+';path=/';
-          document.cookie = `temp=${test}`+';expires='+now2.toUTCString()+';path=/'
+          document.cookie = `temp=test`+';expires='+now2.toUTCString()+';path=/'
           // document.cookie = `jwt=${resObject.jwt}`;
           // document.cookie = `userid=${resObject.userid}`;
           if (resObject.userFound) {
