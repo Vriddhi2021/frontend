@@ -11,8 +11,8 @@ function HeaderTourna() {
   });
   const { vertical, horizontal, open } = state;
   const openOauth = () => {
-    // window.open("https://api.vriddhinitr.com/auth/google", "_self");
-    setState({ ...state, open: true });
+    window.open("https://api.vriddhinitr.com/auth/google", "_self");
+    // setState({ ...state, open: true });
   };
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -48,7 +48,7 @@ function HeaderTourna() {
               during Vriddhi 2021 this year.
             </p>
             <a onClick={openOauth} className={styles.coolBeans} href="#">
-              Register Now
+              Join Now
             </a>
             <Snackbar
               // bodyStyle={{ maxWidth: '100%', height: '30%' }}
