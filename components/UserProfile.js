@@ -1,6 +1,6 @@
+import { Button, Link } from "@mui/material"
 import axios from 'axios';
 import { useEffect, useState } from 'react'
-import { MdDashboardCustomize } from 'react-icons/md'
 
 const UserProfile = () => {
     const [change, setChange] = useState('Dashboard');
@@ -38,6 +38,9 @@ const UserProfile = () => {
 
     },[]);
 
+    
+    console.log(((user?.paidStatus === false) && (user?.isNitr)))
+
     const Dashboard = () => (
         <div style={{ padding: '14px', backgroundColor: '#2b0c52', margin: "14px", height: "90%", borderRadius: '2px' }}>
             <p style={{ fontSize: '20px', margin: '4px' }}>DASHBOARD</p>
@@ -53,6 +56,42 @@ const UserProfile = () => {
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>College Name:     </span> {user?.collegeName}</p>
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>Contact Number:     </span> {user?.contact}</p>
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>You are currently registerd in {user?.participatedEvents?.length} Events</span></p>
+                
+                <div className='d-flex'>
+                { ((user?.paidStatus === false) && (user?.isNitr)) ? <Button 
+                    sx={{
+                        borderRadius: "40px",
+                        border: "1px solid #8800CD",
+                        background: "#AA1EF1",
+                        color: "white",
+                        "&:hover": {
+                            backgroundColor: "transparent",
+                            color: "white",
+                            boxShadow: "none",
+                            border: "1px solid #8800CD",
+                        },
+                    }}
+                    variant="contained"><Link className="text-decoration-none text-white" href="/User/otp">Verify OTP</Link></Button> : <>
+                        &nbsp;&nbsp;&nbsp;
+                    <Button
+                    sx={{
+                        borderRadius: "40px",
+                        border: "1px solid #8800CD",
+                        background: "#AA1EF1",
+                        color: "white",
+                        "&:hover": {
+                            backgroundColor: "transparent",
+                            color: "white",
+                            boxShadow: "none",
+                            border: "1px solid #8800CD",
+                        },
+                    }}
+                    variant="contained"><Link className="text-decoration-none text-white" href="/paymentHTML.html">Payment</Link></Button>
+                    </> }
+
+                
+                </div>
+
                 </div>
             </div>
             {/* <p style={{ margin: '24px' }}>
