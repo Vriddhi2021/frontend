@@ -48,7 +48,7 @@ const UserProfile = () => {
             <div style={{ backgroundColor: 'whitesmoke', height: '1px' }} />
             <div className="row">
                 <div className="col-4 mx-auto m-3 p-2">
-                <img src="https://i.pinimg.com/736x/51/96/b3/5196b34be5aec2079e4b68190299a544.jpg" alt="Avatar" class="img-thumbnail rounded"/>
+                <img src="https://i.pinimg.com/736x/51/96/b3/5196b34be5aec2079e4b68190299a544.jpg" alt="Avatar" className="img-thumbnail rounded"/>
                 </div>
                 <div className="col-8 mx-auto">
                 <p style={{ margin: '18px' }}><span style={{color: "#ffffff96"}}>User ID/ Unique ID:     </span> {user?.uniqueId}</p>
