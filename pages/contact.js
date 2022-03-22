@@ -185,6 +185,22 @@ function contact() {
                 </AccordionItemPanel>
               </AccordionItem>
                 </div>
+                <div className="col-12 col-md-6 my-2">
+                <AccordionItem>
+                <Button variant="text" style={{width: "100%", padding: "0 !important", background: "#2B0C52"}}>
+                <AccordionItemHeading style={{width: "100% !important"}}>
+                    <AccordionItemButton>
+                    What is my user id?
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                </Button>
+                <AccordionItemPanel>
+                    <p>
+                    Your user id is the initials of your mail id example if your Gmail is vriddhi123@gmail.com then your user id is vriddhi123.
+                    </p>
+                </AccordionItemPanel>
+              </AccordionItem>
+                </div>
               
             </div>
         </Accordion>
