@@ -60,7 +60,7 @@ const EventPage = (props) => {
             try {
                 const res = await axios.post(`https://api.vriddhinitr.com/Event/${props.id}/register`, body , { headers: {
                     mode: "no-cors",
-                    authorization : token
+                    authorization: String(token)
                 }});
                 console.log(res);
                 } catch (err) {}
