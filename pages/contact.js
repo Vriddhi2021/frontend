@@ -48,7 +48,7 @@ function contact() {
              img={bgHero.src}
         />
         <section className='contactusPage' style={{backgroundImage: `url(${bg.src}`}}>
-            <div className='col-10 col-md-8 mx-auto text-white'>
+            <div className='col-12 col-md-12 mx-auto text-white'>
                 <div className="row">
                     <div className="col-12 col-md-6 mx-auto p-4 my-5">
                        <div className='p-5 contactInfo' style={{backgroundColor: "#2B0C52", position: "relative"}}>
@@ -78,43 +78,22 @@ function contact() {
                             </li>
                             <li>
                                 <a href="https://www.linkedin.com/in/vriddhi-nit-rourkela-456664234">
-                                <span className="material-icons-outlined p-2"><i className="fa fa-2x fa-linkedin-square" aria-hidden="true"></i> </span>
+                                <span className="material-icons-outlined p-3"><i className="fa fa-2x fa-linkedin-square" aria-hidden="true"></i> </span>
                                 </a>
+                            </li>
+                            <li>
+                                <span className="material-icons-outlined p-2">Mihir : 8763374987  </span>
+                            </li>
+                            <li>
+                                <span className="material-icons-outlined p-2"> Ayusman : 9658038853 </span>
+                            </li>
+                            <li>
+                                <span className="material-icons-outlined p-2">Aditya : 9337261871 </span>
                             </li>
                     </ul>
                        </div>
                     </div>
-                    <div className="col-12 col-md-6 mx-auto p-4 my-5">
-                    <div className='p-5 sendMessage' style={{backgroundColor: "#2B0C52"}}>
-                    <h4>SEND A MESSAGE</h4>
-                        <Box
-                            component="form"
-                            sx={{
-                                '& > :not(style)': { m: 1, width: '25ch' },
-                            }}
-                            noValidate
-                            autoComplete="off"
-                        >
-
-                        <div className="row my-3 pt-3" style={{width: "100%"}}>
-                        <div className="col-12 col-md-6 mx-0 px-0"><div className='sam1 px-0'><CustomTextField className="text-white sam1" id="standard-basic" label="First Name" variant="standard" /></div></div>
-                        <div className="col-12 col-md-6 mx-0 px-0"><div className='sam2 px-0'><CustomTextField className="text-white sam2" id="standard-basic" label="Last Name" variant="standard" /></div></div>
-                        </div>
-                        <div className="row my-3" style={{width: "100%"}}><CustomTextField className="text-white" id="standard-basic" label="Email Address" variant="standard" /></div>
-                        <div className="row my-3" style={{width: "100%"}}><CustomTextField className="text-white" id="standard-basic" label="Mobile Number" variant="standard" /></div>
-                        <div className="row my-3" style={{width: "100%"}}><CustomTextField className="text-white" id="standard-basic" label="Write your message here..." variant="standard" /></div>
-                        <div className="row mt-4" style={{width: "100%"}}>
-                        <Button 
-                        sx={{
-                                borderColor: "#510578",
-                                background: "#AA1EF1",
-                                color: "white",
-                            }}
-                        className='py-2 ' variant="outlined">Send</Button></div>
-
-                        </Box>
-                    </div>
-                    </div>
+                 
                 </div>
             </div>
             <div className="col-10 col-md-9 mx-auto pb-5">
