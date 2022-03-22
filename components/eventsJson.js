@@ -21,10 +21,11 @@ const Events = [
         description: "Battle Royale Solo Event",
         teamSize: 1,
         prize: "4,500",
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1v2zTFVSaARu_qXkoxB4cCvH982ar2CTanLuyMJGkPPc/edit#heading=h.lul8rqi8wzfh",
         day: 3,
         date: 27,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: pubg.src,
     },
     {
@@ -34,10 +35,11 @@ const Events = [
         description: "Battle Royale Squad Event",
         teamSize: 4,
         prize: "15,500",
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1v2zTFVSaARu_qXkoxB4cCvH982ar2CTanLuyMJGkPPc/edit#heading=h.lul8rqi8wzfh",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: pubg.src,
     },
     {
@@ -48,10 +50,10 @@ const Events = [
         teamSize: 5,
         prize: "20,000",
         pdfLink:
-            "https://docs.google.com/document/d/1NGDTX5HF8aDsKyP5mpu5Q4DveD1n6ARopIMyJgF34Xs/edit?usp=sharing",
+            "https://docs.google.com/document/d/1fWV8YZFjznWdi7Af4u5KiUUdq_KMAPES/edit?usp=drivesdk&ouid=113652035161026772828&rtpof=true&sd=true",
         day: "1,02",
         date: 25,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: valorant.src,
     },
     {
@@ -61,10 +63,11 @@ const Events = [
         description: "5v5 tactical FPS",
         teamSize: 5,
         prize: "7,500",
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1o-SPpYM4btaOjwBx7L4zPY0pQiDTgQg60Qi2OT4n4aQ/edit?usp=sharing",
         day: 3,
         date: 27,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: csgo.src,
     },
     {
@@ -75,10 +78,10 @@ const Events = [
         teamSize: 5,
         prize: "6,000",
         pdfLink:
-            "https://docs.google.com/document/d/1m71K7n124S6lpnIh4Jp03hrqr0J1Z9ADhD0lgAfeKT4/edit?usp=sharing",
+            "https://docs.google.com/document/d/1p0kOgxOjsuaPab0PVqCMjz2xxLERz6eKvX7PiF995_M/edit",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: codm.src,
     },
     {
@@ -89,10 +92,10 @@ const Events = [
         teamSize: 1,
         prize: "4,500",
         pdfLink:
-            "https://docs.google.com/document/d/1O_nB3t4WmOXpRqN7CCei2v0uUFlCIp8pcQBiVD290Ys/edit?usp=sharing",
+            "https://docs.google.com/document/d/1DtpnZaoO23tQDrZPT5pvIUhwcejpDVdOlx8owNy1yEg/edit?usp=sharing",
         day: 3,
         date: 27,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: clashRoyale.src,
     },
     {
@@ -103,10 +106,10 @@ const Events = [
         teamSize: 3,
         prize: "4,500",
         pdfLink:
-            "https://docs.google.com/document/d/1OUcK32V1CEl_66OieS6N-KWtxtqhoF7nw3CY0VXLWGc/edit?usp=sharing",
+            "https://docs.google.com/document/d/1JKYPcd8ZOZmMz1p5V_Jiu_uTnxMnkfQdBZkmN1JLGw0/edit?usp=sharing",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: rocketLeague.src,
     },
     {
@@ -117,10 +120,10 @@ const Events = [
         teamSize: 4,
         prize: "4,500",
         pdfLink:
-            "https://docs.google.com/document/d/145E3Yf9DjRVIoVJ5Rmmq8UmFmiNDbNP436B8Enc07FI/edit?usp=sharing",
+            "https://docs.google.com/document/d/1jDTpTpT7RwAgyxbHFlhZACh7SW2aLZOEq078jHpcqLk/edit",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: freeFire.src,
     },
     {
@@ -131,10 +134,10 @@ const Events = [
         teamSize: 1,
         prize: "3,000",
         pdfLink:
-            "https://docs.google.com/document/d/1cH1QFjHo2wDaQyTZRP2psKe1QN0pnq8LCE3xLvzyWn0/edit?usp=sharing",
+            "https://docs.google.com/document/d/1A6zfvBV-L95pkCxedACR-lJXe39ut-5Fng3vox2jlzE/edit?usp=sharing",
         day: "2,03",
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: fantasyCricket.src,
     },
     {
@@ -147,7 +150,7 @@ const Events = [
         pdfLink: "#",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: img.src,
     },
     {
@@ -160,7 +163,7 @@ const Events = [
         pdfLink: "#",
         day: 1,
         date: 25,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: img.src,
     },
     {
@@ -173,7 +176,7 @@ const Events = [
         pdfLink: "#",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: img.src,
     },
     {
@@ -186,7 +189,7 @@ const Events = [
         pdfLink: "#",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: img.src,
     },
     {
@@ -196,10 +199,10 @@ const Events = [
         description: "Debate Event",
         teamSize: 1,
         prize: "3,000",
-        pdfLink: "#",
+        pdfLink: "",
         day: 3,
         date: 27,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: img.src,
     },
     {
@@ -212,7 +215,7 @@ const Events = [
         pdfLink: "#",
         day: "",
         date: 23,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: img.src,
     },
     {
@@ -222,10 +225,11 @@ const Events = [
         description: "Drawing and Guessing event",
         teamSize: 1,
         prize: 500,
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/16pP-VjuNEa4wxIr8laN5opc5CoiBl1cz/edit?usp=drivesdk&ouid=113988085220362124424&rtpof=true&sd=true",
         day: 1,
         date: 25,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: skribble.src,
     },
     {
@@ -235,10 +239,11 @@ const Events = [
         description: "Party game of teamwork and betrayal Event",
         teamSize: 1,
         prize: 500,
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1OxWtwYljoE1Aox0z3p5UPKlzlR0wy0fm-8rVp5YVWIE/edit?usp=sharing",
         day: 1,
         date: 25,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: amongUs.src,
     },
     {
@@ -248,10 +253,11 @@ const Events = [
         description: "Puzzle Games",
         teamSize: 1,
         prize: 500,
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1n1lK-SF2u8V7FFdASaiJ3H8pWJ4OKieO0bUolvP89cY/edit?usp=sharing",
         day: 3,
         date: 27,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: sudduko.src,
     },
     {
@@ -261,10 +267,11 @@ const Events = [
         description: "",
         teamSize: 1,
         prize: 500,
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1N3Q-oY9McfjtwzpxkqVRVjQFQoLBiCWw2f8-UFzlJU4/edit?usp=sharing",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: typeracer.src,
     },
     {
@@ -274,10 +281,11 @@ const Events = [
         description: "A strategy board game",
         teamSize: 1,
         prize: 500,
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/12H_ZEJzWfwS0PeIAZflIzU61uTBsPJm-sRTb-KF_FY4/edit",
         day: 1,
         date: 25,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: ludo.src,
     },
     {
@@ -287,10 +295,11 @@ const Events = [
         description: "2D intense multiplayer combat game",
         teamSize: 1,
         prize: 500,
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1rGsX3YePx7p3HSIlX5179v7ZQZj1WhPKUSMNMfaVMLI/edit?usp=sharing",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: img.src,
     },
     {
@@ -300,10 +309,11 @@ const Events = [
         description: "Battle Royale Party Game",
         teamSize: 1,
         prize: 500,
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1mv5dhtere5EmiwdfbIBnRasjKpl0BPgbpq1zjcNdnVo/edit",
         day: 3,
         date: 27,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: img.src,
     },
     {
@@ -313,10 +323,11 @@ const Events = [
         description: "",
         teamSize: 1,
         prize: 500,
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1rW0Kztg2wazKtLYNgv2BOB_TO4iM6Rzb/edit?usp=sharing&ouid=113652035161026772828&rtpof=true&sd=true",
         day: 2,
         date: 26,
-        discord: "#",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: valorant.src,
     },
     {
@@ -326,10 +337,11 @@ const Events = [
         description: "",
         teamSize: 1,
         prize: 500,
-        pdfLink: "#",
+        pdfLink:
+            "https://docs.google.com/document/d/1kA5TR8FPjkNEkumkFVYFctoy_cOZ_4Ft86NNxqNDjfQ/edit?usp=sharing",
         day: "",
         date: "",
-        discord: "",
+        discord: "https://discord.gg/BPzYSaSjGK",
         img: img.src,
     },
 ];
