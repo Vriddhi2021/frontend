@@ -139,7 +139,7 @@ const Events = [
     },
     {
         id: 10,
-        name: "Game Quiz (Inquizzitives)",
+        name: "Game Quiz (Inquizzitive)",
         category: "Events with Clubs",
         description: "Quiz Competition",
         teamSize: 1,
