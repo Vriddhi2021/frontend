@@ -46,18 +46,19 @@ const UserProfile = () => {
             <p style={{ fontSize: '20px', margin: '4px' }}>DASHBOARD</p>
             <div style={{ backgroundColor: 'whitesmoke', height: '1px' }} />
             <div className="row">
-                <div className="col-4 mx-auto m-3 p-2">
+                <div className="col-12 col-md-4 mx-auto m-3 p-2">
                 <img src="https://i.pinimg.com/736x/51/96/b3/5196b34be5aec2079e4b68190299a544.jpg" alt="Avatar" className="img-thumbnail rounded"/>
                 </div>
-                <div className="col-8 mx-auto">
+                <div className="col-12 col-md-8 mx-auto">
                 <p style={{ margin: '18px' }}><span style={{color: "#ffffff96"}}>User ID/ Unique ID:     </span> {user?.uniqueId}</p>
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>Name:     </span> {user?.name}</p>
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>Email:     </span> {user?.email}</p>
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>College Name:     </span> {user?.collegeName}</p>
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>Contact Number:     </span> {user?.contact}</p>
-                <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>You are currently registerd in {user?.participatedEvents?.length} Events</span></p>
+                <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>You are currently registered in {user?.participatedEvents?.length} Events</span></p>
                 
                 <div className='d-flex'>
+                
                 { ((user?.paidStatus === false) && (user?.isNitr)) ? <Button 
                     sx={{
                         borderRadius: "40px",
@@ -128,13 +129,14 @@ const UserProfile = () => {
 
     return (
         <div className="" style={{ color: 'white', margin: '14px', display: 'flex', }}>
-            <div style={{ flex: '0.3', padding: '14px', cursor: 'pointer', }}>
-                <div onClick={e => setChange('Dashboard')} style={{ backgroundColor: '#2b0c52', padding: '12px', margin: '6px', borderRadius: '2px' }}>
+        <div className="row">
+            <div style={{ padding: '14px', cursor: 'pointer', }} className="col-12 col-md-3 mx-auto">
+                <div onClick={e => setChange('Dashboard')} style={{ backgroundColor: '#2b0c52', padding: '12px', margin: '6px', borderRadius: '2px' }} className="col-12 mx-auto">
                     <p style={{ marginTop: '14px', fontSize: '20px', display: 'flex', justifyContent: 'center', }}>
                         DASHBOARD
                     </p>
                 </div>
-                <div onClick={e => setChange('Profile')} style={{ backgroundColor: '#2b0c52', padding: '12px', margin: '6px', borderRadius: '2px' }}>
+                <div onClick={e => setChange('Profile')} style={{ backgroundColor: '#2b0c52', padding: '12px', margin: '6px', borderRadius: '2px' }} className="col-12 mx-auto">
                     <p style={{ marginTop: '14px', fontSize: '20px', display: 'flex', justifyContent: 'center', }}>
                         PROFILE
                     </p>
@@ -150,11 +152,12 @@ const UserProfile = () => {
                     </p>
                 </div> */}
             </div>
-            <div style={{ flex: '0.7' }}>
+            <div className="col-12 col-md-9 mx-auto">
                 {change === "Dashboard" && <Dashboard />}
                 {change === "Events" && <Events />}
                 {change === "Profile" && <Profile />}
             </div>
+        </div>
         </div>
     )
 }
