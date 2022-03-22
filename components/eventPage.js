@@ -63,6 +63,7 @@ const EventPage = (props) => {
                     authorization: String(token)
                 }});
                 console.log(res);
+                alert(res.data.message);
                 } catch (err) {}
         }
         else{
@@ -70,6 +71,7 @@ const EventPage = (props) => {
                 const res = await axios.post("https://api.vriddhinitr.com/Team/Register", body , { headers: {
                     mode: "no-cors",
                 }});
+                alert(res.data.message);
                 console.log(res);
                 } catch (err) {}
         }
