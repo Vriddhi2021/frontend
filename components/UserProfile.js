@@ -4,8 +4,7 @@ import { MdDashboardCustomize } from 'react-icons/md'
 
 const UserProfile = () => {
     const [change, setChange] = useState('Dashboard');
-    const [userid, setUserid] = useState(null);
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState({});
     useEffect(() => {
         function getCookie(cname) {
             let name = cname + "=";
@@ -22,14 +21,11 @@ const UserProfile = () => {
             }
             return "";
           }
-          let token = getCookie("jwt");
           let userId=getCookie("userid");
-          setUserid(userId);
-          console.log(`this is ${token} token and useId ${userId}`)
 
 
         const getUser = async () => {
-            await axios.get(`https://api.vriddhinitr.com/user/${userid}`)
+            await axios.get(`https://api.vriddhinitr.com/user/${userId}`)
             .then((res) => {
                 console.log(res.data);
                 setUser(res.data)
@@ -56,7 +52,7 @@ const UserProfile = () => {
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>Email:     </span> {user?.email}</p>
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>College Name:     </span> {user?.collegeName}</p>
                 <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>Contact Number:     </span> {user?.contact}</p>
-                <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>You are currently registerd in {user?.participatedEvents.length} Events</span></p>
+                <p style={{ margin: '14px' }}><span style={{color: "#ffffff96"}}>You are currently registerd in {user?.participatedEvents?.length} Events</span></p>
                 </div>
             </div>
             {/* <p style={{ margin: '24px' }}>
