@@ -1,6 +1,7 @@
 import styles from "../styles/TournamentHead.module.css";
 import Snackbar from '@mui/material/Snackbar';
 import { useEffect, useState } from "react";
+import { Link } from "@mui/material";
 // import './globals.css';
 
 function HeaderTourna() {
@@ -77,11 +78,11 @@ function HeaderTourna() {
               Embrace the gamer in you as you will have the most fantastic time
               during Vriddhi 2021 this year.
             </p>
-            {user ? <a className={styles.coolBeans}
+            {user ? <Link href="/tournaments" className={styles.coolBeans}
             // href="/tournaments"
             >
             Register Events
-            </a> : <a
+            </Link> : <a
             onClick={openOauth}
             className={styles.coolBeans} href="#">
               Join now

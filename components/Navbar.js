@@ -62,9 +62,9 @@ const Navbar = () => {
     }
     let token = getCookie("jwt");
     let userid = getCookie("userid")
-    console.log(token);
+     console.log(token);
     console.log(userid);
-    setUser(token);
+    setUser(userid);
   },[]);
 
   const open = Boolean(anchorEl);
@@ -239,16 +239,16 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
               >
                 { user ? <Button
-                  onClick={openOauth}
+                  // onClick={openOauth}
                   sx={{
                     borderRadius: "40px",
                     borderColor: "#AA1EF1",
                     color: "white",
                   }}
                   variant="outlined"
-                  disabled={true}
+                  // disabled={true}
                 >
-                  Dashboard
+                  <Link className="text-decoration-none text-white" href="/User/profile">Dashboard</Link>
                 </Button> : <Button
                   onClick={openOauth}
                   sx={{
@@ -257,7 +257,7 @@ const Navbar = () => {
                     color: "white",
                   }}
                   variant="outlined"
-                  disabled={true}
+                  // disabled={true}
                 >
                   Join now
                 </Button>}
@@ -367,16 +367,16 @@ const Navbar = () => {
             }}
           >
             { user ? <Button
-                  onClick={openOauth}
+                  // onClick={openOauth}
                   sx={{
                     borderRadius: "40px",
                     borderColor: "#AA1EF1",
                     color: "white",
                   }}
                   variant="outlined"
-                  disabled={true}
+                  // disabled={true}
                 >
-                  Dashboard
+                  <Link className="text-decoration-none text-white" href="/User/profile">Dashboard</Link>
                 </Button> : <Button
                   onClick={openOauth}
                   sx={{
@@ -385,7 +385,7 @@ const Navbar = () => {
                     color: "white",
                   }}
                   variant="outlined"
-                  disabled={true}
+                  // disabled={true}
                 >
                   Join now
                 </Button>}

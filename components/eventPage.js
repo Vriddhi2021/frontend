@@ -99,7 +99,7 @@ const EventPage = (props) => {
                     </div>
                     <form onSubmit={Actionform} method="POST" action="/teamDetails">
                     <div className="row InputTeamID">
-                    {(Number(props.teamSize) !== 1) ? <><div className="col-12 mx-auto">
+                    {(Number(props.teamSize) > 0) ? <><div className="col-12 mx-auto">
                                 <div className="input-group input-group-sm mb-3">
                                 <div className="input-group-prepend">
                                     <span className="input-group-text" id="inputGroup-sizing-sm">Team Name*</span>
