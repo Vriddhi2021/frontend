@@ -139,16 +139,16 @@ const UserProfile = () => {
                         PROFILE
                     </p>
                 </div>
-                <div onClick={e => setChange('Events')} style={{ backgroundColor: '#2b0c52', padding: '12px', margin: '6px', borderRadius: '2px' }}>
+                {/* <div onClick={e => setChange('Events')} style={{ backgroundColor: '#2b0c52', padding: '12px', margin: '6px', borderRadius: '2px' }}>
                     <p style={{ marginTop: '14px', fontSize: '20px', display: 'flex', justifyContent: 'center', }}>
                         EVENTS
                     </p>
-                </div>
-                <div style={{ backgroundColor: '#2b0c52', padding: '12px', margin: '6px', borderRadius: '2px' }}>
+                </div> */}
+                {/* <div style={{ backgroundColor: '#2b0c52', padding: '12px', margin: '6px', borderRadius: '2px' }}>
                     <p style={{ marginTop: '14px', fontSize: '20px', display: 'flex', justifyContent: 'center', }}>
                         LOGOUT
                     </p>
-                </div>
+                </div> */}
             </div>
             <div style={{ flex: '0.7' }}>
                 {change === "Dashboard" && <Dashboard />}
