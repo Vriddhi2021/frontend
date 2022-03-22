@@ -8,6 +8,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import bgHero from '../public/contactBanner.png';
 import Head from "next/head";
 import bg from '../public/bg2.png';
+import CallIcon from '@mui/icons-material/Call';
 import CustomTextField from '../components/CustomTextField';
 import '../node_modules/react-accessible-accordion/dist/fancy-example.css'
 import {
@@ -55,7 +56,10 @@ function contact() {
                        <h4>CONTACT INFO</h4><br/>
                         <div className='icon locatinIcon d-flex'><LocationOnIcon className='m-2'/><p>National Institute of Technology Rourkela, Jindal Colony, Udit Nagar, Rourkela, Odisha 769001</p></div>
                         <div className='icon locatinIcon d-flex'><EmailIcon className='m-2'/><p>vriddhinitrourkela@gmail.com</p></div>
-                        <ul className="soci_wrap mt-5">
+                        <div className='icon locatinIcon d-flex'><CallIcon className='m-2'/><p>Mihir : 8763374987</p></div>
+                        <div className='icon locatinIcon d-flex'><CallIcon className='m-2'/><p>Ayusman : 9658038853</p></div>
+                        <div className='icon locatinIcon d-flex' style={{paddingBottom: "50px"}}><CallIcon className='m-2'/><p>Aditya : 9337261871</p></div>
+                        <ul className="soci_wrap mt-5 pt-5">
                             <li>
                             <a href="https://www.facebook.com/nitrkl.vriddhi/">
                                 <span className="material-icons-outlined p-2 "><i className="fa fa-2x fa-facebook-square" aria-hidden="true"></i> </span>
@@ -80,15 +84,6 @@ function contact() {
                                 <a href="https://www.linkedin.com/in/vriddhi-nit-rourkela-456664234">
                                 <span className="material-icons-outlined p-3"><i className="fa fa-2x fa-linkedin-square" aria-hidden="true"></i> </span>
                                 </a>
-                            </li>
-                            <li>
-                                <span className="material-icons-outlined p-2">Mihir : 8763374987  </span>
-                            </li>
-                            <li>
-                                <span className="material-icons-outlined p-2"> Ayusman : 9658038853 </span>
-                            </li>
-                            <li>
-                                <span className="material-icons-outlined p-2">Aditya : 9337261871 </span>
                             </li>
                     </ul>
                        </div>
