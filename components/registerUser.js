@@ -61,6 +61,7 @@ const RegisterUser = () => {
       return "";
     }
     let token = getCookie("jwt");
+    let userId=getCookie("userid")
     try {
       if(person.nitrMail === "")
         person.nitrMail = person.name + person.contact + String(Math.floor(Math.random() * 1000));
@@ -73,12 +74,15 @@ const RegisterUser = () => {
           mode: "no-cors",
         },
       });
+      
       // console.log(person);
       console.log(data);
       console.log(data.data.message);
       if(data.data.message === 'Successfully Registered')
       {
+        alert(`Your ID is "${userId}" please use this ID for event registration`);
         console.log(data.data);
+        
         if (isNitr)
           window.open("https://vriddhinitr.com/User/otp", "_self");
         else 
