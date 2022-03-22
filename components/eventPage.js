@@ -39,34 +39,34 @@ const EventPage = (props) => {
         }
         // console.log(body);
         // let res = await axios.;
-        if(props.teamSize === 1)
-        {   
-            function getCookie(cname) {
-                let name = cname + "=";
-                let decodedCookie = decodeURIComponent(document.cookie);
-                let ca = decodedCookie.split(";");
-                for (let i = 0; i < ca.length; i++) {
-                  let c = ca[i];
-                  while (c.charAt(0) == " ") {
-                    c = c.substring(1);
-                  }
-                  if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                  }
-                }
-                return "";
-              }
-            let token = getCookie("jwt");
-            try {
-                const res = await axios.post(`https://api.vriddhinitr.com/Event/${props.id}/register`, body , { headers: {
-                    mode: "no-cors",
-                    authorization: String(token)
-                }});
-                console.log(res);
-                alert(res.data.message);
-                } catch (err) {}
-        }
-        else{
+        // if(props.teamSize === 1)
+        // {   
+        //     function getCookie(cname) {
+        //         let name = cname + "=";
+        //         let decodedCookie = decodeURIComponent(document.cookie);
+        //         let ca = decodedCookie.split(";");
+        //         for (let i = 0; i < ca.length; i++) {
+        //           let c = ca[i];
+        //           while (c.charAt(0) == " ") {
+        //             c = c.substring(1);
+        //           }
+        //           if (c.indexOf(name) == 0) {
+        //             return c.substring(name.length, c.length);
+        //           }
+        //         }
+        //         return "";
+        //       }
+        //     let token = getCookie("jwt");
+        //     try {
+        //         const res = await axios.post(`https://api.vriddhinitr.com/Event/${props.id}/register`, body , { headers: {
+        //             mode: "no-cors",
+        //             authorization: String(token)
+        //         }});
+        //         console.log(res);
+        //         alert(res.data.message);
+        //         } catch (err) {}
+        // }
+        // else{
             try {
                 const res = await axios.post("https://api.vriddhinitr.com/Team/Register", body , { headers: {
                     mode: "no-cors",
@@ -74,7 +74,7 @@ const EventPage = (props) => {
                 alert(res.data.message);
                 console.log(res);
                 } catch (err) {}
-        }
+    //    }
         
         // this.append('<input type="hidden" name="eventID" value="Sahil"}>');
     }

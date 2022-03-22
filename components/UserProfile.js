@@ -73,7 +73,7 @@ const UserProfile = () => {
                     }}
                     variant="contained"><Link className="text-decoration-none text-white" href="/User/otp">Verify OTP</Link></Button> : <>
                         &nbsp;&nbsp;&nbsp;
-                    <Button
+                   {user?.paidStatus ? null :  <Button
                     sx={{
                         borderRadius: "40px",
                         border: "1px solid #8800CD",
@@ -86,7 +86,7 @@ const UserProfile = () => {
                             border: "1px solid #8800CD",
                         },
                     }}
-                    variant="contained"><Link className="text-decoration-none text-white" href="/paymentHTML.html">Payment</Link></Button>
+                    variant="contained"><Link className="text-decoration-none text-white" href="/paymentHTML.html">Payment</Link></Button>}
                     </> }
 
                 
