@@ -12,6 +12,7 @@ const profile = () => {
             <Hero
                 title="Dashboard"
                 img={bgHero.src}
+                style={{height: "40vh !important"}}
             />
             <UserProfile />
             <Footer />
