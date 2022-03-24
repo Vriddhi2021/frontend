@@ -1,6 +1,6 @@
 import styles from '../styles/TournamentHead.module.css';
 import compstyles from '../styles/about.module.css';
-import aboutImg from '../public/esports.png';
+import aboutImg from '../public/SPONSORSHIP PARTNER.png';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
