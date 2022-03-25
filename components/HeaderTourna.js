@@ -78,15 +78,15 @@ function HeaderTourna() {
               Embrace the gamer in you as you will have the most fantastic time
               during Vriddhi 2021 this year.
             </p>
-            {user ? <Link href="/tournaments" className={styles.coolBeans}
+            {/* {user ? <Link href="/tournaments" className={styles.coolBeans}
             // href="/tournaments"
             >
             Register Events
             </Link> : <a
-            onClick={openOauth}
+            // onClick={openOauth}
             className={styles.coolBeans} href="#">
               Join now
-            </a>}
+            </a>} */}
             <Snackbar
               // bodyStyle={{ maxWidth: '100%', height: '30%' }}
               // bodyStyle={{ height: '200%', width: '200%', flexGrow: 0 }}

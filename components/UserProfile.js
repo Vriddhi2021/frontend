@@ -59,7 +59,7 @@ const UserProfile = () => {
                 
                 <div className='d-flex'>
                 
-                { ((user?.paidStatus === false) && (user?.isNitr)) ? <Button 
+                {/* { ((user?.paidStatus === false) && (user?.isNitr)) ? <Button 
                     sx={{
                         borderRadius: "40px",
                         border: "1px solid #8800CD",
@@ -88,7 +88,7 @@ const UserProfile = () => {
                         },
                     }}
                     variant="contained"><Link className="text-decoration-none text-white" href="/paymentHTML.html">Payment</Link></Button>}
-                    </> }
+                    </> } */}
 
                 
                 </div>
