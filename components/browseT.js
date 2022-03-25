@@ -136,7 +136,8 @@ const BrowseT = () => {
                         },
                     }}
                     variant="contained">
-                    <Link className="text-decoration-none text-white" href={`/tournaments/${old.id}`}>Register</Link>
+                    {/* <Link className="text-decoration-none text-white" href={`/tournaments/${old.id}`}>Register</Link> */}
+                    <Link className="text-decoration-none text-white" href={`/#`}>Registration closed</Link>
                     </Button>
                     {/* <Snackbar
                     anchorOrigin={{ vertical, horizontal }}
