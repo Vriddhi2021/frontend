@@ -25,7 +25,8 @@ const tournamentsComp = (props) => {
                             border: "1px solid #8800CD",
                         },
                     }}
-                    variant="contained"><Link className="text-decoration-none text-white" href={`/tournaments/${props.id}`}>Register</Link></Button></div>
+                    // variant="contained"><Link className="text-decoration-none text-white" href={`/tournaments/${props.id}`}>Register</Link></Button></div>
+                    variant="contained"><Link className="text-decoration-none text-white" href={`/#`}>Registration closed</Link></Button></div>
                 </div>
             </div>
         </div>
