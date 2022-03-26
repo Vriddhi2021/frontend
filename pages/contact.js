@@ -56,9 +56,9 @@ function contact() {
                        <h4>CONTACT INFO</h4><br/>
                         <div className='icon locatinIcon d-flex'><LocationOnIcon className='m-2'/><p>National Institute of Technology Rourkela, Jindal Colony, Udit Nagar, Rourkela, Odisha 769001</p></div>
                         <div className='icon locatinIcon d-flex'><EmailIcon className='m-2'/><p>vriddhinitrourkela@gmail.com</p></div>
-                        <div className='icon locatinIcon d-flex'><CallIcon className='m-2'/><p>Mihir : 8763374987</p></div>
+                        {/* <div className='icon locatinIcon d-flex'><CallIcon className='m-2'/><p>Mihir : 8763374987</p></div>
                         <div className='icon locatinIcon d-flex'><CallIcon className='m-2'/><p>Ayusman : 9658038853</p></div>
-                        <div className='icon locatinIcon d-flex' style={{paddingBottom: "50px"}}><CallIcon className='m-2'/><p>Aditya : 9337261871</p></div>
+                        <div className='icon locatinIcon d-flex' style={{paddingBottom: "50px"}}><CallIcon className='m-2'/><p>Aditya : 9337261871</p></div> */}
                         <ul className="soci_wrap mt-5 pt-5">
                             <li>
                             <a href="https://www.facebook.com/nitrkl.vriddhi/">
