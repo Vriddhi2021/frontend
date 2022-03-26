@@ -59,6 +59,7 @@ function contact() {
                         {/* <div className='icon locatinIcon d-flex'><CallIcon className='m-2'/><p>Mihir : 8763374987</p></div>
                         <div className='icon locatinIcon d-flex'><CallIcon className='m-2'/><p>Ayusman : 9658038853</p></div>
                         <div className='icon locatinIcon d-flex' style={{paddingBottom: "50px"}}><CallIcon className='m-2'/><p>Aditya : 9337261871</p></div> */}
+                        <div className='icon locatinIcon d-flex'><CallIcon className='m-2'/><p>Chandan : 6370513113</p></div>
                         <ul className="soci_wrap mt-5 pt-5">
                             <li>
                             <a href="https://www.facebook.com/nitrkl.vriddhi/">
