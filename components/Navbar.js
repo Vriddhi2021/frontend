@@ -250,7 +250,7 @@ const Navbar = () => {
                 >
                   <Link className="text-decoration-none text-white" href="/User/profile">Dashboard</Link>
                 </Button> : <Button
-                  // onClick={openOauth}
+                  onClick={openOauth}
                   sx={{
                     borderRadius: "40px",
                     borderColor: "#AA1EF1",
@@ -260,7 +260,7 @@ const Navbar = () => {
                   // disabled={true}
                 >
                   {/* Join now */}
-                  Registration closed
+                  Register Now
                 </Button>}
                 
               </MenuItem>
@@ -380,7 +380,7 @@ const Navbar = () => {
                 >
                   <Link className="text-decoration-none text-white" href="/User/profile">Dashboard</Link>
                 </Button> : <Button
-                  // onClick={openOauth}
+                  onClick={openOauth}
                   sx={{
                     borderRadius: "40px",
                     borderColor: "#AA1EF1",
@@ -389,7 +389,7 @@ const Navbar = () => {
                   variant="outlined"
                   // disabled={true}
                 >
-                  Registration closed
+                  Register Now
                 </Button>}
           </Box>
         </Toolbar>
